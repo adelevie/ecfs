@@ -2,7 +2,7 @@
 
 ECFS helps you download and parse filings from the FCC's Electronic Comment Filing System.
 
-[![Build Status](https://travis-ci.org/[adelevie]/[ecfs].png)](https://travis-ci.org/[adelevie]/[ecfs])
+[![Build Status](https://travis-ci.org/adelevie/ecfs.png?branch=master)](https://travis-ci.org/adelevie/ecfs)
 
 ## Installation
 
