@@ -1,24 +1,48 @@
-# Ecfs
+# ECFS
 
-TODO: Write a gem description
+ECFS helps you download and parse filings from the FCC's Electronic Comment Filing System.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'ecfs'
+```ruby
+gem 'ecfs'
+```
 
 And then execute:
 
-    $ bundle
+```sh
+$ bundle
+```
 
 Or install it yourself as:
 
-    $ gem install ecfs
+```sh
+$ gem install ecfs
+```
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+
+# get info about a specific proceeding
+proceeding = ECFS::ProceedingsQuery.new.tap do |q|
+  q.eq("proceeding_number", "12-375")
+end.get
+#=>
+{
+  "bureau_name" => "Wireline Competition Bureau",
+  "subject" => 
+  "Implementation of the Pay Telephone Reclassification and Compensation Provisions of the Telecommunications Act of 1996 et al.",
+ "prepared_by" => "Aleta.Bowers",
+ "date_created" => "12/26/2012",
+ "status" => "Open",
+ "total_filings" => "292",
+ "filings_in_last_30_days" => "58"
+}
+
+```
 
 ## Contributing
 
