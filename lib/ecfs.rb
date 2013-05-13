@@ -1,5 +1,5 @@
 require "ecfs/version"
+require "ecfs/proceedings_query"
 
-module Ecfs
-  # Your code goes here...
+module ECFS
 end

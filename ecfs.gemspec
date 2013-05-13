@@ -5,11 +5,11 @@ require 'ecfs/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "ecfs"
-  spec.version       = Ecfs::VERSION
+  spec.version       = ECFS::VERSION
   spec.authors       = ["Alan deLevie"]
   spec.email         = ["adelevie@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = %q{ECFS provides a set of utilities for scraping FCC rulemakings}
+  spec.summary       = %q{ECFS helps you obtain comments and other filings from the FCC's Electronic Comment Filing System}
   spec.homepage      = ""
   spec.license       = "MIT"
 
@@ -20,4 +20,7 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "rake"
+
+  spec.add_dependency "mechanize"
+  spec.add_dependency "pry"
 end

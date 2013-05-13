@@ -35,11 +35,11 @@ end.get
   "bureau_name" => "Wireline Competition Bureau",
   "subject" => 
   "Implementation of the Pay Telephone Reclassification and Compensation Provisions of the Telecommunications Act of 1996 et al.",
- "prepared_by" => "Aleta.Bowers",
- "date_created" => "12/26/2012",
- "status" => "Open",
- "total_filings" => "292",
- "filings_in_last_30_days" => "58"
+  "prepared_by" => "Aleta.Bowers",
+  "date_created" => "12/26/2012",
+  "status" => "Open",
+  "total_filings" => "292",
+  "filings_in_last_30_days" => "58"
 }
 
 ```
