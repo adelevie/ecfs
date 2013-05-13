@@ -2,6 +2,8 @@
 
 ECFS helps you download and parse filings from the FCC's Electronic Comment Filing System.
 
+[![Build Status](https://travis-ci.org/[adelevie]/[ecfs].png)](https://travis-ci.org/[adelevie]/[ecfs])
+
 ## Installation
 
 Add this line to your application's Gemfile:
