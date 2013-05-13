@@ -46,6 +46,7 @@ end.get
   "filings_in_last_30_days" => "58"
 }
 
+# get filings for a specific proceeding
 filings = ECFS::FilingsQuery.new.tap do |q|
   q.eq("docket_number", "12-375")
 end.get
