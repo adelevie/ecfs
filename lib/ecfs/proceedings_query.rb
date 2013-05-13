@@ -2,17 +2,7 @@ require "mechanize"
 
 module ECFS
 
-  class ProceedingsQuery
-    attr_reader :constraints
-
-    def initialize
-      @constraints = {}
-    end
-
-    def eq(field, value)
-      @constraints[field] = value
-      self
-    end
+  class ProceedingsQuery < ECFS::Query
 
     def constraints_dictionary
       {
@@ -36,20 +26,8 @@ module ECFS
       }
     end
 
-    def format_constraint(constraint)
-      constraints_dictionary[constraint]
-    end
-
-    def query_string
-      @constraints.keys.map do |constraint|
-        format_constraint(constraint) + "=" + @constraints[constraint]
-      end.join("&")
-    end
-
-    def url
-      base = "http://apps.fcc.gov/ecfs/proceeding_search/execute"
-
-      "#{base}?#{query_string}"
+    def base_url
+      "http://apps.fcc.gov/ecfs/proceeding_search/execute"
     end
 
     def get

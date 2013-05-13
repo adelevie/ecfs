@@ -45,6 +45,10 @@ end.get
   "total_filings" => "292",
   "filings_in_last_30_days" => "58"
 }
+
+filings = ECFS::FilingsQuery.new.tap do |q|
+  q.eq("docket_number", "12-375")
+end.get
 ```
 
 ## Contributing
