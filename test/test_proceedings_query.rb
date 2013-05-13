@@ -30,16 +30,18 @@ class TestProceedingsQuery < Test::Unit::TestCase
   end
 
   def test_get_proceeding_info
-    proceedings_query = ECFS::ProceedingsQuery.new
-    proceedings_query.eq("docket_number", "12-375")
-    results = proceedings_query.get
-    %w[
-      bureau_name subject date_created status
-      total_filings filings_in_last_30_days
-    ].each do |key|
-      assert results.keys.include?(key)
+    VCR.use_cassette('test_proceedings_query_test_get_proceeding_info') do
+      proceedings_query = ECFS::ProceedingsQuery.new
+      proceedings_query.eq("docket_number", "12-375")
+      results = proceedings_query.get
+      %w[
+        bureau_name subject date_created status
+        total_filings filings_in_last_30_days
+      ].each do |key|
+        assert results.keys.include?(key)
+      end
+      pp results
     end
-    pp results
   end
 
   # TODO: Implement proceeding search result pages

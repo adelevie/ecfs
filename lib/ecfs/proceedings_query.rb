@@ -31,7 +31,8 @@ module ECFS
         "callsign"       => "callsign",
         "channel"        => "channel",
         "rule_section"   => "ruleSection",
-        "page_number"    => "pageNumber"
+        "page_number"    => "pageNumber",
+        "per_page"       => "pageSize"
       }
     end
 
