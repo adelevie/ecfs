@@ -5,7 +5,7 @@ class TestProceedingsQuery < Test::Unit::TestCase
   def test_add_constraint
     proceedings_query = ECFS::ProceedingsQuery.new
     proceedings_query.eq("docket_number", "12-375")
-    proceedings_query.constraints
+    assert_equal proceedings_query.constraints, {"docket_number" => "12-375"}
   end
 
   def test_constraints_dictionary
@@ -40,7 +40,6 @@ class TestProceedingsQuery < Test::Unit::TestCase
       ].each do |key|
         assert results.keys.include?(key)
       end
-      pp results
     end
   end
 
