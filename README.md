@@ -32,7 +32,7 @@ $ gem install ecfs
 
 # get info about a specific proceeding
 proceeding = ECFS::ProceedingsQuery.new.tap do |q|
-  q.eq("proceeding_number", "12-375")
+  q.eq("docket_number", "12-375")
 end.get
 #=>
 {
