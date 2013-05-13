@@ -41,7 +41,6 @@ end.get
   "total_filings" => "292",
   "filings_in_last_30_days" => "58"
 }
-
 ```
 
 ## Contributing
