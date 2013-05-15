@@ -1,7 +1,6 @@
 require "mechanize"
 
 module ECFS
-
   class ProceedingsQuery < ECFS::Query
 
     def constraints_dictionary
