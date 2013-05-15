@@ -47,7 +47,7 @@ end.get
 }
 ```
 
-### Get Filings
+### Get filings
 
 ```ruby
 filings = ECFS::FilingsQuery.new.tap do |q|
