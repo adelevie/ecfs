@@ -104,6 +104,32 @@ end.get
 
 See `ECFS::FilingsQuery#constraints_dictionary` for a list of query options.
 
+## TODO
+
+### Parse proceeding search results
+
+If you enter a docket number, you'll get info about that specific proceeding. If you enter other search terms (sans docket number), fcc.gov returns a results page of proceeding listings. This gem should be able to page through and parse these results. See `ECFS::ProceedingsQuery.constraints_dictionary` for a list of potential query options.
+
+### Get filings from proceegings with > 10,000 filings
+
+fcc.gov will only generate spreadsheets of up to ~10,000 rows. This gem should first be able to detect those pages and then use a strategy for dividing the results into chunks and recombining them into a single results array.
+
+### Typecasting dates
+
+For now, dates scraped from fcc.gov are returned as "yyyy-mm-dd" strings. I'm not completely convinced, but perhaps returning Ruby `Date` objects is best.
+
+### Syntax sugar
+
+Something like this might be nice:
+
+```ruby
+ECFS::Proceeding.new("12-375").subject
+```
+
+## Contact
+
+If you've made it this far into the README/are using this gem, I'd like to hear from you! Email me at [github username] at [google's mail] dot com.
+
 ## Contributing
 
 1. Fork it
