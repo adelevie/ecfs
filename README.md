@@ -28,9 +28,9 @@ $ gem install ecfs
 
 ## Usage
 
-```ruby
+### Get info about a proceeding
 
-# get info about a specific proceeding
+```ruby
 proceeding = ECFS::ProceedingsQuery.new.tap do |q|
   q.eq("docket_number", "12-375")
 end.get
@@ -45,12 +45,64 @@ end.get
   "total_filings" => "292",
   "filings_in_last_30_days" => "58"
 }
+```
 
-# get filings for a specific proceeding
+### Get Filings
+
+```ruby
 filings = ECFS::FilingsQuery.new.tap do |q|
   q.eq("docket_number", "12-375")
 end.get
+#=> 
+[
+  {
+    "name_of_filer"=>"Leadership Conference on Civil and Human Rights",
+    "docket_number"=>"12-375",
+    "lawfirm_name"=>"",
+    "date_received"=>"2013-05-14",
+    "date_posted"=>"2013-05-14",
+    "exparte"=>true,
+    "type_of_filing"=>"NOTICE OF EXPARTE",
+    "document_urls"=>
+     ["http://apps.fcc.gov/ecfs/document/view?id=7022313561",
+      "http://apps.fcc.gov/ecfs/document/view?id=7022313562",
+      "http://apps.fcc.gov/ecfs/document/view?id=7022313563"]
+  },
+ {
+    "name_of_filer"=>"The Leadership Conference on Civil and Human Rights",
+    "docket_number"=>"12-375",
+    "lawfirm_name"=>"",
+    "date_received"=>"2013-05-13",
+    "date_posted"=>"2013-05-13",
+    "exparte"=>true,
+    "type_of_filing"=>"NOTICE OF EXPARTE",
+    "document_urls"=>["http://apps.fcc.gov/ecfs/document/view?id=7022313134"]
+  },
+ {
+   "name_of_filer"=>"David J. Hodges",
+    "docket_number"=>"12-375",
+    "lawfirm_name"=>"",
+    "date_received"=>"2013-04-30",
+    "date_posted"=>"2013-05-10",
+    "exparte"=>false,
+    "type_of_filing"=>"LETTER",
+    "document_urls"=>["http://apps.fcc.gov/ecfs/document/view?id=7022312052"]
+  },
+ {
+   "name_of_filer"=>"Frederick Trons",
+    "docket_number"=>"12-375",
+    "lawfirm_name"=>"",
+    "date_received"=>"2013-04-29",
+    "date_posted"=>"2013-05-10",
+    "exparte"=>false,
+    "type_of_filing"=>"LETTER",
+    "document_urls"=>["http://apps.fcc.gov/ecfs/document/view?id=7022312047"]
+  },
+# ...
+}
 ```
+
+See `ECFS::FilingsQuery#constraints_dictionary` for a list of query options.
 
 ## Contributing
 
