@@ -51,28 +51,34 @@ module ECFS
     end
 
     def format_date(date)
-      #input format 12/22/1988
-      # desired format "22-12-1988"
+      # input format 12/22/1988
       chunks = date.split("/")
-      "#{chunks[2]}-#{chunks[0]}-#{chunks[1]}"
+      new_date = "#{chunks[2]}-#{chunks[0]}-#{chunks[1]}" # "22-12-1988"
+      "#{new_date}T00:00:00.000Z" # dumb hack
     end
 
     def format_exparte(my_bool)
-      if my_bool == "Y"
-        return true
-      elsif my_bool == "N"
-        return false
-      else
-        return nil
-      end
+      return true  if my_bool == "Y"
+      return false if my_bool == "N"
+      return nil
     end
 
+    #def format_exparte(my_bool)
+    #  if my_bool == "Y"
+    #    return true
+    #  elsif my_bool == "N"
+    #    return false
+    #  else
+    #    return nil
+    #  end
+    #end
+
     def extract_filing_id(txt)
-      re1='(\\d+)'  # Integer Number 1
+      re1='(\\d+)'
       re=(re1)
-      m=Regexp.new(re,Regexp::IGNORECASE);
+      m = Regexp.new(re, Regexp::IGNORECASE)
       if m.match(txt)
-        int1=m.match(txt)[1];
+        int1 = m.match(txt)[1]
         return int1
       end
     end
