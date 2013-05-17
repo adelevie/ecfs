@@ -63,16 +63,6 @@ module ECFS
       return nil
     end
 
-    #def format_exparte(my_bool)
-    #  if my_bool == "Y"
-    #    return true
-    #  elsif my_bool == "N"
-    #    return false
-    #  else
-    #    return nil
-    #  end
-    #end
-
     def extract_filing_id(txt)
       re1='(\\d+)'
       re=(re1)
