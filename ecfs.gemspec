@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["adelevie@gmail.com"]
   spec.description   = %q{ECFS provides a set of utilities for scraping FCC rulemakings}
   spec.summary       = %q{ECFS helps you obtain comments and other filings from the FCC's Electronic Comment Filing System}
-  spec.homepage      = ""
+  spec.homepage      = "http://github.com/adelevie/ecfs"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
