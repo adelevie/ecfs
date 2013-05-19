@@ -36,6 +36,8 @@ $ gem install ecfs
 proceeding = ECFS::ProceedingsQuery.new.tap do |q|
   q.eq("docket_number", "12-375")
 end.get
+# Or
+proceeding = ECFS::Proceeding.find("12-375")
 #=>
 {
   "bureau_name" => "Wireline Competition Bureau",
@@ -119,14 +121,6 @@ fcc.gov will only generate spreadsheets of up to ~10,000 rows. This gem should f
 ### Typecasting dates
 
 For now, dates scraped from fcc.gov are returned as "yyyy-mm-dd" strings. I'm not completely convinced, but perhaps returning Ruby `Date` objects is best.
-
-### Syntax sugar
-
-Something like this might be nice:
-
-```ruby
-ECFS::Proceeding.new("12-375").subject
-```
 
 ## Contact
 
