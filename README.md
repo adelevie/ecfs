@@ -77,6 +77,8 @@ end.get
 }
 ```
 
+See `ECFS::ProceedingsQuery#constraints_dictionary` for a list of query options.
+
 ### Get info about a proceeding
 
 ```ruby
