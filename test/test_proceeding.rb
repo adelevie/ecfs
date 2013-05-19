@@ -4,7 +4,7 @@ require "pp"
 class TestProceeding < Test::Unit::TestCase
   
 
-  def test_get_proceeding_info
+  def test_find
     VCR.use_cassette('test_proceedings_query_test_get_proceeding_info') do
       results = ECFS::Proceeding.find("12-375")
       %w[
