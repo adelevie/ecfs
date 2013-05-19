@@ -30,6 +30,53 @@ $ gem install ecfs
 
 ## Usage
 
+### Search for a proceeding
+
+```ruby
+results = ECFS::ProceedingsQuery.new.tap do |q|
+  q.eq("bureau_code", "WC") # Wireline Competition Bureau
+  q.eq("per_page", "100")   # defaults to 10
+end.get
+#=>
+{
+  "current_page"=>1,
+  "total_pages"=>16,
+  "first_result"=>1,
+  "last_result"=>100,
+  "total_results"=>1503,
+  "results"=>
+  [
+   {"docket_number"=>"10-90",
+    "bureau"=>"Wireline Competition Bureau",
+    "subject"=>
+     "In the Matter of Connect America Fund A National Brooadband Plan for Our Future High-Cost\r\nUniversal Service Support. ."},
+   {"docket_number"=>"05-337",
+    "bureau"=>"Wireline Competition Bureau",
+    "subject"=>
+     "In the Matter of Federal -State Joint Board on Universal Service High-Cost Universal\r\nService Support.  .. ."},
+   {"docket_number"=>"13-39",
+    "bureau"=>"Wireline Competition Bureau",
+    "subject"=>"Rural Call Completion"},
+   {"docket_number"=>"12-375",
+    "bureau"=>"Wireline Competition Bureau",
+    "subject"=>
+     "Implementation of the Pay Telephone Reclassification and Compensation Provisions of the Telecommunications Act of 1996 et al."},
+   {"docket_number"=>"11-42",
+    "bureau"=>"Wireline Competition Bureau",
+    "subject"=>
+     "In the Matter of Federal-State Joint Board on Universal Service Lifelineand Link Up Llifeline and\r\nLink Up Reform and Modernization."},
+   {"docket_number"=>"07-135",
+    "bureau"=>"Wireline Competition Bureau",
+    "subject"=>
+     "In the Matter of Establishing Just and Reasonable Rates for Local Exchange Carriers. ."},
+   {"docket_number"=>"03-109",
+    "bureau"=>"Wireline Competition Bureau",
+    "subject"=>"In the Matter of Lifeline and Link-Up"},
+    # ...
+  ]
+}
+```
+
 ### Get info about a proceeding
 
 ```ruby
@@ -109,10 +156,6 @@ end.get
 See `ECFS::FilingsQuery#constraints_dictionary` for a list of query options.
 
 ## TODO
-
-### Parse proceeding search results
-
-If you enter a docket number, you'll get info about that specific proceeding. If you enter other search terms (sans docket number), fcc.gov returns a results page of proceeding listings. Example: http://apps.fcc.gov/ecfs/proceeding_search/execute?subject=phones. This gem should be able to page through and parse these results. See `ECFS::ProceedingsQuery.constraints_dictionary` for a list of potential query options.
 
 ### Get filings from proceedings with > 10,000 filings
 

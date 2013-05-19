@@ -41,7 +41,7 @@ module ECFS
 
     def scrape_proceedings_page
       agent = Mechanize.new
-      page = agent.get(url)
+      page = agent.get(self.url)
       container = []
       page.search("div").select do |d| 
         d.attributes["class"].nil? == false
@@ -71,7 +71,34 @@ module ECFS
     end
 
     def scrape_results_page
-      raise "Parsing result pages is not yet supported."
+      agent = Mechanize.new
+      page = agent.get(self.url)
+      total_pages = page.link_with(:text => "Last").attributes.first[1].split("pageNumber=")[1].gsub(",","").to_i
+      banner = page.search("//*[@id='yui-main']/div/div[2]/table/tbody/tr[2]/td/span[1]").text.lstrip.rstrip.split("Modify Search")[0].rstrip.split  
+      first  = banner[1].gsub(",","").to_i
+      last   = banner[3].gsub(",","").to_i
+      total  = banner[5].gsub(",","").to_i
+      table_rows = page.search("//*[@id='yui-main']/div/div[2]/table/tbody/tr[2]/td/table/tbody").children
+      results   = table_rows.map do |tr|
+        bureau  = tr.children[2].children.children.first.text.lstrip.rstrip
+        subject = tr.children[4].children.text.lstrip.rstrip
+        docket_number = tr.children[0].children[1].attributes["href"].value.split("name=")[1].rstrip
+
+        {
+          "docket_number" => docket_number,
+          "bureau" => bureau,
+          "subject" => subject
+        }
+      end
+
+      {
+        "current_page" => self.constraints["page_number"].gsub(",","").to_i,
+        "total_pages" => total_pages,
+        "first_result" => first,
+        "last_result" => last,
+        "total_results" => total,
+        "results" => results
+      }
     end
 
   end

@@ -43,12 +43,21 @@ class TestProceedingsQuery < Test::Unit::TestCase
     end
   end
 
-  # TODO: Implement proceeding search result pages
   def test_get_proceeding_search_results
-    proceedings_query = ECFS::ProceedingsQuery.new
-    proceedings_query.eq("bureau_code", "WB")
-    assert_raise RuntimeError do
-      proceedings_query.get
+    VCR.use_cassette('test_get_proceeding_search_results') do
+      proceedings_query = ECFS::ProceedingsQuery.new
+      proceedings_query.eq("bureau_code", "WC")
+      proceedings_query.eq("page_number", "1")
+      proceedings_query.eq("per_page", "100")
+      results = proceedings_query.get
+      %w[
+        total_pages first_result
+        last_result total_results
+        current_page
+      ].each do |key|
+        assert results.keys.include?(key)
+        assert results[key]
+      end
     end
   end
 end
