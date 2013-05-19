@@ -42,7 +42,11 @@ class TestFilingsQuery < Test::Unit::TestCase
       assert_equal rows.first["lawfirm_name"].class, String
       assert_equal rows.first["date_received"].class, String
       assert_equal rows.first["date_posted"].class, String
-      assert_equal !!rows.first["exparte"], rows.first["exparte"] # http://stackoverflow.com/a/3033645/94154
+
+      # checks if value is `true` or `false`--since Ruby does not have a Boolean type
+      # http://stackoverflow.com/a/3033645/94154
+      assert_equal !!rows.first["exparte"], rows.first["exparte"] 
+
       assert_equal rows.first["type_of_filing"].class, String
       assert_equal rows.first["document_urls"].class, Array
     end

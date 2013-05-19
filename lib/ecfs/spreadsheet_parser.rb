@@ -38,14 +38,14 @@ module ECFS
         end
 
         {
-          'name_of_filer'  => row[1],
-          'docket_number'  => row[0],
-          'lawfirm_name'   => row[2],
-          'date_received'  => format_date(row[3]),
-          'date_posted'    => format_date(row[4]),
-          'exparte'        => format_exparte(row[5]),
-          'type_of_filing' => row[6],
-          'document_urls'  => urls
+          "name_of_filer"  => row[1],
+          "docket_number"  => row[0],
+          "lawfirm_name"   => row[2],
+          "date_received"  => format_date(row[3]),
+          "date_posted"    => format_date(row[4]),
+          "exparte"        => format_exparte(row[5]),
+          "type_of_filing" => row[6],
+          "document_urls"  => urls
         }
       end
     end
