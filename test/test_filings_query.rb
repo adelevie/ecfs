@@ -11,7 +11,7 @@ class TestFilingsQuery < Test::Unit::TestCase
 
   def test_constraints_dictionary
     filings_query = ECFS::FilingsQuery.new
-    dictionary = filings_query.constraints_dictionary
+    dictionary    = filings_query.constraints_dictionary
     assert_equal Hash, dictionary.class
   end
 
