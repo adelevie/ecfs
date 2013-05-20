@@ -10,7 +10,7 @@ class TestProceedingsQuery < Test::Unit::TestCase
 
   def test_constraints_dictionary
     proceedings_query = ECFS::ProceedingsQuery.new
-    dictionary = proceedings_query.constraints_dictionary
+    dictionary        = proceedings_query.constraints_dictionary
     assert_equal Hash, dictionary.class
   end
 
