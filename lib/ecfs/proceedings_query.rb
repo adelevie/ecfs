@@ -37,11 +37,14 @@ module ECFS
       end
     end
 
+    def mechanize_page
+      Mechanize.new.get(self.url)
+    end
+
     private
 
     def scrape_proceedings_page
-      agent = Mechanize.new
-      page = agent.get(self.url)
+      page = self.mechanize_page
       container = []
       page.search("div").select do |d| 
         d.attributes["class"].nil? == false
@@ -71,8 +74,7 @@ module ECFS
     end
 
     def scrape_results_page
-      agent = Mechanize.new
-      page  = agent.get(self.url)
+      page = self.mechanize_page
 
       total_pages = page.link_with(:text => "Last").attributes.first[1].split("pageNumber=")[1].gsub(",","").to_i
       banner      = page.search("//*[@id='yui-main']/div/div[2]/table/tbody/tr[2]/td/span[1]").text.lstrip.rstrip.split("Modify Search")[0].rstrip.split  
@@ -93,10 +95,9 @@ module ECFS
     end
 
     def row_to_hash(row)
-      bureau        = bureau_from_row(row) #tr.children[2].children.children.first.text.lstrip.rstrip
-      subject       = subject_from_row(row) #tr.children[4].children.text.lstrip.rstrip
-      docket_number = docket_number_from_row(row) #tr.children[0].children[1].attributes["href"].value.split("name=")[1].rstrip
-
+      bureau        = bureau_from_row(row)
+      subject       = subject_from_row(row)
+      docket_number = docket_number_from_row(row)
       {
         "docket_number" => docket_number,
         "bureau"        => bureau,
