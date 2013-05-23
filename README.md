@@ -205,6 +205,19 @@ Self explanatory
 
 For each url in `ECFS::Filing#['document_urls']`, download the PDF file, extract text and store in-memory as part of the `ECFS::Filing` instance. Each url will point to a document with multiple pages. Therefore it's probably best to create an `ECFS::Filing::Document` class. Each `ECFS::Filing` instance may have multiple `ECFS::Filing::Document` instances. These will be accessed by `ECFS::Filing#documents`. `ECFS::Filing::Document` will have `#pages` and `#full_text` methods. `#pages` will return an `Array` of `ECFS::Filing::Document::Page` instances. `Page` will have a `#text` method, which will return a plain text string of the page contents. `ECFS::Filing::Document#full_text` will just be a `map` and a `join(",")` of this method.
 
+This code should get me (or you!) started:
+
+```ruby
+require "pdf-reader"
+require 'open-uri'
+
+io     = open(url)
+reader = PDF::Reader.new(io)
+reader.pages.each do |page|
+  page.text
+end
+```
+
 ## Contact
 
 If you've made it this far into the README/are using this gem, I'd like to hear from you! Email me at [github username] at [google's mail] dot com.
