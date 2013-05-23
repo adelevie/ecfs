@@ -135,6 +135,14 @@ proceeding = ECFS::Proceeding.find("12-375")
 }
 ```
 
+#### Fetch filings for a proceeding:
+
+```ruby
+proceeding = ECFS::Proceeding.find("12-375")
+proceeding.fetch_filings!
+proceeding["filings"]   # See Filings section below for sample responses
+```
+
 ### Filings
 
 #### Search for filings

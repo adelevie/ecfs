@@ -39,6 +39,13 @@ class TestProceeding < Test::Unit::TestCase
       next_proceedings = proceedings.next
       assert_equal ECFS::Proceeding::ResultSet, next_proceedings.class
 
+      VCR.use_cassette('test_filings_query_test_get') do
+        prison_phones = proceedings["results"].select {|p| p["docket_number"] == "12-375"}.first
+        prison_phones.fetch_filings!
+
+        assert_equal Array, prison_phones["filings"].class
+      end
+
       VCR.use_cassette('test_proceedings_query_test_get_proceeding_info') do
         prison_phones = proceedings["results"].select {|p| p["docket_number"] == "12-375"}.first
         assert_equal ECFS::Proceeding, prison_phones.class

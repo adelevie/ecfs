@@ -21,6 +21,16 @@ module ECFS
 
     def fetch_info!
       merge!(ECFS::Proceeding.find(self["docket_number"]))
+
+      self
+    end
+
+    def fetch_filings!
+      filings = ECFS::Filing.query.tap do |q|
+        q.docket_number = self["docket_number"]
+      end.get
+      merge!({"filings" => filings})
+
       self
     end
 
