@@ -154,57 +154,37 @@ proceeding = ECFS::Proceeding.find("12-375")
 filings = ECFS::Filing.query.tap do |q|
   q.docket_number = "12-375" 
 end
-
-filings = ECFS::FilingsQuery.new.tap do |q|
-  q.eq("docket_number", "12-375")
-end.get
 #=> 
 [
+  # Each result is instance of `ECFS::Filing`, which is a subclass of `Hash`
   {
-    "name_of_filer"=>"Leadership Conference on Civil and Human Rights",
-    "docket_number"=>"12-375",
-    "lawfirm_name"=>"",
-    "date_received"=>"2013-05-14",
-    "date_posted"=>"2013-05-14",
-    "exparte"=>true,
-    "type_of_filing"=>"NOTICE OF EXPARTE",
-    "document_urls"=>
-     ["http://apps.fcc.gov/ecfs/document/view?id=7022313561",
+    "name_of_filer"  => "Leadership Conference on Civil and Human Rights",
+    "docket_number"  => "12-375",
+    "lawfirm_name"   => "",
+    "date_received"  => "2013-05-14T00:00:00.000Z",  # dates are iso8601 strings
+    "date_posted"    => "2013-05-14T00:00:00.000Z",  # TODO: convert Proceeding dates to iso8601
+    "exparte"        => true,
+    "type_of_filing" => "NOTICE OF EXPARTE",
+    "document_urls"  => [
+      "http://apps.fcc.gov/ecfs/document/view?id=7022313561",
       "http://apps.fcc.gov/ecfs/document/view?id=7022313562",
-      "http://apps.fcc.gov/ecfs/document/view?id=7022313563"]
+      "http://apps.fcc.gov/ecfs/document/view?id=7022313563"
+    ]
   },
  {
-    "name_of_filer"=>"The Leadership Conference on Civil and Human Rights",
-    "docket_number"=>"12-375",
-    "lawfirm_name"=>"",
-    "date_received"=>"2013-05-13",
-    "date_posted"=>"2013-05-13",
-    "exparte"=>true,
-    "type_of_filing"=>"NOTICE OF EXPARTE",
-    "document_urls"=>["http://apps.fcc.gov/ecfs/document/view?id=7022313134"]
+    "name_of_filer"  => "The Leadership Conference on Civil and Human Rights",
+    "docket_number"  => "12-375",
+    "lawfirm_name"   => "",
+    "date_received"  => "2013-05-13T00:00:00.000Z",
+    "date_posted"    => "2013-05-13T00:00:00.000Z",
+    "exparte"        => true,
+    "type_of_filing" => "NOTICE OF EXPARTE",
+    "document_urls"  => [
+      "http://apps.fcc.gov/ecfs/document/view?id=7022313134"
+    ]
   },
- {
-   "name_of_filer"=>"David J. Hodges",
-    "docket_number"=>"12-375",
-    "lawfirm_name"=>"",
-    "date_received"=>"2013-04-30",
-    "date_posted"=>"2013-05-10",
-    "exparte"=>false,
-    "type_of_filing"=>"LETTER",
-    "document_urls"=>["http://apps.fcc.gov/ecfs/document/view?id=7022312052"]
-  },
- {
-   "name_of_filer"=>"Frederick Trons",
-    "docket_number"=>"12-375",
-    "lawfirm_name"=>"",
-    "date_received"=>"2013-04-29",
-    "date_posted"=>"2013-05-10",
-    "exparte"=>false,
-    "type_of_filing"=>"LETTER",
-    "document_urls"=>["http://apps.fcc.gov/ecfs/document/view?id=7022312047"]
-  },
-# ...
-}
+ # ...
+]
 ```
 
 See `ECFS::FilingsQuery#constraints_dictionary` for a list of query options.

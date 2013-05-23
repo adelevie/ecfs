@@ -35,12 +35,37 @@ module ECFS
       }
     end
 
+    self.new.constraints_dictionary.keys.each do |key|
+      class_eval do
+
+        define_method("#{key}=") do |value|
+          eq(key, value)
+        end
+
+        define_method(key) do
+          @constraints[key]
+        end
+
+      end
+    end
+
     def base_url
       "http://apps.fcc.gov/ecfs/comment_search/execute"
     end
 
     def get
-      download_spreadsheet.rows
+      rows = download_spreadsheet.rows
+      if @typecast_results
+        return rows.map do |row|
+          row_to_filing(row)
+        end
+      else
+        return rows
+      end
+    end
+
+    def row_to_filing(row)
+      ECFS::Filing.new(row)
     end
 
     def mechanize_agent
