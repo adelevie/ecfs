@@ -190,7 +190,7 @@ See `ECFS::FilingsQuery#constraints_dictionary` for a list of query options.
 
 ### Get filings from proceedings with > 10,000 filings
 
-fcc.gov will only generate spreadsheets of up to ~10,000 rows. This gem should first be able to detect those pages and then use a strategy for dividing the results into chunks and recombining them into a single results array. Such strategies might include recursively dividing the results in half (by date) until all result-sets contain < 10,000 results.
+fcc.gov will only generate spreadsheets of up to ~10,000 rows. This gem should first be able to detect those pages and then use a strategy for dividing the results into chunks and recombining them into a single results array. Such strategies might include recursively dividing the results in half (by date) until all result-sets contain < 10,000 results. Then just flatten the array.
 
 ### Extract text from filing PDFs
 
