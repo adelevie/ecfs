@@ -41,6 +41,8 @@ class TestProceedingsQuery < Test::Unit::TestCase
       ].each do |key|
         assert results.keys.include?(key)
       end
+
+      binding.pry
     end
   end
 

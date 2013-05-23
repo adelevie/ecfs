@@ -123,7 +123,7 @@ pp proceeding
   "subject"       => "Implementation of the Pay Telephone Reclassification and Compensation Provisions of the Telecommunications Act of 1996 et al.",
   "bureau_name"   => "Wireline Competition Bureau",
   "prepared_by"   => "Aleta.Bowers",
-  "date_created"  => "12/26/2012",
+  "date_created"  => "2012-12-26T00:00:00.000Z", # iso8601 string
   "status"        => "Open",
   "total_filings" => "292",
   "filings_in_last_30_days" => "58"
@@ -141,7 +141,7 @@ proceeding = ECFS::Proceeding.find("12-375")
   "subject"       => "Implementation of the Pay Telephone Reclassification and Compensation Provisions of the Telecommunications Act of 1996 et al.",
   "bureau_name"   => "Wireline Competition Bureau",
   "prepared_by"   => "Aleta.Bowers",
-  "date_created"  => "12/26/2012",
+  "date_created"  => "2012-12-26T00:00:00.000Z",
   "status"        => "Open",
   "total_filings" => "292",
   "filings_in_last_30_days" => "58"
@@ -161,8 +161,8 @@ end
     "name_of_filer"  => "Leadership Conference on Civil and Human Rights",
     "docket_number"  => "12-375",
     "lawfirm_name"   => "",
-    "date_received"  => "2013-05-14T00:00:00.000Z",  # dates are iso8601 strings
-    "date_posted"    => "2013-05-14T00:00:00.000Z",  # TODO: convert Proceeding dates to iso8601
+    "date_received"  => "2013-05-14T00:00:00.000Z",  # iso8601 string
+    "date_posted"    => "2013-05-14T00:00:00.000Z", 
     "exparte"        => true,
     "type_of_filing" => "NOTICE OF EXPARTE",
     "document_urls"  => [
@@ -198,10 +198,6 @@ fcc.gov will only generate spreadsheets of up to ~10,000 rows. This gem should f
 ### Show filings in last 30 days for proceedings search
 
 Self explanatory
-
-### Typecasting dates
-
-For now, dates scraped from fcc.gov are returned as "yyyy-mm-dd" strings. I'm not completely convinced, but perhaps returning Ruby `Date` objects is best.
 
 ## Contact
 

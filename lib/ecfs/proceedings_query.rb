@@ -1,8 +1,10 @@
 require "mechanize"
+require "ecfs/util"
 
 module ECFS
   class ProceedingsQuery
     include ECFS::Query
+    include ECFS::Util
 
     def constraints_dictionary
       {
@@ -92,6 +94,8 @@ module ECFS
       container.each_slice(2) do |chunk|
         hash.merge!({chunk[0][0] => chunk[1][0]})
       end
+
+      hash["date_created"] = format_date(hash["date_created"])
 
       hash
     end

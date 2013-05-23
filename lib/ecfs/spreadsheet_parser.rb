@@ -1,9 +1,11 @@
+require "ecfs/util"
 require "mechanize"
 require "spreadsheet"
 require "pry"
 
 module ECFS
   class SpreadsheetParser < Mechanize::File
+    include ECFS::Util
     attr_reader :rows
 
     def initialize(uri = nil, response = nil, body = nil, code = nil)
@@ -48,13 +50,6 @@ module ECFS
           "document_urls"  => urls
         }
       end
-    end
-
-    def format_date(date)
-      # input format 12/22/1988
-      chunks = date.split("/")
-      new_date = "#{chunks[2]}-#{chunks[0]}-#{chunks[1]}" # "22-12-1988"
-      "#{new_date}T00:00:00.000Z" # dumb hack
     end
 
     def format_exparte(my_bool)
