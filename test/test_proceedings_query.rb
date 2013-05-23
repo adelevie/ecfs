@@ -2,6 +2,7 @@ require "helper"
 require "pp"
 
 class TestProceedingsQuery < Test::Unit::TestCase
+
   def test_add_constraint
     proceedings_query = ECFS::ProceedingsQuery.new
     proceedings_query.eq("docket_number", "12-375")
@@ -43,7 +44,7 @@ class TestProceedingsQuery < Test::Unit::TestCase
     end
   end
 
-  def test_get_proceeding_search_results
+  def test_search_proceedings
     VCR.use_cassette('test_get_proceeding_search_results') do
       proceedings_query = ECFS::ProceedingsQuery.new
       proceedings_query.eq("bureau_code", "WC")
@@ -60,4 +61,5 @@ class TestProceedingsQuery < Test::Unit::TestCase
       end
     end
   end
+
 end

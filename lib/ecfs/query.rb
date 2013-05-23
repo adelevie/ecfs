@@ -1,8 +1,9 @@
 module ECFS
-  class Query
+  module Query
     attr_reader :constraints
 
-    def initialize
+    def initialize(params={})
+      @typecast_results = params[:typecast_results]
       @constraints = {}
     end
 
@@ -24,5 +25,6 @@ module ECFS
     def url
       "#{base_url}?#{query_string}"
     end
+
   end
 end

@@ -6,7 +6,8 @@ require "pry"
 
 module ECFS
 
-  class FilingsQuery < ECFS::Query
+  class FilingsQuery
+    include ECFS::Query
 
     def constraints_dictionary
       {

@@ -1,7 +1,8 @@
 require "mechanize"
 
 module ECFS
-  class ProceedingsQuery < ECFS::Query
+  class ProceedingsQuery
+    include ECFS::Query
 
     def constraints_dictionary
       {
@@ -25,16 +26,37 @@ module ECFS
       }
     end
 
+    self.new.constraints_dictionary.keys.each do |key|
+      class_eval do
+
+        define_method("#{key}=") do |value|
+          eq(key, value)
+        end
+
+        define_method(key) do
+          @constraints[key]
+        end
+
+      end
+    end
+
     def base_url
       "http://apps.fcc.gov/ecfs/proceeding_search/execute"
     end
 
     def get
       if @constraints["docket_number"]
-        scrape_proceedings_page
+        # if docket_number is given along with other constraints, the other constraints will be ignored.
+        warn "Constraints other than `docket_number` will be ignored." if @constraints.keys.length > 1
+        
+        return scrape_proceedings_page unless @typecast_results
+        results = ECFS::Proceeding.new(scrape_proceedings_page)
       else
-        scrape_results_page
+        return scrape_results_page unless @typecast_results
+        results = ECFS::Proceeding::ResultSet.new(scrape_results_page)
       end
+
+      results
     end
 
     def mechanize_page
@@ -45,6 +67,7 @@ module ECFS
 
     def scrape_proceedings_page
       page = self.mechanize_page
+
       container = []
       page.search("div").select do |d| 
         d.attributes["class"].nil? == false
@@ -82,9 +105,11 @@ module ECFS
       last        = banner[3].gsub(",","").to_i
       total       = banner[5].gsub(",","").to_i
       table_rows  = page.search("//*[@id='yui-main']/div/div[2]/table/tbody/tr[2]/td/table/tbody").children
-      results     = table_rows.map { |row| row_to_hash(row) }
+      results     = table_rows.map { |row| row_to_proceeding(row) }
 
       {
+        "constraints"   => @constraints,
+        "fcc_url"       => self.url,
         "current_page"  => self.constraints["page_number"].gsub(",","").to_i,
         "total_pages"   => total_pages,
         "first_result"  => first,
@@ -92,6 +117,12 @@ module ECFS
         "total_results" => total,
         "results"       => results
       }
+    end
+
+    def row_to_proceeding(row)
+      hash = row_to_hash(row)
+
+      ECFS::Proceeding.new(hash)
     end
 
     def row_to_hash(row)

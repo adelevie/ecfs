@@ -30,71 +30,119 @@ $ gem install ecfs
 
 ## Usage
 
-### Search for a proceeding
+### Proceedings
+
+#### Search for a proceeding
 
 ```ruby
-results = ECFS::ProceedingsQuery.new.tap do |q|
-  q.eq("bureau_code", "WC") # Wireline Competition Bureau
-  q.eq("per_page", "100")   # defaults to 10
-end.get
+proceedings = ECFS::Proceeding.query.tap to |q|
+  q.bureau_code = "WC"  # Wireline Competition Bureau
+  q.per_page    = "100" # Defaults to 10, maximum is 100
+  q.page_number = "1"
+end
 #=>
+# returns an instance of `ECFS::Proceeding::ResultSet`, which is a subclass of `Hash`:
 {
-  "current_page"=>1,
-  "total_pages"=>16,
-  "first_result"=>1,
-  "last_result"=>100,
-  "total_results"=>1503,
-  "results"=>
-  [
-   {"docket_number"=>"10-90",
-    "bureau"=>"Wireline Competition Bureau",
-    "subject"=>
-     "In the Matter of Connect America Fund A National Brooadband Plan for Our Future High-Cost\r\nUniversal Service Support. ."},
-   {"docket_number"=>"05-337",
-    "bureau"=>"Wireline Competition Bureau",
-    "subject"=>
-     "In the Matter of Federal -State Joint Board on Universal Service High-Cost Universal\r\nService Support.  .. ."},
-   {"docket_number"=>"13-39",
-    "bureau"=>"Wireline Competition Bureau",
-    "subject"=>"Rural Call Completion"},
-   {"docket_number"=>"12-375",
-    "bureau"=>"Wireline Competition Bureau",
-    "subject"=>
-     "Implementation of the Pay Telephone Reclassification and Compensation Provisions of the Telecommunications Act of 1996 et al."},
-   {"docket_number"=>"11-42",
-    "bureau"=>"Wireline Competition Bureau",
-    "subject"=>
-     "In the Matter of Federal-State Joint Board on Universal Service Lifelineand Link Up Llifeline and\r\nLink Up Reform and Modernization."},
-   {"docket_number"=>"07-135",
-    "bureau"=>"Wireline Competition Bureau",
-    "subject"=>
-     "In the Matter of Establishing Just and Reasonable Rates for Local Exchange Carriers. ."},
-   {"docket_number"=>"03-109",
-    "bureau"=>"Wireline Competition Bureau",
-    "subject"=>"In the Matter of Lifeline and Link-Up"},
+  "constraints" => {
+    "bureau_code" => "WC", 
+    "page_number" => "1", 
+    "per_page"    => "100"
+  },
+  "fcc_url"       => "http://apps.fcc.gov/ecfs/proceeding_search/execute?bureauCode=WC&pageNumber=1&pageSize=100",
+  "current_page"  => 1,
+  "total_pages"   => 16,
+  "first_result"  => 1,
+  "last_result"   => 100,
+  "total_results" => 1504,
+  "results"=> [
+  # each result is an instance of `ECFS::Proceeding`, which is a subclass of `Hash`
+    {
+      "docket_number" => "10-90",
+      "bureau"        => "Wireline Competition Bureau",
+      "subject"       => "In the Matter of Connect America Fund A National Brooadband Plan for Our Future High-Cost\r\nUniversal Service Support. ."
+    },
+   {
+      "docket_number" => "05-337",
+      "bureau"        => "Wireline Competition Bureau",
+      "subject"       => "In the Matter of Federal -State Joint Board on Universal Service High-Cost Universal\r\nService Support.  .. ."
+    },
+   {
+      "docket_number" => "13-39",
+      "bureau"        => "Wireline Competition Bureau",
+      "subject"       => "Rural Call Completion"
+    },
+   {
+      "docket_number" => "03-109",
+      "bureau"        => "Wireline Competition Bureau",
+      "subject"       => "In the Matter of Lifeline and Link-Up"
+    },
+   {
+      "docket_number" => "07-135",
+      "bureau"        => "Wireline Competition Bureau",
+      "subject"       => "In the Matter of Establishing Just and Reasonable Rates for Local Exchange Carriers. ."
+    },
     # ...
   ]
 }
 ```
 
-See `ECFS::ProceedingsQuery#constraints_dictionary` for a list of query options.
-
-### Get info about a proceeding
+#### Get the next page of results:
 
 ```ruby
-proceeding = ECFS::ProceedingsQuery.new.tap do |q|
-  q.eq("docket_number", "12-375")
-end.get
-# Or
+next_page = proceedings.next
+#=>
+{
+  "constraints" => {
+    "bureau_code" => "WC",
+    "per_page"    => "100",
+    "page_number" => "2" # automagically incremented the page number
+  },
+ "fcc_url"       => "http://apps.fcc.gov/ecfs/proceeding_search/execute?bureauCode=WC&pageSize=100&pageNumber=2",
+ "current_page"  => 2,
+ "total_pages"   => 16,
+ "first_result"  => 101,
+ "last_result"   => 200,
+ "total_results" => 1504,
+ "results"       => [
+  # ... 
+  ]
+}
+```
+See `ECFS::ProceedingsQuery#constraints_dictionary` for a list of query options.
+
+#### Fetch info about a proceeding from the results:
+
+```ruby
+proceeding = proceedings["results"].select {|p| p["docket_number"] == "12-375"}.first
+proceeding.fetch_info!
+pp proceeding
+#=>
+{
+  "docket_number" => "12-375",
+  "bureau"        => "Wireline Competition Bureau",
+  "subject"       => "Implementation of the Pay Telephone Reclassification and Compensation Provisions of the Telecommunications Act of 1996 et al.",
+  "bureau_name"   => "Wireline Competition Bureau",
+  "prepared_by"   => "Aleta.Bowers",
+  "date_created"  => "12/26/2012",
+  "status"        => "Open",
+  "total_filings" => "292",
+  "filings_in_last_30_days" => "58"
+}
+```
+
+### Find a proceeding by docket number
+
+```ruby
 proceeding = ECFS::Proceeding.find("12-375")
 #=>
 {
-  "bureau_name" => "Wireline Competition Bureau",
-  "subject" => 
-  "Implementation of the Pay Telephone Reclassification and Compensation Provisions of the Telecommunications Act of 1996 et al.",
-  "prepared_by" => "Aleta.Bowers",
-  "date_created" => "12/26/2012",
-  "status" => "Open",
+  "docket_number" => "12-375",
+  "bureau"        => "Wireline Competition Bureau",
+  "subject"       => "Implementation of the Pay Telephone Reclassification and Compensation Provisions of the Telecommunications Act of 1996 et al.",
+  "bureau_name"   => "Wireline Competition Bureau",
+  "prepared_by"   => "Aleta.Bowers",
+  "date_created"  => "12/26/2012",
+  "status"        => "Open",
   "total_filings" => "292",
   "filings_in_last_30_days" => "58"
 }
@@ -103,6 +151,10 @@ proceeding = ECFS::Proceeding.find("12-375")
 ### Search for filings
 
 ```ruby
+filings = ECFS::Filing.query.tap do |q|
+  q.docket_number = "12-375" 
+end
+
 filings = ECFS::FilingsQuery.new.tap do |q|
   q.eq("docket_number", "12-375")
 end.get

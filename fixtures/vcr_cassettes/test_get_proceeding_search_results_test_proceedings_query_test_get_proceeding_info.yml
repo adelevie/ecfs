@@ -1,0 +1,105 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://apps.fcc.gov/ecfs/proceeding_search/execute?bureauCode=WC&pageNumber=1&pageSize=100
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Mechanize/2.6.0 Ruby/1.9.3p194 (http://github.com/sparklemotion/mechanize/)
+      Accept-Encoding:
+      - gzip,deflate,identity
+      Accept-Charset:
+      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
+      Accept-Language:
+      - en-us,en;q=0.5
+      Host:
+      - apps.fcc.gov
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - 300
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 23 May 2013 15:48:39 GMT
+      Server:
+      - Apache
+      Cache-Control:
+      - no-cache, no-store
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - text/html; charset=ISO-8859-1
+    body:
+      encoding: US-ASCII
+      string: <html><head><META http-equiv='refresh' content='1;URL=https://icafe.rccl.com/auth/perfigo_weblogin.jsp?cm=ws32vklm&uri=http%3A%2F%2Fapps.fcc.gov%2Fecfs%2Fproceeding_search%2Fexecute%3FbureauCode%3DWC%26pageNumber%3D1%26pageSize%3D100'></head><body><center>You
+        are being redirected to the network authentication page.<br>If you are not
+        redirected automatically, then please click <a href='https://icafe.rccl.com/auth/perfigo_weblogin.jsp?cm=ws32vklm&uri=http%3A%2F%2Fapps.fcc.gov%2Fecfs%2Fproceeding_search%2Fexecute%3FbureauCode%3DWC%26pageNumber%3D1%26pageSize%3D100'>HERE</a>.</center></body></html>
+    http_version: 
+  recorded_at: Thu, 23 May 2013 15:50:57 GMT
+- request:
+    method: get
+    uri: http://apps.fcc.gov/ecfs/proceeding_search/execute?bureauCode=WC&pageNumber=1&pageSize=100
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Mechanize/2.6.0 Ruby/1.9.3p194 (http://github.com/sparklemotion/mechanize/)
+      Accept-Encoding:
+      - gzip,deflate,identity
+      Accept-Charset:
+      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
+      Accept-Language:
+      - en-us,en;q=0.5
+      Host:
+      - apps.fcc.gov
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - 300
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 23 May 2013 15:48:39 GMT
+      Server:
+      - Apache
+      Cache-Control:
+      - no-cache, no-store
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - text/html; charset=ISO-8859-1
+    body:
+      encoding: US-ASCII
+      string: <html><head><META http-equiv='refresh' content='1;URL=https://icafe.rccl.com/auth/perfigo_weblogin.jsp?cm=ws32vklm&uri=http%3A%2F%2Fapps.fcc.gov%2Fecfs%2Fproceeding_search%2Fexecute%3FbureauCode%3DWC%26pageNumber%3D1%26pageSize%3D100'></head><body><center>You
+        are being redirected to the network authentication page.<br>If you are not
+        redirected automatically, then please click <a href='https://icafe.rccl.com/auth/perfigo_weblogin.jsp?cm=ws32vklm&uri=http%3A%2F%2Fapps.fcc.gov%2Fecfs%2Fproceeding_search%2Fexecute%3FbureauCode%3DWC%26pageNumber%3D1%26pageSize%3D100'>HERE</a>.</center></body></html>
+    http_version: 
+  recorded_at: Thu, 23 May 2013 15:50:57 GMT
+recorded_with: VCR 2.4.0
