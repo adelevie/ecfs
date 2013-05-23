@@ -148,7 +148,9 @@ proceeding = ECFS::Proceeding.find("12-375")
 }
 ```
 
-### Search for filings
+### Filings
+
+#### Search for filings
 
 ```ruby
 filings = ECFS::Filing.query.tap do |q|
