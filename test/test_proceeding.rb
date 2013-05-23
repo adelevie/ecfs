@@ -28,7 +28,7 @@ class TestProceeding < Test::Unit::TestCase
 
       %w[
         total_pages first_result last_result total_results
-        current_page constraints fcc_url
+        current_page constraints fcc_url results
       ].each do |key|
         assert proceedings.keys.include?(key)
         assert proceedings[key]

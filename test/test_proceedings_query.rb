@@ -41,8 +41,6 @@ class TestProceedingsQuery < Test::Unit::TestCase
       ].each do |key|
         assert results.keys.include?(key)
       end
-
-      binding.pry
     end
   end
 
@@ -54,13 +52,15 @@ class TestProceedingsQuery < Test::Unit::TestCase
       proceedings_query.eq("per_page", "100")
       results = proceedings_query.get
       %w[
-        total_pages first_result
-        last_result total_results
-        current_page
+        total_pages first_result last_result total_results
+        current_page results
       ].each do |key|
         assert results.keys.include?(key)
         assert results[key]
       end
+
+      result = results["results"].first
+      assert_equal Fixnum, result["filings_in_last_30_days"].class
     end
   end
 

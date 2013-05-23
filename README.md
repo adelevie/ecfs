@@ -43,10 +43,10 @@ end
 #=>
 # returns an instance of `ECFS::Proceeding::ResultSet`, which is a subclass of `Hash`:
 {
-  "constraints" => {
-    "bureau_code" => "WC", 
-    "page_number" => "1", 
-    "per_page"    => "100"
+  "constraints"   => {
+    "bureau_code"  => "WC", 
+    "page_number"  => "1", 
+    "per_page"     => "100"
   },
   "fcc_url"       => "http://apps.fcc.gov/ecfs/proceeding_search/execute?bureauCode=WC&pageNumber=1&pageSize=100",
   "current_page"  => 1,
@@ -54,34 +54,21 @@ end
   "first_result"  => 1,
   "last_result"   => 100,
   "total_results" => 1504,
-  "results"=> [
-  # each result is an instance of `ECFS::Proceeding`, which is a subclass of `Hash`
+  "results"       => [
     {
       "docket_number" => "10-90",
       "bureau"        => "Wireline Competition Bureau",
-      "subject"       => "In the Matter of Connect America Fund A National Brooadband Plan for Our Future High-Cost\r\nUniversal Service Support. ."
+      "subject"       => "In the Matter of Connect America Fund A National Brooadband Plan for Our Future High-Cost\r\nUniversal Service Support. .",
+      "filings_in_last_30_days" => 182
     },
    {
       "docket_number" => "05-337",
       "bureau"        => "Wireline Competition Bureau",
-      "subject"       => "In the Matter of Federal -State Joint Board on Universal Service High-Cost Universal\r\nService Support.  .. ."
+      "subject"       =>
+      "In the Matter of Federal -State Joint Board on Universal Service High-Cost Universal\r\nService Support.  .. .",
+      "filings_in_last_30_days" => 102
     },
-   {
-      "docket_number" => "13-39",
-      "bureau"        => "Wireline Competition Bureau",
-      "subject"       => "Rural Call Completion"
-    },
-   {
-      "docket_number" => "03-109",
-      "bureau"        => "Wireline Competition Bureau",
-      "subject"       => "In the Matter of Lifeline and Link-Up"
-    },
-   {
-      "docket_number" => "07-135",
-      "bureau"        => "Wireline Competition Bureau",
-      "subject"       => "In the Matter of Establishing Just and Reasonable Rates for Local Exchange Carriers. ."
-    },
-    # ...
+  #...
   ]
 }
 ```
@@ -196,10 +183,6 @@ See `ECFS::FilingsQuery#constraints_dictionary` for a list of query options.
 ### Get filings from proceedings with > 10,000 filings
 
 fcc.gov will only generate spreadsheets of up to ~10,000 rows. This gem should first be able to detect those pages and then use a strategy for dividing the results into chunks and recombining them into a single results array. Such strategies might include recursively dividing the results in half (by date) until all result-sets contain < 10,000 results.
-
-### Show filings in last 30 days for proceedings search
-
-Self explanatory
 
 ### Extract text from filing PDFs
 

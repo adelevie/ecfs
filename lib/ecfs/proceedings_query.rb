@@ -130,13 +130,16 @@ module ECFS
     end
 
     def row_to_hash(row)
-      bureau        = bureau_from_row(row)
-      subject       = subject_from_row(row)
-      docket_number = docket_number_from_row(row)
+      bureau                  = bureau_from_row(row)
+      subject                 = subject_from_row(row)
+      docket_number           = docket_number_from_row(row)
+      filings_in_last_30_days = filings_in_last_30_days_from_row(row)
+
       {
-        "docket_number" => docket_number,
-        "bureau"        => bureau,
-        "subject"       => subject
+        "docket_number"           => docket_number,
+        "bureau"                  => bureau,
+        "subject"                 => subject,
+        "filings_in_last_30_days" => filings_in_last_30_days
       }
     end
 
@@ -150,6 +153,10 @@ module ECFS
 
     def subject_from_row(row)
       row.children[4].children.text.lstrip.rstrip
+    end
+
+    def filings_in_last_30_days_from_row(row)
+      row.children[6].children.first.text.lstrip.rstrip.to_i
     end
 
   end
