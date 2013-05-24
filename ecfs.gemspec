@@ -23,8 +23,8 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "vcr"
   spec.add_development_dependency "webmock", "1.9.0"
 
+  spec.add_dependency "pdf-reader"
   spec.add_dependency "pry"
-
   spec.add_dependency "mechanize"
   spec.add_dependency "spreadsheet"
 end

@@ -186,6 +186,38 @@ end.get
 
 See `ECFS::FilingsQuery#constraints_dictionary` for a list of query options.
 
+#### Working with filing documents
+
+`ECFS::Filing#documents` returns an `Array` of `ECFS::Document` instances.
+
+```ruby
+document = filings.first.documents.first
+pp document
+#=> 
+#<ECFS::Document:0x007fed7c95bf48
+ @filing=
+  {
+    "name_of_filer"  => "Leadership Conference on Civil and Human Rights",
+    "docket_number"  => "12-375",
+    "lawfirm_name"   => "",
+    "date_received"  => "2013-05-14T00:00:00.000Z",
+    "date_posted"    => "2013-05-14T00:00:00.000Z",
+    "exparte"        => true,
+    "type_of_filing" => "NOTICE OF EXPARTE",
+    "document_urls"  => [
+      "http://apps.fcc.gov/ecfs/document/view?id=7022313561",
+      "http://apps.fcc.gov/ecfs/document/view?id=7022313562",
+      "http://apps.fcc.gov/ecfs/document/view?id=7022313563"
+    ]
+  },
+ @pages=[#<ECFS::Document::Page @text=String, @page_number=1>],
+ @url="http://apps.fcc.gov/ecfs/document/view?id=7022313561">
+```
+
+To get the text from a given document, you can use `ECFS::Document#full_text`.
+
+You can also keep track of page numbers with `ECFS::Document#pages`, which returns an `Array` of `ECFS::Document::Page` instances. `ECFS::Document::Page#text` and `ECFS::Document::Page#page_number` are self-explanatory.
+
 ## TODO
 
 ### Get filings from proceedings with > 10,000 filings
