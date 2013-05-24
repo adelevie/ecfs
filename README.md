@@ -39,7 +39,7 @@ proceedings = ECFS::Proceeding.query.tap to |q|
   q.bureau_code = "WC"  # Wireline Competition Bureau
   q.per_page    = "100" # Defaults to 10, maximum is 100
   q.page_number = "1"
-end
+end.get
 #=>
 # returns an instance of `ECFS::Proceeding::ResultSet`, which is a subclass of `Hash`:
 {
