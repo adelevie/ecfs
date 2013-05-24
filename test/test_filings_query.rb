@@ -2,8 +2,6 @@ require "helper"
 require "pp"
 
 class TestFilingsQuery < Test::Unit::TestCase
-
-  p "TestFilingsQuery"
   
   def test_add_constraint
     filings_query = ECFS::FilingsQuery.new
