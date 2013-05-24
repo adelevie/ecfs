@@ -42,6 +42,10 @@ class TestFiling < Test::Unit::TestCase
         assert_equal ECFS::Document::Page, page.class
         assert_equal String, page.text.class
         assert_equal Fixnum, page.page_number.class
+
+        #VCR.use_cassette('test_proceedings_query_test_get_proceeding_info') do
+        #  binding.pry
+        #end
       end
     end
   end

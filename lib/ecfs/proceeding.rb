@@ -16,7 +16,7 @@ module ECFS
     def self.find(docket_number)
       query.tap do |q|
         q.eq("docket_number", docket_number)
-      end.get
+      end.get.merge!({"docket_number" => docket_number})
     end
 
     def fetch_info!

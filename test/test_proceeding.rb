@@ -9,6 +9,7 @@ class TestProceeding < Test::Unit::TestCase
       %w[
         bureau_name subject date_created status
         total_filings filings_in_last_30_days
+        docket_number
       ].each do |key|
         assert proceeding.keys.include?(key)
       end
