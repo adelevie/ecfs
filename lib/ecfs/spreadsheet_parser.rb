@@ -11,45 +11,73 @@ module ECFS
     def initialize(uri = nil, response = nil, body = nil, code = nil)
       super(uri, response, body, code)
       @body = body
-      extract_rows!
-      format_rows!
+      @rows = formatted_rows
     end
 
     private
 
-    def extract_rows!
-      book = Spreadsheet.open(StringIO.new(@body))
-      sheet1 = book.worksheet 0
-      @rows = []
+    def file
+      StringIO.new(@body)
+    end
+
+    def book
+      Spreadsheet.open(file)
+    end
+
+    def sheet
+      book.worksheet(0)
+    end
+
+    def unformatted_rows
+      my_rows = []
       first = false
-      sheet1.each do |row|
-        @rows << row if first
+      sheet.each do |row|
+        my_rows << row if first
         first = true
       end
 
-      @rows
+      my_rows
     end
 
-    def format_rows!
-      @rows.map! do |row|
-        urls = []  
-        indices = (7..row.length-1).to_a
-        indices.each do |i|
-          text = row[i].data.split("id=")[1]
-          urls << "http://apps.fcc.gov/ecfs/document/view?id=#{extract_filing_id(text)}"
-        end
-
-        {
-          "name_of_filer"  => row[1],
-          "docket_number"  => row[0],
-          "lawfirm_name"   => row[2],
-          "date_received"  => format_date(row[3]),
-          "date_posted"    => format_date(row[4]),
-          "exparte"        => format_exparte(row[5]),
-          "type_of_filing" => row[6],
-          "document_urls"  => urls
-        }
+    def formatted_rows
+      unformatted_rows.map do |row|
+        row_to_hash(row)
       end
+    end
+
+    def row_to_hash(row)
+      {
+        "name_of_filer"  => row[1],
+        "docket_number"  => row[0],
+        "lawfirm_name"   => row[2],
+        "date_received"  => format_date(row[3]),
+        "date_posted"    => format_date(row[4]),
+        "exparte"        => format_exparte(row[5]),
+        "type_of_filing" => row[6],
+        "document_urls"  => extract_urls_from_row(row)
+      }
+    end
+
+    def extract_urls_from_row(row)
+      indices = (7..row.length-1).to_a
+      
+      indices.map do |index|
+        extract_url_from_row_and_index(row, index)
+      end
+    end
+
+    def extract_url_from_row_and_index(row, index)
+      text = row[index].data.split("id=")[1]
+      
+      "http://apps.fcc.gov/ecfs/document/view?id=#{extract_filing_id(text)}"
+    end
+
+    def extract_filing_id(txt)
+      re1='(\\d+)'
+      re=(re1)
+      m = Regexp.new(re, Regexp::IGNORECASE)
+
+      m.match(txt)[1]
     end
 
     def format_exparte(my_bool)
@@ -58,15 +86,5 @@ module ECFS
       return nil
     end
 
-    def extract_filing_id(txt)
-      re1='(\\d+)'
-      re=(re1)
-      m = Regexp.new(re, Regexp::IGNORECASE)
-      if m.match(txt)
-        int1 = m.match(txt)[1]
-        return int1
-      end
-    end
-
-  end # end class
-end # end module
+  end
+end
