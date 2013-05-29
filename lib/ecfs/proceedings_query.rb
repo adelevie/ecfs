@@ -51,8 +51,8 @@ module ECFS
         # if docket_number is given along with other constraints, the other constraints will be ignored.
         warn "Constraints other than `docket_number` will be ignored." if @constraints.keys.length > 1
         
-        return scrape_proceedings_page unless @typecast_results
-        results = ECFS::Proceeding.new(scrape_proceedings_page)
+        return scrape_proceeding_page! unless @typecast_results
+        results = ECFS::Proceeding.new(scrape_proceeding_page!)
       else
         return scrape_results_page unless @typecast_results
         results = ECFS::Proceeding::ResultSet.new(scrape_results_page)
@@ -61,38 +61,32 @@ module ECFS
       results
     end
 
+
+    private
+
     def mechanize_page
       Mechanize.new.get(self.url)
     end
 
-    private
+    def scrape_proceeding_page!
+      page = mechanize_page
 
-    def scrape_proceedings_page
-      page = self.mechanize_page
-
-      container = []
-      page.search("div").select do |d| 
+      container = page.search("div").select do |d| 
         d.attributes["class"].nil? == false
       end.select do |d|
         d.attributes["class"].text == "wwgrp"
-      end.each do |node|
-        node.search("span").each do |span|
-          search = span.search("label")
-          pair = []
-          if search.length > 0
-            key = search.first.children.first.text.lstrip.rstrip.split(":")[0].gsub(" ", "_").downcase
-            pair << key
-          else
-            value = span.text.lstrip.rstrip
-            value.gsub!(",", "") if value.is_a?(String)
-            pair << value
-          end
-          container << pair
-        end
+      end.map do |node|
+        search_node(node)
       end
+
+      container_to_hash(container)
+    end
+
+    def container_to_hash(container)
       hash = {}
+      container.flatten!
       container.each_slice(2) do |chunk|
-        hash.merge!({chunk[0][0] => chunk[1][0]})
+        hash.merge!({chunk[0] => chunk[1]})
       end
 
       hash["date_created"] = format_date(hash["date_created"])
@@ -100,27 +94,63 @@ module ECFS
       hash
     end
 
-    def scrape_results_page
-      page = self.mechanize_page
+    def search_node(node)
+      node.search("span").map do |span|
+        search = span.search("label")
+        pair = []
+        if search.length > 0
+          key = search.first.children.first.text.lstrip.rstrip.split(":")[0].gsub(" ", "_").downcase
+          pair << key
+        else
+          value = span.text.lstrip.rstrip
+          value.gsub!(",", "") if value.is_a?(String)
+          pair << value
+        end
+        
+        pair
+      end
+    end
 
-      total_pages = page.link_with(:text => "Last").attributes.first[1].split("pageNumber=")[1].gsub(",","").to_i
-      banner      = page.search("//*[@id='yui-main']/div/div[2]/table/tbody/tr[2]/td/span[1]").text.lstrip.rstrip.split("Modify Search")[0].rstrip.split  
-      first       = banner[1].gsub(",","").to_i
-      last        = banner[3].gsub(",","").to_i
-      total       = banner[5].gsub(",","").to_i
-      table_rows  = page.search("//*[@id='yui-main']/div/div[2]/table/tbody/tr[2]/td/table/tbody").children
-      results     = table_rows.map { |row| row_to_proceeding(row) }
+    def scrape_results_page
+      page   = mechanize_page
+      banner = extract_banner_from_page(page)
 
       {
         "constraints"   => @constraints,
         "fcc_url"       => self.url,
-        "current_page"  => self.constraints["page_number"].gsub(",","").to_i,
-        "total_pages"   => total_pages,
-        "first_result"  => first,
-        "last_result"   => last,
-        "total_results" => total,
-        "results"       => results
+        "current_page"  => current_page,
+        "total_pages"   => extract_total_pages_from_page(page),
+        "first_result"  => extract_from_banner(banner, 1),
+        "last_result"   => extract_from_banner(banner, 3),
+        "total_results" => extract_from_banner(banner, 5),
+        "results"       => extract_proceedings_from_page(page)
       }
+    end
+
+    def current_page
+      self.constraints["page_number"].gsub(",","").to_i
+    end
+
+    def extract_proceedings_from_page(page)
+      extract_table_rows_from_page(page).map do |row|
+        row_to_proceeding(row)
+      end
+    end
+
+    def extract_table_rows_from_page(page)
+      page.search("//*[@id='yui-main']/div/div[2]/table/tbody/tr[2]/td/table/tbody").children
+    end
+
+    def extract_banner_from_page(page)
+      page.search("//*[@id='yui-main']/div/div[2]/table/tbody/tr[2]/td/span[1]").text.lstrip.rstrip.split("Modify Search")[0].rstrip.split  
+    end
+
+    def extract_from_banner(banner, index)
+      banner[index].gsub(",", "").to_i
+    end
+
+    def extract_total_pages_from_page(page)
+      page.link_with(:text => "Last").attributes.first[1].split("pageNumber=")[1].gsub(",","").to_i
     end
 
     def row_to_proceeding(row)
@@ -130,16 +160,11 @@ module ECFS
     end
 
     def row_to_hash(row)
-      bureau                  = bureau_from_row(row)
-      subject                 = subject_from_row(row)
-      docket_number           = docket_number_from_row(row)
-      filings_in_last_30_days = filings_in_last_30_days_from_row(row)
-
       {
-        "docket_number"           => docket_number,
-        "bureau"                  => bureau,
-        "subject"                 => subject,
-        "filings_in_last_30_days" => filings_in_last_30_days
+        "docket_number"           => docket_number_from_row(row),
+        "bureau"                  => bureau_from_row(row),
+        "subject"                 => subject_from_row(row),
+        "filings_in_last_30_days" => filings_in_last_30_days_from_row(row)
       }
     end
 
