@@ -54,14 +54,8 @@ module ECFS
     end
 
     def get
-      rows = download_spreadsheet.rows
-      if @typecast_results
-        return rows.map do |row|
-          row_to_filing(row)
-        end
-      else
-        return rows
-      end
+      download_spreadsheet!
+      @typecast_results ? @rows.map {|row| row_to_filing(row)} : @rows
     end
 
     def row_to_filing(row)
@@ -69,20 +63,18 @@ module ECFS
     end
 
     def mechanize_agent
-      agent = Mechanize.new
-      agent.follow_meta_refresh = true
-      agent.pluggable_parser["application/vnd.ms-excel"] = ECFS::SpreadsheetParser
-
-      agent
+      Mechanize.new.tap do |agent|
+        agent.follow_meta_refresh = true
+        agent.pluggable_parser["application/vnd.ms-excel"] = ECFS::SpreadsheetParser
+      end
     end
 
-    def download_spreadsheet
-      agent = self.mechanize_agent
-      page = agent.get(self.url)
+    def download_spreadsheet!
+      agent = mechanize_agent
       link_text = "\r\n    \t    \t    \tExport to Excel file\r\n    \t        \t"
-      link = page.link_with(:text => link_text)
-      
-      agent.click(link)
+      link = agent.get(url).link_with(:text => link_text)
+
+      @rows = agent.click(link).rows
     end
   end
 end

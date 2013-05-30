@@ -50,15 +50,15 @@ module ECFS
         "name_of_filer"  => row[1],
         "docket_number"  => row[0],
         "lawfirm_name"   => row[2],
-        "date_received"  => format_date(row[3]),
-        "date_posted"    => format_date(row[4]),
-        "exparte"        => format_exparte(row[5]),
+        "date_received"  => format_iso_date(row[3]),
+        "date_posted"    => format_iso_date(row[4]),
+        "exparte"        => bool_from_exparte(row[5]),
         "type_of_filing" => row[6],
-        "document_urls"  => extract_urls_from_row(row)
+        "document_urls"  => urls_from_row(row)
       }
     end
 
-    def extract_urls_from_row(row)
+    def urls_from_row(row)
       indices = (7..row.length-1).to_a
       
       indices.map do |index|
@@ -80,10 +80,8 @@ module ECFS
       m.match(txt)[1]
     end
 
-    def format_exparte(my_bool)
-      return true  if my_bool == "Y"
-      return false if my_bool == "N"
-      return nil
+    def bool_from_exparte(y_or_n)
+      {"Y" => true, "N" => false}[y_or_n]
     end
 
   end

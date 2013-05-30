@@ -65,31 +65,26 @@ module ECFS
     private
 
     def mechanize_page
-      Mechanize.new.get(self.url)
+      Mechanize.new.get(url)
     end
 
     def scrape_proceeding_page!
-      page = mechanize_page
-
-      container = page.search("div").select do |d| 
-        d.attributes["class"].nil? == false
-      end.select do |d|
-        d.attributes["class"].text == "wwgrp"
-      end.map do |node|
-        search_node(node)
+      container_to_hash do
+        mechanize_page.search("div").select do |div| 
+          div.attributes["class"].nil? == false
+        end.select do |div|
+          div.attributes["class"].text == "wwgrp"
+        end.map do |node|
+          search_node(node)
+        end
       end
-
-      container_to_hash(container)
     end
 
-    def container_to_hash(container)
+    def container_to_hash(&block)
       hash = {}
-      container.flatten!
-      container.each_slice(2) do |chunk|
-        hash.merge!({chunk[0] => chunk[1]})
+      block.call.flatten!.each_slice(2) do |chunk|
+        hash[chunk[0]] = chunk[1]
       end
-
-      hash["date_created"] = format_date(hash["date_created"])
 
       hash
     end
@@ -97,18 +92,34 @@ module ECFS
     def search_node(node)
       node.search("span").map do |span|
         search = span.search("label")
-        pair = []
-        if search.length > 0
-          key = search.first.children.first.text.lstrip.rstrip.split(":")[0].gsub(" ", "_").downcase
-          pair << key
-        else
-          value = span.text.lstrip.rstrip
-          value.gsub!(",", "") if value.is_a?(String)
-          pair << value
-        end
-        
-        pair
+        key_or_value_from_search_and_span(search, span)
       end
+    end
+
+    def key_or_value_from_search_and_span(search, span)
+      search.length > 0 ? key_from_search(search) : value_from_span(span)
+    end
+
+    def key_from_search(search)
+      format_key_text(search.first.children.first.text)
+    end
+
+    def format_key_text(key_text)
+      key_text.lstrip!.rstrip!
+      key_text = key_text.split(":")[0]
+      key_text.gsub!(" ", "_")
+      key_text.downcase!
+    end
+
+    def value_from_span(span)
+      value = text_from_span(span)
+      value.gsub!(",", "") if value.is_a?(String)
+
+      value
+    end
+
+    def text_from_span(span)
+      span.text.lstrip.rstrip
     end
 
     def scrape_results_page
@@ -117,13 +128,13 @@ module ECFS
 
       {
         "constraints"   => @constraints,
-        "fcc_url"       => self.url,
+        "fcc_url"       => url,
         "current_page"  => current_page,
-        "total_pages"   => extract_total_pages_from_page(page),
-        "first_result"  => extract_from_banner(banner, 1),
-        "last_result"   => extract_from_banner(banner, 3),
-        "total_results" => extract_from_banner(banner, 5),
-        "results"       => extract_proceedings_from_page(page)
+        "total_pages"   => total_pages_from_page(page),
+        "first_result"  => first_from_banner(banner),
+        "last_result"   => last_from_banner(banner),
+        "total_results" => total_from_banner(banner),
+        "results"       => proceedings_from_page(page)
       }
     end
 
@@ -131,32 +142,47 @@ module ECFS
       self.constraints["page_number"].gsub(",","").to_i
     end
 
-    def extract_proceedings_from_page(page)
+    def proceedings_from_page(page)
       extract_table_rows_from_page(page).map do |row|
         row_to_proceeding(row)
       end
     end
 
     def extract_table_rows_from_page(page)
-      page.search("//*[@id='yui-main']/div/div[2]/table/tbody/tr[2]/td/table/tbody").children
+      xpath = "//*[@id='yui-main']/div/div[2]/table/tbody/tr[2]/td/table/tbody"
+      page.search(xpath).children
+    end
+
+    def first_from_banner(banner)
+      extract_from_banner(banner, 1)
+    end
+
+    def last_from_banner(banner)
+      extract_from_banner(banner, 3)
+    end
+
+    def total_from_banner(banner)
+      extract_from_banner(banner, 5)
     end
 
     def extract_banner_from_page(page)
-      page.search("//*[@id='yui-main']/div/div[2]/table/tbody/tr[2]/td/span[1]").text.lstrip.rstrip.split("Modify Search")[0].rstrip.split  
+      xpath = "//*[@id='yui-main']/div/div[2]/table/tbody/tr[2]/td/span[1]"
+      page.search(xpath).text.tap do |t|
+        t.lstrip!
+        t.rstrip!
+      end.split("Modify Search")[0].rstrip.split  
     end
 
     def extract_from_banner(banner, index)
       banner[index].gsub(",", "").to_i
     end
 
-    def extract_total_pages_from_page(page)
+    def total_pages_from_page(page)
       page.link_with(:text => "Last").attributes.first[1].split("pageNumber=")[1].gsub(",","").to_i
     end
 
     def row_to_proceeding(row)
-      hash = row_to_hash(row)
-
-      ECFS::Proceeding.new(hash)
+      ECFS::Proceeding.new(row_to_hash(row))
     end
 
     def row_to_hash(row)
@@ -183,6 +209,7 @@ module ECFS
     def filings_in_last_30_days_from_row(row)
       row.children[6].children.first.text.lstrip.rstrip.to_i
     end
+    #####
 
   end
 end
