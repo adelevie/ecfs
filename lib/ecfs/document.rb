@@ -6,6 +6,7 @@ module ECFS
   class Document
     attr_reader :pages
     attr_reader :filing
+    attr_reader :url
 
     def initialize(params={})
       @filing = params["filing"]
