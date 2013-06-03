@@ -12,7 +12,7 @@ module ECFS
         "bureau_code"    => "bureauCode",
         "subject"        => "subject",
         "bureau_id"      => "bureauIdentificationNumber",
-        "applicant"      => "application",
+        "applicant"      => "applicant",
         "filed_by"       => "filedBy",
         "recent_filings" => "__checkbox_recentFilingsRequired",
         "open_status"    => "openStatus",
