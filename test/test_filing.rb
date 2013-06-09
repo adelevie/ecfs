@@ -4,7 +4,7 @@ require "pp"
 class TestFiling < Test::Unit::TestCase
 
   def test_search
-    VCR.use_cassette('test_filings_query_test_get') do
+    VCR.use_cassette('main_cassette') do
       filings = ECFS::Filing.query.tap do |q|
         q.docket_number = "12-375" 
       end.get
@@ -29,24 +29,22 @@ class TestFiling < Test::Unit::TestCase
 
       assert_equal nil, filing.documents
 
-      VCR.use_cassette('test_document') do
-        filing.fetch_documents!
-        documents = filing.documents
-        document = documents.first
+      filing.fetch_documents!
+      documents = filing.documents
+      document = documents.first
 
-        assert_equal Array, documents.class
-        assert_equal ECFS::Document, document.class
-        assert_equal String, document.full_text.class
-        assert_equal Array, document.pages.class
-        page = document.pages.first
-        assert_equal ECFS::Document::Page, page.class
-        assert_equal String, page.text.class
-        assert_equal Fixnum, page.page_number.class
+      assert_equal Array, documents.class
+      assert_equal ECFS::Document, document.class
+      assert_equal String, document.full_text.class
+      assert_equal Array, document.pages.class
+      page = document.pages.first
+      assert_equal ECFS::Document::Page, page.class
+      assert_equal String, page.text.class
+      assert_equal Fixnum, page.page_number.class
 
-        #VCR.use_cassette('test_proceedings_query_test_get_proceeding_info') do
-        #  binding.pry
-        #end
-      end
+      #VCR.use_cassette('test_proceedings_query_test_get_proceeding_info') do
+      #  binding.pry
+      #end
     end
   end
 

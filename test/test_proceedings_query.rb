@@ -31,7 +31,7 @@ class TestProceedingsQuery < Test::Unit::TestCase
   end
 
   def test_get_proceeding_info
-    VCR.use_cassette('test_proceedings_query_test_get_proceeding_info') do
+    VCR.use_cassette('main_cassette') do
       proceedings_query = ECFS::ProceedingsQuery.new
       proceedings_query.eq("docket_number", "12-375")
       results = proceedings_query.get
@@ -45,7 +45,7 @@ class TestProceedingsQuery < Test::Unit::TestCase
   end
 
   def test_search_proceedings
-    VCR.use_cassette('test_get_proceeding_search_results') do
+    VCR.use_cassette('main_cassette') do
       proceedings_query = ECFS::ProceedingsQuery.new
       proceedings_query.eq("bureau_code", "WC")
       proceedings_query.eq("page_number", "1")

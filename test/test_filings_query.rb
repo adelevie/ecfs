@@ -31,7 +31,7 @@ class TestFilingsQuery < Test::Unit::TestCase
   end
 
   def test_get
-    VCR.use_cassette('test_filings_query_test_get') do
+    VCR.use_cassette('main_cassette') do
       filings_query = ECFS::FilingsQuery.new
       filings_query.eq("docket_number", "12-375")
       rows = filings_query.get
