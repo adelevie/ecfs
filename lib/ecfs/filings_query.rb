@@ -2,6 +2,7 @@ require "pp"
 require "mechanize"
 require "spreadsheet"
 require "ecfs/spreadsheet_parser"
+require "ecfs/too_many_filings_error"
 require "pry"
 
 module ECFS
@@ -31,7 +32,7 @@ module ECFS
         "bureau_id_number"            => "bureauIdentificationNumber",
         "report_number"               => "reportNumber",
         "submission_type_id"          => "submissionTypeId",
-        "exparte"                     => "__checkbox_exParte"
+        "exparte"                     => "__checkbox_exParte",
       }
     end
 
@@ -69,12 +70,31 @@ module ECFS
       end
     end
 
+    def page_contains_ecfs_error_message?(page)
+      xpath = "//*[@id='yui-main']/div/table/tbody/tr[2]/td/span[1]"
+      text = page.search(xpath).text.gsub(/\s+/, " ").strip
+      if text == "Retrieved the 10,000 most recent records. To view older records narrow your search criteria."
+        result = true
+      else
+        result = false
+      end
+
+      result
+    end
+
     def download_spreadsheet!
       agent = mechanize_agent
-      link_text = "\r\n    \t    \t    \tExport to Excel file\r\n    \t        \t"
-      link = agent.get(url).link_with(:text => link_text)
+      page = agent.get(url)
 
-      @rows = agent.click(link).rows
+
+      if page_contains_ecfs_error_message?(page)
+        raise ECFS::TooManyFilingsError.new
+      else
+        link_text = "\r\n    \t    \t    \tExport to Excel file\r\n    \t        \t"
+        link = page.link_with(:text => link_text)
+
+        @rows = agent.click(link).rows
+      end
     end
   end
 end
