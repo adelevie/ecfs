@@ -86,7 +86,6 @@ module ECFS
       agent = mechanize_agent
       page = agent.get(url)
 
-
       if page_contains_ecfs_error_message?(page)
         raise ECFS::TooManyFilingsError.new
       else

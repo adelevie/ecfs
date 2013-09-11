@@ -1,7 +1,7 @@
 require "helper"
 require "pp"
 
-class TestProceeding < Test::Unit::TestCase
+class TestProceeding < MiniTest::Unit::TestCase
   
   def test_find
     VCR.use_cassette('main_cassette') do

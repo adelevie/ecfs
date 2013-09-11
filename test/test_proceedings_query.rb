@@ -1,7 +1,7 @@
 require "helper"
 require "pp"
 
-class TestProceedingsQuery < Test::Unit::TestCase
+class TestProceedingsQuery < MiniTest::Unit::TestCase
 
   def test_add_constraint
     proceedings_query = ECFS::ProceedingsQuery.new

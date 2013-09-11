@@ -22,6 +22,9 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake"
   spec.add_development_dependency "vcr"
   spec.add_development_dependency "webmock", "1.9.0"
+  spec.add_development_dependency "minitest", "~> 4.7.3"
+  spec.add_development_dependency "pry-rescue"
+
 
   spec.add_dependency "pdf-reader"
   spec.add_dependency "pry"

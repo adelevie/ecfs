@@ -2,6 +2,12 @@ require 'rubygems'
 require 'bundler'
 require 'vcr'
 
+require 'minitest/unit'
+require 'minitest/autorun'
+require 'minitest/pride'
+
+require 'pry-rescue/minitest'
+
 VCR.configure do |c|
   c.cassette_library_dir = 'fixtures/vcr_cassettes'
   c.hook_into :webmock
