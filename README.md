@@ -218,11 +218,21 @@ To get the text from a given document, you can use `ECFS::Document#full_text`.
 
 You can also keep track of page numbers with `ECFS::Document#pages`, which returns an `Array` of `ECFS::Document::Page` instances. `ECFS::Document::Page#text` and `ECFS::Document::Page#page_number` are self-explanatory.
 
-## TODO
+### Bulk Queries
 
-### Get filings from proceedings with > 10,000 filings
+This has been a problem that's been bothering me for a while: ECFS filing pages won't create spreadsheets when a query returns more than 10,000 filings. A simple solution is to add date constraints to the query until you have a set of queries where each result set contains 10,000 or fewer filings.
 
-fcc.gov will only generate spreadsheets of up to ~10,000 rows. This gem should first be able to detect those pages and then use a strategy for dividing the results into chunks and recombining them into a single results array. Such strategies might include recursively dividing the results in half (by date) until all result-sets contain < 10,000 results. Then just flatten the array.
+I implemented a convenience method that make these queries for you:
+
+```ruby
+docket_number = "11-109"
+query = ECFS::BulkFilingsQuery.new(docket_number)
+filings = query.get
+```
+
+In the background, `ECFS::BulkFilingsQuery#get` will perform as many queries as necessary to retrieve all the filings for the given proceeding.
+
+
 
 ## Contact
 
