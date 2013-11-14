@@ -1,5 +1,3 @@
-# Currently inoperable during government shutdown.
-<hr />
 # ECFS
 
 ECFS helps you download and parse filings from the FCC's Electronic Comment Filing System.
