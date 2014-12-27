@@ -234,6 +234,28 @@ filings = query.get
 
 In the background, `ECFS::BulkFilingsQuery#get` will perform as many queries as necessary to retrieve all the filings for the given proceeding.
 
+### SOLR Search
+
+The FCC has a [SOLR search page](http://apps.fcc.gov/ecfs/solr/search) which is not limited to 10,000 results. The bad news is that each page of results is maxed out at twenty. So this is all scrapable, but every 20 results requires a new HTTP request. Nevertheless, here's how you can scrape it:
+
+```ruby
+filings = ECFS::SolrScrapeQuery.new.tap do |q|
+  q.docket_number = '12-83'
+end.get
+
+p filings.first
+#=> 
+
+{
+  'proceeeding'=>"12-83",
+  'name_of_filer'=>"Media Bureau Policy Division",
+  'type_of_filing'=>"PUBLIC NOTICE",
+  'url'=>"http://apps.fcc.gov/ecfs/comment/view?id=6017027798",
+  'date_recieved'=>"03/30/2012",
+  'pages'=>10
+}
+```
+
 ### Daily Releases
 
 This feature parses these types of pages: http://transition.fcc.gov/Daily_Releases/Daily_Business/2014/db0917/.
