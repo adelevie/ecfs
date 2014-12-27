@@ -28,7 +28,7 @@ module ECFS
       href_val = link.attributes["href"].value
       {
         title: href_val,
-        url: @query_url + "/" + href_val
+        url: @query_url + href_val
       }
     end
   end
