@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*'
+      - "*/*"
       User-Agent:
       - Mechanize/2.7.1 Ruby/1.9.3p194 (http://github.com/sparklemotion/mechanize/)
       Accept-Encoding:
@@ -26,38 +26,27 @@ http_interactions:
   response:
     status:
       code: 200
-      message: !binary |-
-        T0s=
+      message: OK
     headers:
-      !binary "U2VydmVy":
-      - !binary |-
-        U3VuLUphdmEtU3lzdGVtLVdlYi1TZXJ2ZXIvNy4w
-      !binary "RGF0ZQ==":
-      - !binary |-
-        U3VuLCAwOSBKdW4gMjAxMyAxNDo1Njo1NCBHTVQ=
-      !binary "Q29udGVudC1UeXBl":
-      - !binary |-
-        dGV4dC9odG1sOyBjaGFyc2V0PVVURi04
-      !binary "U2V0LUNvb2tpZQ==":
-      - !binary |-
-        SlNFU1NJT05JRD00cGh0UjBaWXBadjRRcmczUDd2NjAyUVZIMjdUQkNsTGxu
-        SHBmMnlybnA0bjhMdkdXR0xNIS0xMjcyNzU2OTc1ITEyOTE4MDY1MzQ7IHBh
-        dGg9LzsgSHR0cE9ubHk=
-      !binary "Q29udGVudC1MYW5ndWFnZQ==":
-      - !binary |-
-        ZW4tVVM=
-      !binary "WC1Qb3dlcmVkLUJ5":
-      - !binary |-
-        U2VydmxldC8yLjUgSlNQLzIuMQ==
-      !binary "Q2FjaGUtQ29udHJvbA==":
-      - !binary |-
-        cHJpdmF0ZQ==
-      !binary "Q29udGVudC1FbmNvZGluZw==":
-      - !binary |-
-        Z3ppcA==
-      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
-      - !binary |-
-        Y2h1bmtlZA==
+      Server:
+      - Sun-Java-System-Web-Server/7.0
+      Date:
+      - Sun, 09 Jun 2013 14:56:54 GMT
+      Content-Type:
+      - text/html; charset=UTF-8
+      Set-Cookie:
+      - JSESSIONID=4phtR0ZYpZv4Qrg3P7v602QVH27TBClLlnHpf2yrnp4n8LvGWGLM!-1272756975!1291806534;
+        path=/; HttpOnly
+      Content-Language:
+      - en-US
+      X-Powered-By:
+      - Servlet/2.5 JSP/2.1
+      Cache-Control:
+      - private
+      Content-Encoding:
+      - gzip
+      Transfer-Encoding:
+      - chunked
     body:
       encoding: ASCII-8BIT
       string: !binary |-
@@ -302,7 +291,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*'
+      - "*/*"
       User-Agent:
       - Mechanize/2.7.1 Ruby/1.9.3p194 (http://github.com/sparklemotion/mechanize/)
       Accept-Encoding:
@@ -312,9 +301,7 @@ http_interactions:
       Accept-Language:
       - en-us,en;q=0.5
       Cookie:
-      - !binary |-
-        SlNFU1NJT05JRD00cGh0UjBaWXBadjRRcmczUDd2NjAyUVZIMjdUQkNsTGxu
-        SHBmMnlybnA0bjhMdkdXR0xNIS0xMjcyNzU2OTc1ITEyOTE4MDY1MzQ=
+      - JSESSIONID=4phtR0ZYpZv4Qrg3P7v602QVH27TBClLlnHpf2yrnp4n8LvGWGLM!-1272756975!1291806534
       Host:
       - apps.fcc.gov
       Referer:
@@ -324,7 +311,7 @@ http_interactions:
         password: 
         host: apps.fcc.gov
         port: 80
-        path: /ecfs/comment_search/execute
+        path: "/ecfs/comment_search/execute"
         query: proceeding=12-375
         opaque: 
         registry: 
@@ -337,33 +324,24 @@ http_interactions:
   response:
     status:
       code: 200
-      message: !binary |-
-        T0s=
+      message: OK
     headers:
-      !binary "U2VydmVy":
-      - !binary |-
-        U3VuLUphdmEtU3lzdGVtLVdlYi1TZXJ2ZXIvNy4w
-      !binary "RGF0ZQ==":
-      - !binary |-
-        U3VuLCAwOSBKdW4gMjAxMyAxNTowNDowMCBHTVQ=
-      !binary "Q29udGVudC1UeXBl":
-      - !binary |-
-        dGV4dC9odG1sO2NoYXJzZXQ9VVRGLTg=
-      !binary "Q29udGVudC1MYW5ndWFnZQ==":
-      - !binary |-
-        ZW4tVVM=
-      !binary "WC1Qb3dlcmVkLUJ5":
-      - !binary |-
-        U2VydmxldC8yLjUgSlNQLzIuMQ==
-      !binary "Q2FjaGUtQ29udHJvbA==":
-      - !binary |-
-        cHJpdmF0ZQ==
-      !binary "Q29udGVudC1FbmNvZGluZw==":
-      - !binary |-
-        Z3ppcA==
-      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
-      - !binary |-
-        Y2h1bmtlZA==
+      Server:
+      - Sun-Java-System-Web-Server/7.0
+      Date:
+      - Sun, 09 Jun 2013 15:04:00 GMT
+      Content-Type:
+      - text/html;charset=UTF-8
+      Content-Language:
+      - en-US
+      X-Powered-By:
+      - Servlet/2.5 JSP/2.1
+      Cache-Control:
+      - private
+      Content-Encoding:
+      - gzip
+      Transfer-Encoding:
+      - chunked
     body:
       encoding: ASCII-8BIT
       string: !binary |-
@@ -493,7 +471,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*'
+      - "*/*"
       User-Agent:
       - Mechanize/2.7.1 Ruby/1.9.3p194 (http://github.com/sparklemotion/mechanize/)
       Accept-Encoding:
@@ -503,9 +481,7 @@ http_interactions:
       Accept-Language:
       - en-us,en;q=0.5
       Cookie:
-      - !binary |-
-        SlNFU1NJT05JRD00cGh0UjBaWXBadjRRcmczUDd2NjAyUVZIMjdUQkNsTGxu
-        SHBmMnlybnA0bjhMdkdXR0xNIS0xMjcyNzU2OTc1ITEyOTE4MDY1MzQ=
+      - JSESSIONID=4phtR0ZYpZv4Qrg3P7v602QVH27TBClLlnHpf2yrnp4n8LvGWGLM!-1272756975!1291806534
       Host:
       - apps.fcc.gov
       Connection:
@@ -515,30 +491,22 @@ http_interactions:
   response:
     status:
       code: 200
-      message: !binary |-
-        T0s=
+      message: OK
     headers:
-      !binary "U2VydmVy":
-      - !binary |-
-        U3VuLUphdmEtU3lzdGVtLVdlYi1TZXJ2ZXIvNy4w
-      !binary "RGF0ZQ==":
-      - !binary |-
-        U3VuLCAwOSBKdW4gMjAxMyAxNTowNDowNSBHTVQ=
-      !binary "Q29udGVudC1MZW5ndGg=":
-      - !binary |-
-        OTMxODQ=
-      !binary "Q29udGVudC1UeXBl":
-      - !binary |-
-        YXBwbGljYXRpb24vdm5kLm1zLWV4Y2Vs
-      !binary "Q29udGVudC1EaXNwb3NpdGlvbg==":
-      - !binary |-
-        YXR0YWNobWVudDtmaWxlbmFtZT0iRXhjZWwgRG93bmxvYWQueGxzIg==
-      !binary "Q29udGVudC1MYW5ndWFnZQ==":
-      - !binary |-
-        ZW4tVVM=
-      !binary "WC1Qb3dlcmVkLUJ5":
-      - !binary |-
-        U2VydmxldC8yLjUgSlNQLzIuMQ==
+      Server:
+      - Sun-Java-System-Web-Server/7.0
+      Date:
+      - Sun, 09 Jun 2013 15:04:05 GMT
+      Content-Length:
+      - '93184'
+      Content-Type:
+      - application/vnd.ms-excel
+      Content-Disposition:
+      - attachment;filename="Excel Download.xls"
+      Content-Language:
+      - en-US
+      X-Powered-By:
+      - Servlet/2.5 JSP/2.1
     body:
       encoding: ASCII-8BIT
       string: !binary |-
@@ -2623,45 +2591,33 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*'
+      - "*/*"
       User-Agent:
       - Ruby
   response:
     status:
       code: 200
-      message: !binary |-
-        T0s=
+      message: OK
     headers:
-      !binary "U2VydmVy":
-      - !binary |-
-        U3VuLUphdmEtU3lzdGVtLVdlYi1TZXJ2ZXIvNy4w
-      !binary "RGF0ZQ==":
-      - !binary |-
-        U3VuLCAwOSBKdW4gMjAxMyAxNDo1NzowNiBHTVQ=
-      !binary "Q2FjaGUtQ29udHJvbA==":
-      - !binary |-
-        bWF4LWFnZT02MA==
-      !binary "Q29udGVudC1MZW5ndGg=":
-      - !binary |-
-        OTk1OA==
-      !binary "Q29udGVudC1UeXBl":
-      - !binary |-
-        YXBwbGljYXRpb24vcGRm
-      !binary "Q29udGVudC1EaXNwb3NpdGlvbg==":
-      - !binary |-
-        aW5saW5lOyBmaWxlbmFtZT0iMTItMzc1IDA2LTA2LTIwMTMgV2lyZWxpbmUg
-        Q29tcGV0aXRpb24gQnVyZWF1IDcwMjI0MjE5NzkucGRmIg==
-      !binary "U2V0LUNvb2tpZQ==":
-      - !binary |-
-        SlNFU1NJT05JRD0wdjhRUjBaR2JjN1hNOWgzWHAyVHNHNlRYMUh6NTRUWkRw
-        eVF2WXhwbnYwQkc0ODZZTkxyIS0xMjcyNzU2OTc1ITEyOTE4MDY1MzQ7IHBh
-        dGg9LzsgSHR0cE9ubHk=
-      !binary "Q29udGVudC1MYW5ndWFnZQ==":
-      - !binary |-
-        ZW4tVVM=
-      !binary "WC1Qb3dlcmVkLUJ5":
-      - !binary |-
-        U2VydmxldC8yLjUgSlNQLzIuMQ==
+      Server:
+      - Sun-Java-System-Web-Server/7.0
+      Date:
+      - Sun, 09 Jun 2013 14:57:06 GMT
+      Cache-Control:
+      - max-age=60
+      Content-Length:
+      - '9958'
+      Content-Type:
+      - application/pdf
+      Content-Disposition:
+      - inline; filename="12-375 06-06-2013 Wireline Competition Bureau 7022421979.pdf"
+      Set-Cookie:
+      - JSESSIONID=0v8QR0ZGbc7XM9h3Xp2TsG6TX1Hz54TZDpyQvYxpnv0BG486YNLr!-1272756975!1291806534;
+        path=/; HttpOnly
+      Content-Language:
+      - en-US
+      X-Powered-By:
+      - Servlet/2.5 JSP/2.1
     body:
       encoding: ASCII-8BIT
       string: !binary |-
@@ -2897,7 +2853,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*'
+      - "*/*"
       User-Agent:
       - Mechanize/2.7.1 Ruby/1.9.3p194 (http://github.com/sparklemotion/mechanize/)
       Accept-Encoding:
@@ -2934,9 +2890,8 @@ http_interactions:
       - chunked
     body:
       encoding: US-ASCII
-      string: ! "<html><head><title>302 Moved Temporarily</title></head>\r\n<body
-        bgcolor=\"#FFFFFF\">\r\n<p>This document you requested has moved temporarily.</p>\r\n<p>It's
-        now at <a href=\"http://apps.fcc.gov/ecfs/proceeding/view&#59;jsessionid=24LPR0ZGvb26Qwkn73jXPbvkm4WS2tBTjygfDvtKHrJMg6scVj1S!-1272756975!1291806534?z=47786&amp;name=12-375\">http://apps.fcc.gov/ecfs/proceeding/view&#59;jsessionid=24LPR0ZGvb26Qwkn73jXPbvkm4WS2tBTjygfDvtKHrJMg6scVj1S!-1272756975!1291806534?z=47786&amp;name=12-375</a>.</p>\r\n</body></html>\r\n"
+      string: "<html><head><title>302 Moved Temporarily</title></head>\r\n<body bgcolor=\"#FFFFFF\">\r\n<p>This
+        document you requested has moved temporarily.</p>\r\n<p>It's now at <a href=\"http://apps.fcc.gov/ecfs/proceeding/view&#59;jsessionid=24LPR0ZGvb26Qwkn73jXPbvkm4WS2tBTjygfDvtKHrJMg6scVj1S!-1272756975!1291806534?z=47786&amp;name=12-375\">http://apps.fcc.gov/ecfs/proceeding/view&#59;jsessionid=24LPR0ZGvb26Qwkn73jXPbvkm4WS2tBTjygfDvtKHrJMg6scVj1S!-1272756975!1291806534?z=47786&amp;name=12-375</a>.</p>\r\n</body></html>\r\n"
     http_version: 
   recorded_at: Sun, 09 Jun 2013 15:06:21 GMT
 - request:
@@ -2947,7 +2902,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*'
+      - "*/*"
       User-Agent:
       - Mechanize/2.7.1 Ruby/1.9.3p194 (http://github.com/sparklemotion/mechanize/)
       Accept-Encoding:
@@ -2967,33 +2922,24 @@ http_interactions:
   response:
     status:
       code: 200
-      message: !binary |-
-        T0s=
+      message: OK
     headers:
-      !binary "U2VydmVy":
-      - !binary |-
-        U3VuLUphdmEtU3lzdGVtLVdlYi1TZXJ2ZXIvNy4w
-      !binary "RGF0ZQ==":
-      - !binary |-
-        U3VuLCAwOSBKdW4gMjAxMyAxNTowNjoxNiBHTVQ=
-      !binary "Q29udGVudC1UeXBl":
-      - !binary |-
-        dGV4dC9odG1sO2NoYXJzZXQ9VVRGLTg=
-      !binary "Q29udGVudC1MYW5ndWFnZQ==":
-      - !binary |-
-        ZW4tVVM=
-      !binary "WC1Qb3dlcmVkLUJ5":
-      - !binary |-
-        U2VydmxldC8yLjUgSlNQLzIuMQ==
-      !binary "Q2FjaGUtQ29udHJvbA==":
-      - !binary |-
-        cHJpdmF0ZQ==
-      !binary "Q29udGVudC1FbmNvZGluZw==":
-      - !binary |-
-        Z3ppcA==
-      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
-      - !binary |-
-        Y2h1bmtlZA==
+      Server:
+      - Sun-Java-System-Web-Server/7.0
+      Date:
+      - Sun, 09 Jun 2013 15:06:16 GMT
+      Content-Type:
+      - text/html;charset=UTF-8
+      Content-Language:
+      - en-US
+      X-Powered-By:
+      - Servlet/2.5 JSP/2.1
+      Cache-Control:
+      - private
+      Content-Encoding:
+      - gzip
+      Transfer-Encoding:
+      - chunked
     body:
       encoding: ASCII-8BIT
       string: !binary |-
@@ -3197,7 +3143,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*'
+      - "*/*"
       User-Agent:
       - Mechanize/2.7.1 Ruby/1.9.3p194 (http://github.com/sparklemotion/mechanize/)
       Accept-Encoding:
@@ -3215,38 +3161,27 @@ http_interactions:
   response:
     status:
       code: 200
-      message: !binary |-
-        T0s=
+      message: OK
     headers:
-      !binary "U2VydmVy":
-      - !binary |-
-        U3VuLUphdmEtU3lzdGVtLVdlYi1TZXJ2ZXIvNy4w
-      !binary "RGF0ZQ==":
-      - !binary |-
-        U3VuLCAwOSBKdW4gMjAxMyAxNDo1OToxOCBHTVQ=
-      !binary "Q29udGVudC1UeXBl":
-      - !binary |-
-        dGV4dC9odG1sOyBjaGFyc2V0PVVURi04
-      !binary "U2V0LUNvb2tpZQ==":
-      - !binary |-
-        SlNFU1NJT05JRD13MWpKUjBaSFQyVFFiUW1weTRuWFg1NllwcHBLYm5GRDJE
-        RzQ4bkJybkRoZ1B5WHRTSHF0ITEyOTE4MDY1MzQhLTEyNzI3NTY5NzU7IHBh
-        dGg9LzsgSHR0cE9ubHk=
-      !binary "Q29udGVudC1MYW5ndWFnZQ==":
-      - !binary |-
-        ZW4tVVM=
-      !binary "WC1Qb3dlcmVkLUJ5":
-      - !binary |-
-        U2VydmxldC8yLjUgSlNQLzIuMQ==
-      !binary "Q2FjaGUtQ29udHJvbA==":
-      - !binary |-
-        cHJpdmF0ZQ==
-      !binary "Q29udGVudC1FbmNvZGluZw==":
-      - !binary |-
-        Z3ppcA==
-      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
-      - !binary |-
-        Y2h1bmtlZA==
+      Server:
+      - Sun-Java-System-Web-Server/7.0
+      Date:
+      - Sun, 09 Jun 2013 14:59:18 GMT
+      Content-Type:
+      - text/html; charset=UTF-8
+      Set-Cookie:
+      - JSESSIONID=w1jJR0ZHT2TQbQmpy4nXX56YpppKbnFD2DG48nBrnDhgPyXtSHqt!1291806534!-1272756975;
+        path=/; HttpOnly
+      Content-Language:
+      - en-US
+      X-Powered-By:
+      - Servlet/2.5 JSP/2.1
+      Cache-Control:
+      - private
+      Content-Encoding:
+      - gzip
+      Transfer-Encoding:
+      - chunked
     body:
       encoding: ASCII-8BIT
       string: !binary |-
@@ -3756,7 +3691,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*'
+      - "*/*"
       User-Agent:
       - Mechanize/2.7.1 Ruby/1.9.3p194 (http://github.com/sparklemotion/mechanize/)
       Accept-Encoding:
@@ -3774,38 +3709,27 @@ http_interactions:
   response:
     status:
       code: 200
-      message: !binary |-
-        T0s=
+      message: OK
     headers:
-      !binary "U2VydmVy":
-      - !binary |-
-        U3VuLUphdmEtU3lzdGVtLVdlYi1TZXJ2ZXIvNy4w
-      !binary "RGF0ZQ==":
-      - !binary |-
-        U3VuLCAwOSBKdW4gMjAxMyAxNDo1OToyMCBHTVQ=
-      !binary "Q29udGVudC1UeXBl":
-      - !binary |-
-        dGV4dC9odG1sOyBjaGFyc2V0PVVURi04
-      !binary "U2V0LUNvb2tpZQ==":
-      - !binary |-
-        SlNFU1NJT05JRD1kVGxMUjBaSjVKeUYxVjNUcDZTQmJwdm1ubmhCN3F3V3pM
-        MWhueVRmbENrMmh2ZDJDUWJNIS0xMjcyNzU2OTc1ITEyOTE4MDY1MzQ7IHBh
-        dGg9LzsgSHR0cE9ubHk=
-      !binary "Q29udGVudC1MYW5ndWFnZQ==":
-      - !binary |-
-        ZW4tVVM=
-      !binary "WC1Qb3dlcmVkLUJ5":
-      - !binary |-
-        U2VydmxldC8yLjUgSlNQLzIuMQ==
-      !binary "Q2FjaGUtQ29udHJvbA==":
-      - !binary |-
-        cHJpdmF0ZQ==
-      !binary "Q29udGVudC1FbmNvZGluZw==":
-      - !binary |-
-        Z3ppcA==
-      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
-      - !binary |-
-        Y2h1bmtlZA==
+      Server:
+      - Sun-Java-System-Web-Server/7.0
+      Date:
+      - Sun, 09 Jun 2013 14:59:20 GMT
+      Content-Type:
+      - text/html; charset=UTF-8
+      Set-Cookie:
+      - JSESSIONID=dTlLR0ZJ5JyF1V3Tp6SBbpvmnnhB7qwWzL1hnyTflCk2hvd2CQbM!-1272756975!1291806534;
+        path=/; HttpOnly
+      Content-Language:
+      - en-US
+      X-Powered-By:
+      - Servlet/2.5 JSP/2.1
+      Cache-Control:
+      - private
+      Content-Encoding:
+      - gzip
+      Transfer-Encoding:
+      - chunked
     body:
       encoding: ASCII-8BIT
       string: !binary |-
@@ -4301,7 +4225,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*'
+      - "*/*"
       User-Agent:
       - Mechanize/2.7.2 Ruby/1.9.3p194 (http://github.com/sparklemotion/mechanize/)
       Accept-Encoding:
@@ -4311,9 +4235,7 @@ http_interactions:
       Accept-Language:
       - en-us,en;q=0.5
       Cookie:
-      - !binary |-
-        SlNFU1NJT05JRD00cGh0UjBaWXBadjRRcmczUDd2NjAyUVZIMjdUQkNsTGxu
-        SHBmMnlybnA0bjhMdkdXR0xNIS0xMjcyNzU2OTc1ITEyOTE4MDY1MzQ=
+      - JSESSIONID=4phtR0ZYpZv4Qrg3P7v602QVH27TBClLlnHpf2yrnp4n8LvGWGLM!-1272756975!1291806534
       Host:
       - apps.fcc.gov
       Connection:
@@ -4323,38 +4245,27 @@ http_interactions:
   response:
     status:
       code: 200
-      message: !binary |-
-        T0s=
+      message: OK
     headers:
-      !binary "U2VydmVy":
-      - !binary |-
-        U3VuLUphdmEtU3lzdGVtLVdlYi1TZXJ2ZXIvNy4w
-      !binary "RGF0ZQ==":
-      - !binary |-
-        VHVlLCAxMCBTZXAgMjAxMyAwMToyMDozOSBHTVQ=
-      !binary "Q29udGVudC1UeXBl":
-      - !binary |-
-        dGV4dC9odG1sOyBjaGFyc2V0PVVURi04
-      !binary "U2V0LUNvb2tpZQ==":
-      - !binary |-
-        SlNFU1NJT05JRD1UM2RkU256WHJobGd3Y2hYVzFLc1hjWXlWMnlLR3E0Q3p3
-        bkRMeFRyeHJLUXFKSENsYzJoIS0xNjEzMTg1NDc5ITE1MzcyODcwMjsgcGF0
-        aD0vOyBIdHRwT25seQ==
-      !binary "Q29udGVudC1MYW5ndWFnZQ==":
-      - !binary |-
-        ZW4tVVM=
-      !binary "WC1Qb3dlcmVkLUJ5":
-      - !binary |-
-        U2VydmxldC8yLjUgSlNQLzIuMQ==
-      !binary "Q2FjaGUtQ29udHJvbA==":
-      - !binary |-
-        cHJpdmF0ZQ==
-      !binary "Q29udGVudC1FbmNvZGluZw==":
-      - !binary |-
-        Z3ppcA==
-      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
-      - !binary |-
-        Y2h1bmtlZA==
+      Server:
+      - Sun-Java-System-Web-Server/7.0
+      Date:
+      - Tue, 10 Sep 2013 01:20:39 GMT
+      Content-Type:
+      - text/html; charset=UTF-8
+      Set-Cookie:
+      - JSESSIONID=T3ddSnzXrhlgwchXW1KsXcYyV2yKGq4CzwnDLxTrxrKQqJHClc2h!-1613185479!153728702;
+        path=/; HttpOnly
+      Content-Language:
+      - en-US
+      X-Powered-By:
+      - Servlet/2.5 JSP/2.1
+      Cache-Control:
+      - private
+      Content-Encoding:
+      - gzip
+      Transfer-Encoding:
+      - chunked
     body:
       encoding: ASCII-8BIT
       string: !binary |-
@@ -4591,7 +4502,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*'
+      - "*/*"
       User-Agent:
       - Mechanize/2.7.2 Ruby/1.9.3p194 (http://github.com/sparklemotion/mechanize/)
       Accept-Encoding:
@@ -4609,38 +4520,27 @@ http_interactions:
   response:
     status:
       code: 200
-      message: !binary |-
-        T0s=
+      message: OK
     headers:
-      !binary "U2VydmVy":
-      - !binary |-
-        U3VuLUphdmEtU3lzdGVtLVdlYi1TZXJ2ZXIvNy4w
-      !binary "RGF0ZQ==":
-      - !binary |-
-        V2VkLCAxMSBTZXAgMjAxMyAxODozNTo0MiBHTVQ=
-      !binary "Q29udGVudC1UeXBl":
-      - !binary |-
-        dGV4dC9odG1sOyBjaGFyc2V0PVVURi04
-      !binary "U2V0LUNvb2tpZQ==":
-      - !binary |-
-        SlNFU1NJT05JRD1zRzVrU3c1Zm04anc0ZEZoZ3diTTE2bURDbFlqN0xHaGJk
-        Tkw0dFN6UjJRR3ZRWUhaRzBYITE1MzcyODcwMiEtMTYxMzE4NTQ3OTsgcGF0
-        aD0vOyBIdHRwT25seQ==
-      !binary "Q29udGVudC1MYW5ndWFnZQ==":
-      - !binary |-
-        ZW4tVVM=
-      !binary "WC1Qb3dlcmVkLUJ5":
-      - !binary |-
-        U2VydmxldC8yLjUgSlNQLzIuMQ==
-      !binary "Q2FjaGUtQ29udHJvbA==":
-      - !binary |-
-        cHJpdmF0ZQ==
-      !binary "Q29udGVudC1FbmNvZGluZw==":
-      - !binary |-
-        Z3ppcA==
-      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
-      - !binary |-
-        Y2h1bmtlZA==
+      Server:
+      - Sun-Java-System-Web-Server/7.0
+      Date:
+      - Wed, 11 Sep 2013 18:35:42 GMT
+      Content-Type:
+      - text/html; charset=UTF-8
+      Set-Cookie:
+      - JSESSIONID=sG5kSw5fm8jw4dFhgwbM16mDClYj7LGhbdNL4tSzR2QGvQYHZG0X!153728702!-1613185479;
+        path=/; HttpOnly
+      Content-Language:
+      - en-US
+      X-Powered-By:
+      - Servlet/2.5 JSP/2.1
+      Cache-Control:
+      - private
+      Content-Encoding:
+      - gzip
+      Transfer-Encoding:
+      - chunked
     body:
       encoding: ASCII-8BIT
       string: !binary |-
@@ -4886,7 +4786,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*'
+      - "*/*"
       User-Agent:
       - Mechanize/2.7.2 Ruby/1.9.3p194 (http://github.com/sparklemotion/mechanize/)
       Accept-Encoding:
@@ -4923,9 +4823,8 @@ http_interactions:
       - chunked
     body:
       encoding: US-ASCII
-      string: ! "<html><head><title>302 Moved Temporarily</title></head>\r\n<body
-        bgcolor=\"#FFFFFF\">\r\n<p>This document you requested has moved temporarily.</p>\r\n<p>It's
-        now at <a href=\"http://apps.fcc.gov/ecfs/proceeding/view&#59;jsessionid=Spn3Sw5BsxgJ0KfPlZgF7kyW0pDD8HDm2yjrHpTp1pm2vn5JTtPL!153728702!-1613185479?z=kiyhy&amp;name=11-109\">http://apps.fcc.gov/ecfs/proceeding/view&#59;jsessionid=Spn3Sw5BsxgJ0KfPlZgF7kyW0pDD8HDm2yjrHpTp1pm2vn5JTtPL!153728702!-1613185479?z=kiyhy&amp;name=11-109</a>.</p>\r\n</body></html>\r\n"
+      string: "<html><head><title>302 Moved Temporarily</title></head>\r\n<body bgcolor=\"#FFFFFF\">\r\n<p>This
+        document you requested has moved temporarily.</p>\r\n<p>It's now at <a href=\"http://apps.fcc.gov/ecfs/proceeding/view&#59;jsessionid=Spn3Sw5BsxgJ0KfPlZgF7kyW0pDD8HDm2yjrHpTp1pm2vn5JTtPL!153728702!-1613185479?z=kiyhy&amp;name=11-109\">http://apps.fcc.gov/ecfs/proceeding/view&#59;jsessionid=Spn3Sw5BsxgJ0KfPlZgF7kyW0pDD8HDm2yjrHpTp1pm2vn5JTtPL!153728702!-1613185479?z=kiyhy&amp;name=11-109</a>.</p>\r\n</body></html>\r\n"
     http_version: 
   recorded_at: Wed, 11 Sep 2013 18:42:09 GMT
 - request:
@@ -4936,7 +4835,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*'
+      - "*/*"
       User-Agent:
       - Mechanize/2.7.2 Ruby/1.9.3p194 (http://github.com/sparklemotion/mechanize/)
       Accept-Encoding:
@@ -4956,33 +4855,24 @@ http_interactions:
   response:
     status:
       code: 200
-      message: !binary |-
-        T0s=
+      message: OK
     headers:
-      !binary "U2VydmVy":
-      - !binary |-
-        U3VuLUphdmEtU3lzdGVtLVdlYi1TZXJ2ZXIvNy4w
-      !binary "RGF0ZQ==":
-      - !binary |-
-        V2VkLCAxMSBTZXAgMjAxMyAxODozNTo0MyBHTVQ=
-      !binary "Q29udGVudC1UeXBl":
-      - !binary |-
-        dGV4dC9odG1sO2NoYXJzZXQ9VVRGLTg=
-      !binary "Q29udGVudC1MYW5ndWFnZQ==":
-      - !binary |-
-        ZW4tVVM=
-      !binary "WC1Qb3dlcmVkLUJ5":
-      - !binary |-
-        U2VydmxldC8yLjUgSlNQLzIuMQ==
-      !binary "Q2FjaGUtQ29udHJvbA==":
-      - !binary |-
-        cHJpdmF0ZQ==
-      !binary "Q29udGVudC1FbmNvZGluZw==":
-      - !binary |-
-        Z3ppcA==
-      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
-      - !binary |-
-        Y2h1bmtlZA==
+      Server:
+      - Sun-Java-System-Web-Server/7.0
+      Date:
+      - Wed, 11 Sep 2013 18:35:43 GMT
+      Content-Type:
+      - text/html;charset=UTF-8
+      Content-Language:
+      - en-US
+      X-Powered-By:
+      - Servlet/2.5 JSP/2.1
+      Cache-Control:
+      - private
+      Content-Encoding:
+      - gzip
+      Transfer-Encoding:
+      - chunked
     body:
       encoding: ASCII-8BIT
       string: !binary |-
@@ -5191,7 +5081,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*'
+      - "*/*"
       User-Agent:
       - Mechanize/2.7.2 Ruby/1.9.3p194 (http://github.com/sparklemotion/mechanize/)
       Accept-Encoding:
@@ -5209,38 +5099,27 @@ http_interactions:
   response:
     status:
       code: 200
-      message: !binary |-
-        T0s=
+      message: OK
     headers:
-      !binary "U2VydmVy":
-      - !binary |-
-        U3VuLUphdmEtU3lzdGVtLVdlYi1TZXJ2ZXIvNy4w
-      !binary "RGF0ZQ==":
-      - !binary |-
-        V2VkLCAxMSBTZXAgMjAxMyAxODo0MTo1MyBHTVQ=
-      !binary "Q29udGVudC1UeXBl":
-      - !binary |-
-        dGV4dC9odG1sOyBjaGFyc2V0PVVURi04
-      !binary "U2V0LUNvb2tpZQ==":
-      - !binary |-
-        SlNFU1NJT05JRD12VFRqU3c1Qm5KMTA0MG54N1ZZS0g2WmNIWTEzc2N2eXZo
-        SDdMWGxIUXQ4Q0Y1Qm45MzBOITE1MzcyODcwMiEtMTYxMzE4NTQ3OTsgcGF0
-        aD0vOyBIdHRwT25seQ==
-      !binary "Q29udGVudC1MYW5ndWFnZQ==":
-      - !binary |-
-        ZW4tVVM=
-      !binary "WC1Qb3dlcmVkLUJ5":
-      - !binary |-
-        U2VydmxldC8yLjUgSlNQLzIuMQ==
-      !binary "Q2FjaGUtQ29udHJvbA==":
-      - !binary |-
-        cHJpdmF0ZQ==
-      !binary "Q29udGVudC1FbmNvZGluZw==":
-      - !binary |-
-        Z3ppcA==
-      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
-      - !binary |-
-        Y2h1bmtlZA==
+      Server:
+      - Sun-Java-System-Web-Server/7.0
+      Date:
+      - Wed, 11 Sep 2013 18:41:53 GMT
+      Content-Type:
+      - text/html; charset=UTF-8
+      Set-Cookie:
+      - JSESSIONID=vTTjSw5BnJ1040nx7VYKH6ZcHY13scvyvhH7LXlHQt8CF5Bn930N!153728702!-1613185479;
+        path=/; HttpOnly
+      Content-Language:
+      - en-US
+      X-Powered-By:
+      - Servlet/2.5 JSP/2.1
+      Cache-Control:
+      - private
+      Content-Encoding:
+      - gzip
+      Transfer-Encoding:
+      - chunked
     body:
       encoding: ASCII-8BIT
       string: !binary |-
@@ -5486,7 +5365,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*'
+      - "*/*"
       User-Agent:
       - Mechanize/2.7.2 Ruby/1.9.3p194 (http://github.com/sparklemotion/mechanize/)
       Accept-Encoding:
@@ -5496,9 +5375,7 @@ http_interactions:
       Accept-Language:
       - en-us,en;q=0.5
       Cookie:
-      - !binary |-
-        SlNFU1NJT05JRD12VFRqU3c1Qm5KMTA0MG54N1ZZS0g2WmNIWTEzc2N2eXZo
-        SDdMWGxIUXQ4Q0Y1Qm45MzBOITE1MzcyODcwMiEtMTYxMzE4NTQ3OQ==
+      - JSESSIONID=vTTjSw5BnJ1040nx7VYKH6ZcHY13scvyvhH7LXlHQt8CF5Bn930N!153728702!-1613185479
       Host:
       - apps.fcc.gov
       Referer:
@@ -5508,7 +5385,7 @@ http_interactions:
         password: 
         host: apps.fcc.gov
         port: 80
-        path: /ecfs/comment_search/execute
+        path: "/ecfs/comment_search/execute"
         query: proceeding=11-109&disseminated.minDate=08/04/2012&disseminated.maxDate=09/11/2013
         opaque: 
         registry: 
@@ -5521,30 +5398,22 @@ http_interactions:
   response:
     status:
       code: 200
-      message: !binary |-
-        T0s=
+      message: OK
     headers:
-      !binary "U2VydmVy":
-      - !binary |-
-        U3VuLUphdmEtU3lzdGVtLVdlYi1TZXJ2ZXIvNy4w
-      !binary "RGF0ZQ==":
-      - !binary |-
-        V2VkLCAxMSBTZXAgMjAxMyAxODozNTo0NCBHTVQ=
-      !binary "Q29udGVudC1MZW5ndGg=":
-      - !binary |-
-        MTYzODQ=
-      !binary "Q29udGVudC1UeXBl":
-      - !binary |-
-        YXBwbGljYXRpb24vdm5kLm1zLWV4Y2Vs
-      !binary "Q29udGVudC1EaXNwb3NpdGlvbg==":
-      - !binary |-
-        YXR0YWNobWVudDtmaWxlbmFtZT0iRXhjZWwgRG93bmxvYWQueGxzIg==
-      !binary "Q29udGVudC1MYW5ndWFnZQ==":
-      - !binary |-
-        ZW4tVVM=
-      !binary "WC1Qb3dlcmVkLUJ5":
-      - !binary |-
-        U2VydmxldC8yLjUgSlNQLzIuMQ==
+      Server:
+      - Sun-Java-System-Web-Server/7.0
+      Date:
+      - Wed, 11 Sep 2013 18:35:44 GMT
+      Content-Length:
+      - '16384'
+      Content-Type:
+      - application/vnd.ms-excel
+      Content-Disposition:
+      - attachment;filename="Excel Download.xls"
+      Content-Language:
+      - en-US
+      X-Powered-By:
+      - Servlet/2.5 JSP/2.1
     body:
       encoding: ASCII-8BIT
       string: !binary |-
@@ -5923,7 +5792,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*'
+      - "*/*"
       User-Agent:
       - Mechanize/2.7.2 Ruby/1.9.3p194 (http://github.com/sparklemotion/mechanize/)
       Accept-Encoding:
@@ -5941,38 +5810,27 @@ http_interactions:
   response:
     status:
       code: 200
-      message: !binary |-
-        T0s=
+      message: OK
     headers:
-      !binary "U2VydmVy":
-      - !binary |-
-        U3VuLUphdmEtU3lzdGVtLVdlYi1TZXJ2ZXIvNy4w
-      !binary "RGF0ZQ==":
-      - !binary |-
-        V2VkLCAxMSBTZXAgMjAxMyAxODo0MTo1NCBHTVQ=
-      !binary "Q29udGVudC1UeXBl":
-      - !binary |-
-        dGV4dC9odG1sOyBjaGFyc2V0PVVURi04
-      !binary "U2V0LUNvb2tpZQ==":
-      - !binary |-
-        SlNFU1NJT05JRD1jaDRDU3c1Q3ZXclZwR1ZLRnlzc0pETHA1eVNKUm1KTGZ5
-        NUoyakxDbjB0OEZRYm1RTm5ZITE1MzcyODcwMiEtMTYxMzE4NTQ3OTsgcGF0
-        aD0vOyBIdHRwT25seQ==
-      !binary "Q29udGVudC1MYW5ndWFnZQ==":
-      - !binary |-
-        ZW4tVVM=
-      !binary "WC1Qb3dlcmVkLUJ5":
-      - !binary |-
-        U2VydmxldC8yLjUgSlNQLzIuMQ==
-      !binary "Q2FjaGUtQ29udHJvbA==":
-      - !binary |-
-        cHJpdmF0ZQ==
-      !binary "Q29udGVudC1FbmNvZGluZw==":
-      - !binary |-
-        Z3ppcA==
-      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
-      - !binary |-
-        Y2h1bmtlZA==
+      Server:
+      - Sun-Java-System-Web-Server/7.0
+      Date:
+      - Wed, 11 Sep 2013 18:41:54 GMT
+      Content-Type:
+      - text/html; charset=UTF-8
+      Set-Cookie:
+      - JSESSIONID=ch4CSw5CvWrVpGVKFyssJDLp5ySJRmJLfy5J2jLCn0t8FQbmQNnY!153728702!-1613185479;
+        path=/; HttpOnly
+      Content-Language:
+      - en-US
+      X-Powered-By:
+      - Servlet/2.5 JSP/2.1
+      Cache-Control:
+      - private
+      Content-Encoding:
+      - gzip
+      Transfer-Encoding:
+      - chunked
     body:
       encoding: ASCII-8BIT
       string: !binary |-
@@ -6218,7 +6076,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*'
+      - "*/*"
       User-Agent:
       - Mechanize/2.7.2 Ruby/1.9.3p194 (http://github.com/sparklemotion/mechanize/)
       Accept-Encoding:
@@ -6236,38 +6094,27 @@ http_interactions:
   response:
     status:
       code: 200
-      message: !binary |-
-        T0s=
+      message: OK
     headers:
-      !binary "U2VydmVy":
-      - !binary |-
-        U3VuLUphdmEtU3lzdGVtLVdlYi1TZXJ2ZXIvNy4w
-      !binary "RGF0ZQ==":
-      - !binary |-
-        V2VkLCAxMSBTZXAgMjAxMyAxODo0MTo1NSBHTVQ=
-      !binary "Q29udGVudC1UeXBl":
-      - !binary |-
-        dGV4dC9odG1sOyBjaGFyc2V0PVVURi04
-      !binary "U2V0LUNvb2tpZQ==":
-      - !binary |-
-        SlNFU1NJT05JRD1RdnZHU3c1RDRIbVAyYnZxVnBGa1lRZG1uQnNmUW5UUEdU
-        TG1oVDNMTHdQVFoxTWduNFhiIS0xNjEzMTg1NDc5ITE1MzcyODcwMjsgcGF0
-        aD0vOyBIdHRwT25seQ==
-      !binary "Q29udGVudC1MYW5ndWFnZQ==":
-      - !binary |-
-        ZW4tVVM=
-      !binary "WC1Qb3dlcmVkLUJ5":
-      - !binary |-
-        U2VydmxldC8yLjUgSlNQLzIuMQ==
-      !binary "Q2FjaGUtQ29udHJvbA==":
-      - !binary |-
-        cHJpdmF0ZQ==
-      !binary "Q29udGVudC1FbmNvZGluZw==":
-      - !binary |-
-        Z3ppcA==
-      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
-      - !binary |-
-        Y2h1bmtlZA==
+      Server:
+      - Sun-Java-System-Web-Server/7.0
+      Date:
+      - Wed, 11 Sep 2013 18:41:55 GMT
+      Content-Type:
+      - text/html; charset=UTF-8
+      Set-Cookie:
+      - JSESSIONID=QvvGSw5D4HmP2bvqVpFkYQdmnBsfQnTPGTLmhT3LLwPTZ1Mgn4Xb!-1613185479!153728702;
+        path=/; HttpOnly
+      Content-Language:
+      - en-US
+      X-Powered-By:
+      - Servlet/2.5 JSP/2.1
+      Cache-Control:
+      - private
+      Content-Encoding:
+      - gzip
+      Transfer-Encoding:
+      - chunked
     body:
       encoding: ASCII-8BIT
       string: !binary |-
@@ -6513,7 +6360,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*'
+      - "*/*"
       User-Agent:
       - Mechanize/2.7.2 Ruby/1.9.3p194 (http://github.com/sparklemotion/mechanize/)
       Accept-Encoding:
@@ -6523,9 +6370,7 @@ http_interactions:
       Accept-Language:
       - en-us,en;q=0.5
       Cookie:
-      - !binary |-
-        SlNFU1NJT05JRD1RdnZHU3c1RDRIbVAyYnZxVnBGa1lRZG1uQnNmUW5UUEdU
-        TG1oVDNMTHdQVFoxTWduNFhiIS0xNjEzMTg1NDc5ITE1MzcyODcwMg==
+      - JSESSIONID=QvvGSw5D4HmP2bvqVpFkYQdmnBsfQnTPGTLmhT3LLwPTZ1Mgn4Xb!-1613185479!153728702
       Host:
       - apps.fcc.gov
       Referer:
@@ -6535,7 +6380,7 @@ http_interactions:
         password: 
         host: apps.fcc.gov
         port: 80
-        path: /ecfs/comment_search/execute
+        path: "/ecfs/comment_search/execute"
         query: proceeding=11-109&disseminated.minDate=01/15/2012&disseminated.maxDate=08/04/2012
         opaque: 
         registry: 
@@ -6548,33 +6393,24 @@ http_interactions:
   response:
     status:
       code: 200
-      message: !binary |-
-        T0s=
+      message: OK
     headers:
-      !binary "U2VydmVy":
-      - !binary |-
-        U3VuLUphdmEtU3lzdGVtLVdlYi1TZXJ2ZXIvNy4w
-      !binary "RGF0ZQ==":
-      - !binary |-
-        V2VkLCAxMSBTZXAgMjAxMyAxODo0MjowMSBHTVQ=
-      !binary "Q29udGVudC1UeXBl":
-      - !binary |-
-        dGV4dC9odG1sO2NoYXJzZXQ9VVRGLTg=
-      !binary "Q29udGVudC1MYW5ndWFnZQ==":
-      - !binary |-
-        ZW4tVVM=
-      !binary "WC1Qb3dlcmVkLUJ5":
-      - !binary |-
-        U2VydmxldC8yLjUgSlNQLzIuMQ==
-      !binary "Q2FjaGUtQ29udHJvbA==":
-      - !binary |-
-        cHJpdmF0ZQ==
-      !binary "Q29udGVudC1FbmNvZGluZw==":
-      - !binary |-
-        Z3ppcA==
-      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
-      - !binary |-
-        Y2h1bmtlZA==
+      Server:
+      - Sun-Java-System-Web-Server/7.0
+      Date:
+      - Wed, 11 Sep 2013 18:42:01 GMT
+      Content-Type:
+      - text/html;charset=UTF-8
+      Content-Language:
+      - en-US
+      X-Powered-By:
+      - Servlet/2.5 JSP/2.1
+      Cache-Control:
+      - private
+      Content-Encoding:
+      - gzip
+      Transfer-Encoding:
+      - chunked
     body:
       encoding: ASCII-8BIT
       string: !binary |-
@@ -6706,7 +6542,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*'
+      - "*/*"
       User-Agent:
       - Mechanize/2.7.2 Ruby/1.9.3p194 (http://github.com/sparklemotion/mechanize/)
       Accept-Encoding:
@@ -6724,38 +6560,27 @@ http_interactions:
   response:
     status:
       code: 200
-      message: !binary |-
-        T0s=
+      message: OK
     headers:
-      !binary "U2VydmVy":
-      - !binary |-
-        U3VuLUphdmEtU3lzdGVtLVdlYi1TZXJ2ZXIvNy4w
-      !binary "RGF0ZQ==":
-      - !binary |-
-        V2VkLCAxMSBTZXAgMjAxMyAxODozNTo1OSBHTVQ=
-      !binary "Q29udGVudC1UeXBl":
-      - !binary |-
-        dGV4dC9odG1sOyBjaGFyc2V0PVVURi04
-      !binary "U2V0LUNvb2tpZQ==":
-      - !binary |-
-        SlNFU1NJT05JRD12a2huU3c1UE5SZm5tc0dITnZmQ0NqMEdremRacGREbWo2
-        M3BRbnBMMVFrQ1RuRDJ5M3NZIS0xNjEzMTg1NDc5ITE1MzcyODcwMjsgcGF0
-        aD0vOyBIdHRwT25seQ==
-      !binary "Q29udGVudC1MYW5ndWFnZQ==":
-      - !binary |-
-        ZW4tVVM=
-      !binary "WC1Qb3dlcmVkLUJ5":
-      - !binary |-
-        U2VydmxldC8yLjUgSlNQLzIuMQ==
-      !binary "Q2FjaGUtQ29udHJvbA==":
-      - !binary |-
-        cHJpdmF0ZQ==
-      !binary "Q29udGVudC1FbmNvZGluZw==":
-      - !binary |-
-        Z3ppcA==
-      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
-      - !binary |-
-        Y2h1bmtlZA==
+      Server:
+      - Sun-Java-System-Web-Server/7.0
+      Date:
+      - Wed, 11 Sep 2013 18:35:59 GMT
+      Content-Type:
+      - text/html; charset=UTF-8
+      Set-Cookie:
+      - JSESSIONID=vkhnSw5PNRfnmsGHNvfCCj0GkzdZpdDmj63pQnpL1QkCTnD2y3sY!-1613185479!153728702;
+        path=/; HttpOnly
+      Content-Language:
+      - en-US
+      X-Powered-By:
+      - Servlet/2.5 JSP/2.1
+      Cache-Control:
+      - private
+      Content-Encoding:
+      - gzip
+      Transfer-Encoding:
+      - chunked
     body:
       encoding: ASCII-8BIT
       string: !binary |-
@@ -7001,7 +6826,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*'
+      - "*/*"
       User-Agent:
       - Mechanize/2.7.2 Ruby/1.9.3p194 (http://github.com/sparklemotion/mechanize/)
       Accept-Encoding:
@@ -7011,9 +6836,7 @@ http_interactions:
       Accept-Language:
       - en-us,en;q=0.5
       Cookie:
-      - !binary |-
-        SlNFU1NJT05JRD12a2huU3c1UE5SZm5tc0dITnZmQ0NqMEdremRacGREbWo2
-        M3BRbnBMMVFrQ1RuRDJ5M3NZIS0xNjEzMTg1NDc5ITE1MzcyODcwMg==
+      - JSESSIONID=vkhnSw5PNRfnmsGHNvfCCj0GkzdZpdDmj63pQnpL1QkCTnD2y3sY!-1613185479!153728702
       Host:
       - apps.fcc.gov
       Referer:
@@ -7023,7 +6846,7 @@ http_interactions:
         password: 
         host: apps.fcc.gov
         port: 80
-        path: /ecfs/comment_search/execute
+        path: "/ecfs/comment_search/execute"
         query: proceeding=11-109&disseminated.minDate=06/28/2011&disseminated.maxDate=01/15/2012
         opaque: 
         registry: 
@@ -7036,33 +6859,24 @@ http_interactions:
   response:
     status:
       code: 200
-      message: !binary |-
-        T0s=
+      message: OK
     headers:
-      !binary "U2VydmVy":
-      - !binary |-
-        U3VuLUphdmEtU3lzdGVtLVdlYi1TZXJ2ZXIvNy4w
-      !binary "RGF0ZQ==":
-      - !binary |-
-        V2VkLCAxMSBTZXAgMjAxMyAxODozNjowNSBHTVQ=
-      !binary "Q29udGVudC1UeXBl":
-      - !binary |-
-        dGV4dC9odG1sO2NoYXJzZXQ9VVRGLTg=
-      !binary "Q29udGVudC1MYW5ndWFnZQ==":
-      - !binary |-
-        ZW4tVVM=
-      !binary "WC1Qb3dlcmVkLUJ5":
-      - !binary |-
-        U2VydmxldC8yLjUgSlNQLzIuMQ==
-      !binary "Q2FjaGUtQ29udHJvbA==":
-      - !binary |-
-        cHJpdmF0ZQ==
-      !binary "Q29udGVudC1FbmNvZGluZw==":
-      - !binary |-
-        Z3ppcA==
-      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
-      - !binary |-
-        Y2h1bmtlZA==
+      Server:
+      - Sun-Java-System-Web-Server/7.0
+      Date:
+      - Wed, 11 Sep 2013 18:36:05 GMT
+      Content-Type:
+      - text/html;charset=UTF-8
+      Content-Language:
+      - en-US
+      X-Powered-By:
+      - Servlet/2.5 JSP/2.1
+      Cache-Control:
+      - private
+      Content-Encoding:
+      - gzip
+      Transfer-Encoding:
+      - chunked
     body:
       encoding: ASCII-8BIT
       string: !binary |-
@@ -7194,7 +7008,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*'
+      - "*/*"
       User-Agent:
       - Mechanize/2.7.2 Ruby/1.9.3p194 (http://github.com/sparklemotion/mechanize/)
       Accept-Encoding:
@@ -7204,9 +7018,7 @@ http_interactions:
       Accept-Language:
       - en-us,en;q=0.5
       Cookie:
-      - !binary |-
-        SlNFU1NJT05JRD12a2huU3c1UE5SZm5tc0dITnZmQ0NqMEdremRacGREbWo2
-        M3BRbnBMMVFrQ1RuRDJ5M3NZIS0xNjEzMTg1NDc5ITE1MzcyODcwMg==
+      - JSESSIONID=vkhnSw5PNRfnmsGHNvfCCj0GkzdZpdDmj63pQnpL1QkCTnD2y3sY!-1613185479!153728702
       Host:
       - apps.fcc.gov
       Connection:
@@ -7216,33 +7028,24 @@ http_interactions:
   response:
     status:
       code: 200
-      message: !binary |-
-        T0s=
+      message: OK
     headers:
-      !binary "U2VydmVy":
-      - !binary |-
-        U3VuLUphdmEtU3lzdGVtLVdlYi1TZXJ2ZXIvNy4w
-      !binary "RGF0ZQ==":
-      - !binary |-
-        V2VkLCAxMSBTZXAgMjAxMyAxODozNjoxMCBHTVQ=
-      !binary "Q29udGVudC1UeXBl":
-      - !binary |-
-        dGV4dC9odG1sO2NoYXJzZXQ9VVRGLTg=
-      !binary "Q29udGVudC1MYW5ndWFnZQ==":
-      - !binary |-
-        ZW4tVVM=
-      !binary "WC1Qb3dlcmVkLUJ5":
-      - !binary |-
-        U2VydmxldC8yLjUgSlNQLzIuMQ==
-      !binary "Q2FjaGUtQ29udHJvbA==":
-      - !binary |-
-        cHJpdmF0ZQ==
-      !binary "Q29udGVudC1FbmNvZGluZw==":
-      - !binary |-
-        Z3ppcA==
-      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
-      - !binary |-
-        Y2h1bmtlZA==
+      Server:
+      - Sun-Java-System-Web-Server/7.0
+      Date:
+      - Wed, 11 Sep 2013 18:36:10 GMT
+      Content-Type:
+      - text/html;charset=UTF-8
+      Content-Language:
+      - en-US
+      X-Powered-By:
+      - Servlet/2.5 JSP/2.1
+      Cache-Control:
+      - private
+      Content-Encoding:
+      - gzip
+      Transfer-Encoding:
+      - chunked
     body:
       encoding: ASCII-8BIT
       string: !binary |-
@@ -7374,7 +7177,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*'
+      - "*/*"
       User-Agent:
       - Mechanize/2.7.2 Ruby/1.9.3p194 (http://github.com/sparklemotion/mechanize/)
       Accept-Encoding:
@@ -7384,9 +7187,7 @@ http_interactions:
       Accept-Language:
       - en-us,en;q=0.5
       Cookie:
-      - !binary |-
-        SlNFU1NJT05JRD12a2huU3c1UE5SZm5tc0dITnZmQ0NqMEdremRacGREbWo2
-        M3BRbnBMMVFrQ1RuRDJ5M3NZIS0xNjEzMTg1NDc5ITE1MzcyODcwMg==
+      - JSESSIONID=vkhnSw5PNRfnmsGHNvfCCj0GkzdZpdDmj63pQnpL1QkCTnD2y3sY!-1613185479!153728702
       Host:
       - apps.fcc.gov
       Connection:
@@ -7396,33 +7197,24 @@ http_interactions:
   response:
     status:
       code: 200
-      message: !binary |-
-        T0s=
+      message: OK
     headers:
-      !binary "U2VydmVy":
-      - !binary |-
-        U3VuLUphdmEtU3lzdGVtLVdlYi1TZXJ2ZXIvNy4w
-      !binary "RGF0ZQ==":
-      - !binary |-
-        V2VkLCAxMSBTZXAgMjAxMyAxODozNjoxNSBHTVQ=
-      !binary "Q29udGVudC1UeXBl":
-      - !binary |-
-        dGV4dC9odG1sO2NoYXJzZXQ9VVRGLTg=
-      !binary "Q29udGVudC1MYW5ndWFnZQ==":
-      - !binary |-
-        ZW4tVVM=
-      !binary "WC1Qb3dlcmVkLUJ5":
-      - !binary |-
-        U2VydmxldC8yLjUgSlNQLzIuMQ==
-      !binary "Q2FjaGUtQ29udHJvbA==":
-      - !binary |-
-        cHJpdmF0ZQ==
-      !binary "Q29udGVudC1FbmNvZGluZw==":
-      - !binary |-
-        Z3ppcA==
-      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
-      - !binary |-
-        Y2h1bmtlZA==
+      Server:
+      - Sun-Java-System-Web-Server/7.0
+      Date:
+      - Wed, 11 Sep 2013 18:36:15 GMT
+      Content-Type:
+      - text/html;charset=UTF-8
+      Content-Language:
+      - en-US
+      X-Powered-By:
+      - Servlet/2.5 JSP/2.1
+      Cache-Control:
+      - private
+      Content-Encoding:
+      - gzip
+      Transfer-Encoding:
+      - chunked
     body:
       encoding: ASCII-8BIT
       string: !binary |-
@@ -7554,7 +7346,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*'
+      - "*/*"
       User-Agent:
       - Mechanize/2.7.2 Ruby/1.9.3p194 (http://github.com/sparklemotion/mechanize/)
       Accept-Encoding:
@@ -7564,9 +7356,7 @@ http_interactions:
       Accept-Language:
       - en-us,en;q=0.5
       Cookie:
-      - !binary |-
-        SlNFU1NJT05JRD12a2huU3c1UE5SZm5tc0dITnZmQ0NqMEdremRacGREbWo2
-        M3BRbnBMMVFrQ1RuRDJ5M3NZIS0xNjEzMTg1NDc5ITE1MzcyODcwMg==
+      - JSESSIONID=vkhnSw5PNRfnmsGHNvfCCj0GkzdZpdDmj63pQnpL1QkCTnD2y3sY!-1613185479!153728702
       Host:
       - apps.fcc.gov
       Connection:
@@ -7576,33 +7366,24 @@ http_interactions:
   response:
     status:
       code: 200
-      message: !binary |-
-        T0s=
+      message: OK
     headers:
-      !binary "U2VydmVy":
-      - !binary |-
-        U3VuLUphdmEtU3lzdGVtLVdlYi1TZXJ2ZXIvNy4w
-      !binary "RGF0ZQ==":
-      - !binary |-
-        V2VkLCAxMSBTZXAgMjAxMyAxODozNjoyMCBHTVQ=
-      !binary "Q29udGVudC1UeXBl":
-      - !binary |-
-        dGV4dC9odG1sO2NoYXJzZXQ9VVRGLTg=
-      !binary "Q29udGVudC1MYW5ndWFnZQ==":
-      - !binary |-
-        ZW4tVVM=
-      !binary "WC1Qb3dlcmVkLUJ5":
-      - !binary |-
-        U2VydmxldC8yLjUgSlNQLzIuMQ==
-      !binary "Q2FjaGUtQ29udHJvbA==":
-      - !binary |-
-        cHJpdmF0ZQ==
-      !binary "Q29udGVudC1FbmNvZGluZw==":
-      - !binary |-
-        Z3ppcA==
-      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
-      - !binary |-
-        Y2h1bmtlZA==
+      Server:
+      - Sun-Java-System-Web-Server/7.0
+      Date:
+      - Wed, 11 Sep 2013 18:36:20 GMT
+      Content-Type:
+      - text/html;charset=UTF-8
+      Content-Language:
+      - en-US
+      X-Powered-By:
+      - Servlet/2.5 JSP/2.1
+      Cache-Control:
+      - private
+      Content-Encoding:
+      - gzip
+      Transfer-Encoding:
+      - chunked
     body:
       encoding: ASCII-8BIT
       string: !binary |-
@@ -7733,7 +7514,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*'
+      - "*/*"
       User-Agent:
       - Mechanize/2.7.2 Ruby/1.9.3p194 (http://github.com/sparklemotion/mechanize/)
       Accept-Encoding:
@@ -7743,9 +7524,7 @@ http_interactions:
       Accept-Language:
       - en-us,en;q=0.5
       Cookie:
-      - !binary |-
-        SlNFU1NJT05JRD12a2huU3c1UE5SZm5tc0dITnZmQ0NqMEdremRacGREbWo2
-        M3BRbnBMMVFrQ1RuRDJ5M3NZIS0xNjEzMTg1NDc5ITE1MzcyODcwMg==
+      - JSESSIONID=vkhnSw5PNRfnmsGHNvfCCj0GkzdZpdDmj63pQnpL1QkCTnD2y3sY!-1613185479!153728702
       Host:
       - apps.fcc.gov
       Connection:
@@ -7755,30 +7534,22 @@ http_interactions:
   response:
     status:
       code: 200
-      message: !binary |-
-        T0s=
+      message: OK
     headers:
-      !binary "U2VydmVy":
-      - !binary |-
-        U3VuLUphdmEtU3lzdGVtLVdlYi1TZXJ2ZXIvNy4w
-      !binary "RGF0ZQ==":
-      - !binary |-
-        V2VkLCAxMSBTZXAgMjAxMyAxODozNjoyNSBHTVQ=
-      !binary "Q29udGVudC1MZW5ndGg=":
-      - !binary |-
-        ODYzMjMy
-      !binary "Q29udGVudC1UeXBl":
-      - !binary |-
-        YXBwbGljYXRpb24vdm5kLm1zLWV4Y2Vs
-      !binary "Q29udGVudC1EaXNwb3NpdGlvbg==":
-      - !binary |-
-        YXR0YWNobWVudDtmaWxlbmFtZT0iRXhjZWwgRG93bmxvYWQueGxzIg==
-      !binary "Q29udGVudC1MYW5ndWFnZQ==":
-      - !binary |-
-        ZW4tVVM=
-      !binary "WC1Qb3dlcmVkLUJ5":
-      - !binary |-
-        U2VydmxldC8yLjUgSlNQLzIuMQ==
+      Server:
+      - Sun-Java-System-Web-Server/7.0
+      Date:
+      - Wed, 11 Sep 2013 18:36:25 GMT
+      Content-Length:
+      - '863232'
+      Content-Type:
+      - application/vnd.ms-excel
+      Content-Disposition:
+      - attachment;filename="Excel Download.xls"
+      Content-Language:
+      - en-US
+      X-Powered-By:
+      - Servlet/2.5 JSP/2.1
     body:
       encoding: ASCII-8BIT
       string: !binary |-
@@ -26975,7 +26746,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*'
+      - "*/*"
       User-Agent:
       - Mechanize/2.7.2 Ruby/1.9.3p194 (http://github.com/sparklemotion/mechanize/)
       Accept-Encoding:
@@ -27012,9 +26783,8 @@ http_interactions:
       - chunked
     body:
       encoding: US-ASCII
-      string: ! "<html><head><title>302 Moved Temporarily</title></head>\r\n<body
-        bgcolor=\"#FFFFFF\">\r\n<p>This document you requested has moved temporarily.</p>\r\n<p>It's
-        now at <a href=\"http://apps.fcc.gov/ecfs/proceeding/view&#59;jsessionid=StXPSw5Prc0nh2bxJ1LwJJcydlVLTYqzptDsPZFCjTD2TjJ2ksVj!-1613185479!153728702?z=edyvu&amp;name=11-109\">http://apps.fcc.gov/ecfs/proceeding/view&#59;jsessionid=StXPSw5Prc0nh2bxJ1LwJJcydlVLTYqzptDsPZFCjTD2TjJ2ksVj!-1613185479!153728702?z=edyvu&amp;name=11-109</a>.</p>\r\n</body></html>\r\n"
+      string: "<html><head><title>302 Moved Temporarily</title></head>\r\n<body bgcolor=\"#FFFFFF\">\r\n<p>This
+        document you requested has moved temporarily.</p>\r\n<p>It's now at <a href=\"http://apps.fcc.gov/ecfs/proceeding/view&#59;jsessionid=StXPSw5Prc0nh2bxJ1LwJJcydlVLTYqzptDsPZFCjTD2TjJ2ksVj!-1613185479!153728702?z=edyvu&amp;name=11-109\">http://apps.fcc.gov/ecfs/proceeding/view&#59;jsessionid=StXPSw5Prc0nh2bxJ1LwJJcydlVLTYqzptDsPZFCjTD2TjJ2ksVj!-1613185479!153728702?z=edyvu&amp;name=11-109</a>.</p>\r\n</body></html>\r\n"
     http_version: 
   recorded_at: Wed, 11 Sep 2013 18:42:55 GMT
 - request:
@@ -27025,7 +26795,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*'
+      - "*/*"
       User-Agent:
       - Mechanize/2.7.2 Ruby/1.9.3p194 (http://github.com/sparklemotion/mechanize/)
       Accept-Encoding:
@@ -27045,33 +26815,24 @@ http_interactions:
   response:
     status:
       code: 200
-      message: !binary |-
-        T0s=
+      message: OK
     headers:
-      !binary "U2VydmVy":
-      - !binary |-
-        U3VuLUphdmEtU3lzdGVtLVdlYi1TZXJ2ZXIvNy4w
-      !binary "RGF0ZQ==":
-      - !binary |-
-        V2VkLCAxMSBTZXAgMjAxMyAxODozNjoyOSBHTVQ=
-      !binary "Q29udGVudC1UeXBl":
-      - !binary |-
-        dGV4dC9odG1sO2NoYXJzZXQ9VVRGLTg=
-      !binary "Q29udGVudC1MYW5ndWFnZQ==":
-      - !binary |-
-        ZW4tVVM=
-      !binary "WC1Qb3dlcmVkLUJ5":
-      - !binary |-
-        U2VydmxldC8yLjUgSlNQLzIuMQ==
-      !binary "Q2FjaGUtQ29udHJvbA==":
-      - !binary |-
-        cHJpdmF0ZQ==
-      !binary "Q29udGVudC1FbmNvZGluZw==":
-      - !binary |-
-        Z3ppcA==
-      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
-      - !binary |-
-        Y2h1bmtlZA==
+      Server:
+      - Sun-Java-System-Web-Server/7.0
+      Date:
+      - Wed, 11 Sep 2013 18:36:29 GMT
+      Content-Type:
+      - text/html;charset=UTF-8
+      Content-Language:
+      - en-US
+      X-Powered-By:
+      - Servlet/2.5 JSP/2.1
+      Cache-Control:
+      - private
+      Content-Encoding:
+      - gzip
+      Transfer-Encoding:
+      - chunked
     body:
       encoding: ASCII-8BIT
       string: !binary |-
@@ -27272,4 +27033,747 @@ http_interactions:
         A0+wWYDEf41HU653LAEA
     http_version: 
   recorded_at: Wed, 11 Sep 2013 18:42:55 GMT
-recorded_with: VCR 2.5.0
+- request:
+    method: get
+    uri: http://transition.fcc.gov/Daily_Releases/Daily_Business/2014/db1217/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip,deflate,identity
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Mechanize/2.7.3 Ruby/2.1.5p273 (http://github.com/sparklemotion/mechanize/)
+      Accept-Charset:
+      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
+      Accept-Language:
+      - en-us,en;q=0.5
+      Host:
+      - transition.fcc.gov
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - 300
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Sun-Java-System-Web-Server/7.0
+      Date:
+      - Sat, 27 Dec 2014 01:13:05 GMT
+      Content-Type:
+      - text/html
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: "<TITLE>Index of /Daily_Releases/Daily_Business/2014/db1217/</TITLE>\n<h1>Index
+        of /Daily_Releases/Daily_Business/2014/db1217/</h1>\n<PRE><IMG SRC=\"/mc-icons/blank.gif\"
+        ALT=\"     \">  Name                   Last modified       Size    Description
+        \                      \n<HR>\n<A HREF=\"/Daily_Releases/Daily_Business/2014/\"
+        NAME=\"/Daily_Releases/Daily_Business/2014/\"><IMG SRC=\"/mc-icons/back.gif\"
+        ALT=\"[DIR]\" BORDER=0>  Parent Directory</A>\n<A HREF=\"DA-14-1835A1.docx\"
+        NAME=\"DA-14-1835A1.docx\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  DA-14-1835A1.docx</A>      17-Dec-2014 23:57    48K    \n<A HREF=\"DA-14-1835A1.pdf\"
+        NAME=\"DA-14-1835A1.pdf\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  DA-14-1835A1.pdf</A>       17-Dec-2014 23:58   112K    \n<A HREF=\"DA-14-1835A1.txt\"
+        NAME=\"DA-14-1835A1.txt\"><IMG SRC=\"/mc-icons/text.gif\" ALT=\"[TXT]\" BORDER=0>
+        \ DA-14-1835A1.txt</A>       17-Dec-2014 23:58    16K    \n<A HREF=\"DA-14-1842A1.pdf\"
+        NAME=\"DA-14-1842A1.pdf\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  DA-14-1842A1.pdf</A>       17-Dec-2014 23:58   496K    \n<A HREF=\"DA-14-1842A1.txt\"
+        NAME=\"DA-14-1842A1.txt\"><IMG SRC=\"/mc-icons/text.gif\" ALT=\"[TXT]\" BORDER=0>
+        \ DA-14-1842A1.txt</A>       17-Dec-2014 23:57     1K    \n<A HREF=\"DA-14-1843A1.doc\"
+        NAME=\"DA-14-1843A1.doc\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  DA-14-1843A1.doc</A>       17-Dec-2014 23:58    67K    \n<A HREF=\"DA-14-1843A1.pdf\"
+        NAME=\"DA-14-1843A1.pdf\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  DA-14-1843A1.pdf</A>       17-Dec-2014 23:57    75K    \n<A HREF=\"DA-14-1843A1.txt\"
+        NAME=\"DA-14-1843A1.txt\"><IMG SRC=\"/mc-icons/text.gif\" ALT=\"[TXT]\" BORDER=0>
+        \ DA-14-1843A1.txt</A>       17-Dec-2014 23:57     4K    \n<A HREF=\"DA-14-1844A1.doc\"
+        NAME=\"DA-14-1844A1.doc\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  DA-14-1844A1.doc</A>       17-Dec-2014 23:57    85K    \n<A HREF=\"DA-14-1844A1.pdf\"
+        NAME=\"DA-14-1844A1.pdf\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  DA-14-1844A1.pdf</A>       17-Dec-2014 23:58   114K    \n<A HREF=\"DA-14-1844A1.txt\"
+        NAME=\"DA-14-1844A1.txt\"><IMG SRC=\"/mc-icons/text.gif\" ALT=\"[TXT]\" BORDER=0>
+        \ DA-14-1844A1.txt</A>       17-Dec-2014 23:57    11K    \n<A HREF=\"DA-14-1847A1.doc\"
+        NAME=\"DA-14-1847A1.doc\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  DA-14-1847A1.doc</A>       17-Dec-2014 23:58    57K    \n<A HREF=\"DA-14-1847A1.pdf\"
+        NAME=\"DA-14-1847A1.pdf\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  DA-14-1847A1.pdf</A>       17-Dec-2014 23:58   153K    \n<A HREF=\"DA-14-1847A1.txt\"
+        NAME=\"DA-14-1847A1.txt\"><IMG SRC=\"/mc-icons/text.gif\" ALT=\"[TXT]\" BORDER=0>
+        \ DA-14-1847A1.txt</A>       17-Dec-2014 23:58     8K    \n<A HREF=\"DA-14-1848A1.docx\"
+        NAME=\"DA-14-1848A1.docx\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  DA-14-1848A1.docx</A>      17-Dec-2014 23:58    47K    \n<A HREF=\"DA-14-1848A1.pdf\"
+        NAME=\"DA-14-1848A1.pdf\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  DA-14-1848A1.pdf</A>       17-Dec-2014 23:58    82K    \n<A HREF=\"DA-14-1848A1.txt\"
+        NAME=\"DA-14-1848A1.txt\"><IMG SRC=\"/mc-icons/text.gif\" ALT=\"[TXT]\" BORDER=0>
+        \ DA-14-1848A1.txt</A>       17-Dec-2014 23:57     4K    \n<A HREF=\"DA-14-1849A1.docx\"
+        NAME=\"DA-14-1849A1.docx\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  DA-14-1849A1.docx</A>      17-Dec-2014 23:58    44K    \n<A HREF=\"DA-14-1849A1.pdf\"
+        NAME=\"DA-14-1849A1.pdf\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  DA-14-1849A1.pdf</A>       17-Dec-2014 23:57   123K    \n<A HREF=\"DA-14-1849A1.txt\"
+        NAME=\"DA-14-1849A1.txt\"><IMG SRC=\"/mc-icons/text.gif\" ALT=\"[TXT]\" BORDER=0>
+        \ DA-14-1849A1.txt</A>       17-Dec-2014 23:57     2K    \n<A HREF=\"DA-14-1850A1.doc\"
+        NAME=\"DA-14-1850A1.doc\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  DA-14-1850A1.doc</A>       17-Dec-2014 23:58    49K    \n<A HREF=\"DA-14-1850A1.pdf\"
+        NAME=\"DA-14-1850A1.pdf\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  DA-14-1850A1.pdf</A>       17-Dec-2014 23:58    83K    \n<A HREF=\"DA-14-1850A1.txt\"
+        NAME=\"DA-14-1850A1.txt\"><IMG SRC=\"/mc-icons/text.gif\" ALT=\"[TXT]\" BORDER=0>
+        \ DA-14-1850A1.txt</A>       17-Dec-2014 23:58     5K    \n<A HREF=\"DOC-331038A1.doc\"
+        NAME=\"DOC-331038A1.doc\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  DOC-331038A1.doc</A>       17-Dec-2014 23:57    35K    \n<A HREF=\"DOC-331038A1.pdf\"
+        NAME=\"DOC-331038A1.pdf\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  DOC-331038A1.pdf</A>       17-Dec-2014 23:58    82K    \n<A HREF=\"DOC-331038A1.txt\"
+        NAME=\"DOC-331038A1.txt\"><IMG SRC=\"/mc-icons/text.gif\" ALT=\"[TXT]\" BORDER=0>
+        \ DOC-331038A1.txt</A>       17-Dec-2014 23:57     1K    \n<A HREF=\"DOC-331045A1.pdf\"
+        NAME=\"DOC-331045A1.pdf\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  DOC-331045A1.pdf</A>       17-Dec-2014 23:58    12K    \n<A HREF=\"DOC-331045A1.txt\"
+        NAME=\"DOC-331045A1.txt\"><IMG SRC=\"/mc-icons/text.gif\" ALT=\"[TXT]\" BORDER=0>
+        \ DOC-331045A1.txt</A>       17-Dec-2014 23:58     2K    \n<A HREF=\"DOC-331046A1.pdf\"
+        NAME=\"DOC-331046A1.pdf\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  DOC-331046A1.pdf</A>       17-Dec-2014 23:58    12K    \n<A HREF=\"DOC-331046A1.txt\"
+        NAME=\"DOC-331046A1.txt\"><IMG SRC=\"/mc-icons/text.gif\" ALT=\"[TXT]\" BORDER=0>
+        \ DOC-331046A1.txt</A>       17-Dec-2014 23:57     2K    \n<A HREF=\"DOC-331047A1.pdf\"
+        NAME=\"DOC-331047A1.pdf\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  DOC-331047A1.pdf</A>       17-Dec-2014 23:58    38K    \n<A HREF=\"DOC-331047A1.txt\"
+        NAME=\"DOC-331047A1.txt\"><IMG SRC=\"/mc-icons/text.gif\" ALT=\"[TXT]\" BORDER=0>
+        \ DOC-331047A1.txt</A>       17-Dec-2014 23:58    33K    \n<A HREF=\"DOC-331048A1.pdf\"
+        NAME=\"DOC-331048A1.pdf\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  DOC-331048A1.pdf</A>       17-Dec-2014 23:58    16K    \n<A HREF=\"DOC-331048A1.txt\"
+        NAME=\"DOC-331048A1.txt\"><IMG SRC=\"/mc-icons/text.gif\" ALT=\"[TXT]\" BORDER=0>
+        \ DOC-331048A1.txt</A>       17-Dec-2014 23:58     4K    \n<A HREF=\"DOC-331053A1.pdf\"
+        NAME=\"DOC-331053A1.pdf\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  DOC-331053A1.pdf</A>       17-Dec-2014 23:58   103K    \n<A HREF=\"DOC-331053A1.txt\"
+        NAME=\"DOC-331053A1.txt\"><IMG SRC=\"/mc-icons/text.gif\" ALT=\"[TXT]\" BORDER=0>
+        \ DOC-331053A1.txt</A>       17-Dec-2014 23:57   119K    \n<A HREF=\"DOC-331054A1.pdf\"
+        NAME=\"DOC-331054A1.pdf\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  DOC-331054A1.pdf</A>       17-Dec-2014 23:58    84K    \n<A HREF=\"DOC-331054A1.txt\"
+        NAME=\"DOC-331054A1.txt\"><IMG SRC=\"/mc-icons/text.gif\" ALT=\"[TXT]\" BORDER=0>
+        \ DOC-331054A1.txt</A>       17-Dec-2014 23:57    21K    \n<A HREF=\"DOC-331055A1.pdf\"
+        NAME=\"DOC-331055A1.pdf\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  DOC-331055A1.pdf</A>       17-Dec-2014 23:57    23K    \n<A HREF=\"DOC-331055A1.txt\"
+        NAME=\"DOC-331055A1.txt\"><IMG SRC=\"/mc-icons/text.gif\" ALT=\"[TXT]\" BORDER=0>
+        \ DOC-331055A1.txt</A>       17-Dec-2014 23:58    15K    \n<A HREF=\"DOC-331056A1.pdf\"
+        NAME=\"DOC-331056A1.pdf\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  DOC-331056A1.pdf</A>       17-Dec-2014 23:57    57K    \n<A HREF=\"DOC-331056A1.txt\"
+        NAME=\"DOC-331056A1.txt\"><IMG SRC=\"/mc-icons/text.gif\" ALT=\"[TXT]\" BORDER=0>
+        \ DOC-331056A1.txt</A>       17-Dec-2014 23:57    52K    \n<A HREF=\"DOC-331057A1.pdf\"
+        NAME=\"DOC-331057A1.pdf\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  DOC-331057A1.pdf</A>       17-Dec-2014 23:57    18K    \n<A HREF=\"DOC-331057A1.txt\"
+        NAME=\"DOC-331057A1.txt\"><IMG SRC=\"/mc-icons/text.gif\" ALT=\"[TXT]\" BORDER=0>
+        \ DOC-331057A1.txt</A>       17-Dec-2014 23:57     8K    \n<A HREF=\"DOC-331058A1.pdf\"
+        NAME=\"DOC-331058A1.pdf\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  DOC-331058A1.pdf</A>       17-Dec-2014 23:57   145K    \n<A HREF=\"DOC-331058A1.txt\"
+        NAME=\"DOC-331058A1.txt\"><IMG SRC=\"/mc-icons/text.gif\" ALT=\"[TXT]\" BORDER=0>
+        \ DOC-331058A1.txt</A>       17-Dec-2014 23:57     2K    \n<A HREF=\"DOC-331059A1.pdf\"
+        NAME=\"DOC-331059A1.pdf\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  DOC-331059A1.pdf</A>       17-Dec-2014 23:58    17K    \n<A HREF=\"DOC-331059A1.txt\"
+        NAME=\"DOC-331059A1.txt\"><IMG SRC=\"/mc-icons/text.gif\" ALT=\"[TXT]\" BORDER=0>
+        \ DOC-331059A1.txt</A>       17-Dec-2014 23:57     8K    \n<A HREF=\"DOC-331060A1.pdf\"
+        NAME=\"DOC-331060A1.pdf\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  DOC-331060A1.pdf</A>       17-Dec-2014 23:58    11K    \n<A HREF=\"DOC-331060A1.txt\"
+        NAME=\"DOC-331060A1.txt\"><IMG SRC=\"/mc-icons/text.gif\" ALT=\"[TXT]\" BORDER=0>
+        \ DOC-331060A1.txt</A>       17-Dec-2014 23:57     1K    \n<A HREF=\"DOC-331061A1.pdf\"
+        NAME=\"DOC-331061A1.pdf\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  DOC-331061A1.pdf</A>       17-Dec-2014 23:58    12K    \n<A HREF=\"DOC-331061A1.txt\"
+        NAME=\"DOC-331061A1.txt\"><IMG SRC=\"/mc-icons/text.gif\" ALT=\"[TXT]\" BORDER=0>
+        \ DOC-331061A1.txt</A>       17-Dec-2014 23:58     1K    \n<A HREF=\"DOC-331066A1.pdf\"
+        NAME=\"DOC-331066A1.pdf\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  DOC-331066A1.pdf</A>       17-Dec-2014 23:58    16K    \n<A HREF=\"DOC-331066A1.txt\"
+        NAME=\"DOC-331066A1.txt\"><IMG SRC=\"/mc-icons/text.gif\" ALT=\"[TXT]\" BORDER=0>
+        \ DOC-331066A1.txt</A>       17-Dec-2014 23:57     5K    \n<A HREF=\"DOC-331068A1.pdf\"
+        NAME=\"DOC-331068A1.pdf\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  DOC-331068A1.pdf</A>       17-Dec-2014 23:57    21K    \n<A HREF=\"DOC-331068A1.txt\"
+        NAME=\"DOC-331068A1.txt\"><IMG SRC=\"/mc-icons/text.gif\" ALT=\"[TXT]\" BORDER=0>
+        \ DOC-331068A1.txt</A>       17-Dec-2014 23:58     9K    \n<A HREF=\"DOC-331069A1.pdf\"
+        NAME=\"DOC-331069A1.pdf\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  DOC-331069A1.pdf</A>       17-Dec-2014 23:58    18K    \n<A HREF=\"DOC-331069A1.txt\"
+        NAME=\"DOC-331069A1.txt\"><IMG SRC=\"/mc-icons/text.gif\" ALT=\"[TXT]\" BORDER=0>
+        \ DOC-331069A1.txt</A>       17-Dec-2014 23:57     6K    \n<A HREF=\"DOC-331070A1.pdf\"
+        NAME=\"DOC-331070A1.pdf\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  DOC-331070A1.pdf</A>       17-Dec-2014 23:57   222K    \n<A HREF=\"DOC-331070A1.txt\"
+        NAME=\"DOC-331070A1.txt\"><IMG SRC=\"/mc-icons/text.gif\" ALT=\"[TXT]\" BORDER=0>
+        \ DOC-331070A1.txt</A>       17-Dec-2014 23:58    39K    \n<A HREF=\"DOC-331073A1.pdf\"
+        NAME=\"DOC-331073A1.pdf\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  DOC-331073A1.pdf</A>       17-Dec-2014 23:58    21K    \n<A HREF=\"DOC-331073A1.txt\"
+        NAME=\"DOC-331073A1.txt\"><IMG SRC=\"/mc-icons/text.gif\" ALT=\"[TXT]\" BORDER=0>
+        \ DOC-331073A1.txt</A>       17-Dec-2014 23:57     8K    \n<A HREF=\"DOC-331074A1.pdf\"
+        NAME=\"DOC-331074A1.pdf\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  DOC-331074A1.pdf</A>       17-Dec-2014 23:57    18K    \n<A HREF=\"DOC-331074A1.txt\"
+        NAME=\"DOC-331074A1.txt\"><IMG SRC=\"/mc-icons/text.gif\" ALT=\"[TXT]\" BORDER=0>
+        \ DOC-331074A1.txt</A>       17-Dec-2014 23:58     6K    \n<A HREF=\"DOC-331075A1.pdf\"
+        NAME=\"DOC-331075A1.pdf\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  DOC-331075A1.pdf</A>       17-Dec-2014 23:58    16K    \n<A HREF=\"DOC-331075A1.txt\"
+        NAME=\"DOC-331075A1.txt\"><IMG SRC=\"/mc-icons/text.gif\" ALT=\"[TXT]\" BORDER=0>
+        \ DOC-331075A1.txt</A>       17-Dec-2014 23:57     5K    \n<A HREF=\"DOC-331076A1.docx\"
+        NAME=\"DOC-331076A1.docx\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  DOC-331076A1.docx</A>      17-Dec-2014 23:58    32K    \n<A HREF=\"DOC-331076A1.pdf\"
+        NAME=\"DOC-331076A1.pdf\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  DOC-331076A1.pdf</A>       17-Dec-2014 23:58    55K    \n<A HREF=\"DOC-331076A1.txt\"
+        NAME=\"DOC-331076A1.txt\"><IMG SRC=\"/mc-icons/text.gif\" ALT=\"[TXT]\" BORDER=0>
+        \ DOC-331076A1.txt</A>       17-Dec-2014 23:57     1K    \n<A HREF=\"DOC-331077A1.pdf\"
+        NAME=\"DOC-331077A1.pdf\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  DOC-331077A1.pdf</A>       17-Dec-2014 23:57   104K    \n<A HREF=\"DOC-331077A1.txt\"
+        NAME=\"DOC-331077A1.txt\"><IMG SRC=\"/mc-icons/text.gif\" ALT=\"[TXT]\" BORDER=0>
+        \ DOC-331077A1.txt</A>       17-Dec-2014 23:58    29K    \n<A HREF=\"DOC-331078A1.pdf\"
+        NAME=\"DOC-331078A1.pdf\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  DOC-331078A1.pdf</A>       17-Dec-2014 23:58   149K    \n<A HREF=\"DOC-331078A1.txt\"
+        NAME=\"DOC-331078A1.txt\"><IMG SRC=\"/mc-icons/text.gif\" ALT=\"[TXT]\" BORDER=0>
+        \ DOC-331078A1.txt</A>       17-Dec-2014 23:57    47K    \n<A HREF=\"DOC-331079A1.pdf\"
+        NAME=\"DOC-331079A1.pdf\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  DOC-331079A1.pdf</A>       17-Dec-2014 23:57    39K    \n<A HREF=\"DOC-331079A2.txt\"
+        NAME=\"DOC-331079A2.txt\"><IMG SRC=\"/mc-icons/text.gif\" ALT=\"[TXT]\" BORDER=0>
+        \ DOC-331079A2.txt</A>       17-Dec-2014 23:58    11K    \n<A HREF=\"DOC-331081A1.pdf\"
+        NAME=\"DOC-331081A1.pdf\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  DOC-331081A1.pdf</A>       17-Dec-2014 23:57    66K    \n<A HREF=\"DOC-331081A2.txt\"
+        NAME=\"DOC-331081A2.txt\"><IMG SRC=\"/mc-icons/text.gif\" ALT=\"[TXT]\" BORDER=0>
+        \ DOC-331081A2.txt</A>       17-Dec-2014 23:57    17K    \n<A HREF=\"DOC-331085A1.pdf\"
+        NAME=\"DOC-331085A1.pdf\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  DOC-331085A1.pdf</A>       17-Dec-2014 23:58    12K    \n<A HREF=\"DOC-331085A1.txt\"
+        NAME=\"DOC-331085A1.txt\"><IMG SRC=\"/mc-icons/text.gif\" ALT=\"[TXT]\" BORDER=0>
+        \ DOC-331085A1.txt</A>       17-Dec-2014 23:58     1K    \n<A HREF=\"DOC-331087A1.docx\"
+        NAME=\"DOC-331087A1.docx\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  DOC-331087A1.docx</A>      17-Dec-2014 23:58    38K    \n<A HREF=\"DOC-331087A1.pdf\"
+        NAME=\"DOC-331087A1.pdf\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  DOC-331087A1.pdf</A>       17-Dec-2014 23:58    87K    \n<A HREF=\"DOC-331087A1.txt\"
+        NAME=\"DOC-331087A1.txt\"><IMG SRC=\"/mc-icons/text.gif\" ALT=\"[TXT]\" BORDER=0>
+        \ DOC-331087A1.txt</A>       17-Dec-2014 23:58     1K    \n<A HREF=\"DOC-331092A1.docx\"
+        NAME=\"DOC-331092A1.docx\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  DOC-331092A1.docx</A>      17-Dec-2014 23:57    39K    \n<A HREF=\"DOC-331092A1.pdf\"
+        NAME=\"DOC-331092A1.pdf\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  DOC-331092A1.pdf</A>       17-Dec-2014 23:58    87K    \n<A HREF=\"DOC-331092A1.txt\"
+        NAME=\"DOC-331092A1.txt\"><IMG SRC=\"/mc-icons/text.gif\" ALT=\"[TXT]\" BORDER=0>
+        \ DOC-331092A1.txt</A>       17-Dec-2014 23:58     1K    \n<A HREF=\"DOC-331094A1.docx\"
+        NAME=\"DOC-331094A1.docx\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  DOC-331094A1.docx</A>      17-Dec-2014 23:57    39K    \n<A HREF=\"DOC-331094A1.pdf\"
+        NAME=\"DOC-331094A1.pdf\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  DOC-331094A1.pdf</A>       17-Dec-2014 23:58    96K    \n<A HREF=\"DOC-331094A1.txt\"
+        NAME=\"DOC-331094A1.txt\"><IMG SRC=\"/mc-icons/text.gif\" ALT=\"[TXT]\" BORDER=0>
+        \ DOC-331094A1.txt</A>       17-Dec-2014 23:58     1K    \n<A HREF=\"DOC-331095A1.doc\"
+        NAME=\"DOC-331095A1.doc\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  DOC-331095A1.doc</A>       17-Dec-2014 23:57    34K    \n<A HREF=\"DOC-331095A1.pdf\"
+        NAME=\"DOC-331095A1.pdf\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  DOC-331095A1.pdf</A>       17-Dec-2014 23:57    69K    \n<A HREF=\"DOC-331095A1.txt\"
+        NAME=\"DOC-331095A1.txt\"><IMG SRC=\"/mc-icons/text.gif\" ALT=\"[TXT]\" BORDER=0>
+        \ DOC-331095A1.txt</A>       17-Dec-2014 23:58     1K    \n<A HREF=\"DOC-331096A1.doc\"
+        NAME=\"DOC-331096A1.doc\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  DOC-331096A1.doc</A>       17-Dec-2014 23:57    45K    \n<A HREF=\"DOC-331096A1.pdf\"
+        NAME=\"DOC-331096A1.pdf\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  DOC-331096A1.pdf</A>       17-Dec-2014 23:58    75K    \n<A HREF=\"DOC-331096A1.txt\"
+        NAME=\"DOC-331096A1.txt\"><IMG SRC=\"/mc-icons/text.gif\" ALT=\"[TXT]\" BORDER=0>
+        \ DOC-331096A1.txt</A>       17-Dec-2014 23:57     5K    \n<A HREF=\"DOC-331097A1.doc\"
+        NAME=\"DOC-331097A1.doc\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  DOC-331097A1.doc</A>       17-Dec-2014 23:58    37K    \n<A HREF=\"DOC-331097A1.pdf\"
+        NAME=\"DOC-331097A1.pdf\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  DOC-331097A1.pdf</A>       17-Dec-2014 23:57    73K    \n<A HREF=\"DOC-331097A1.txt\"
+        NAME=\"DOC-331097A1.txt\"><IMG SRC=\"/mc-icons/text.gif\" ALT=\"[TXT]\" BORDER=0>
+        \ DOC-331097A1.txt</A>       17-Dec-2014 23:58     4K    \n<A HREF=\"DOC-331098A1.docx\"
+        NAME=\"DOC-331098A1.docx\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  DOC-331098A1.docx</A>      17-Dec-2014 23:58    36K    \n<A HREF=\"DOC-331098A1.pdf\"
+        NAME=\"DOC-331098A1.pdf\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  DOC-331098A1.pdf</A>       17-Dec-2014 23:58    85K    \n<A HREF=\"DOC-331098A1.txt\"
+        NAME=\"DOC-331098A1.txt\"><IMG SRC=\"/mc-icons/text.gif\" ALT=\"[TXT]\" BORDER=0>
+        \ DOC-331098A1.txt</A>       17-Dec-2014 23:58     5K    \n<A HREF=\"DOC-331101A1.docx\"
+        NAME=\"DOC-331101A1.docx\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  DOC-331101A1.docx</A>      17-Dec-2014 23:58    35K    \n<A HREF=\"DOC-331101A1.pdf\"
+        NAME=\"DOC-331101A1.pdf\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  DOC-331101A1.pdf</A>       17-Dec-2014 23:58    73K    \n<A HREF=\"DOC-331101A1.txt\"
+        NAME=\"DOC-331101A1.txt\"><IMG SRC=\"/mc-icons/text.gif\" ALT=\"[TXT]\" BORDER=0>
+        \ DOC-331101A1.txt</A>       17-Dec-2014 23:58     4K    \n<A HREF=\"DOC-331102A1.doc\"
+        NAME=\"DOC-331102A1.doc\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  DOC-331102A1.doc</A>       17-Dec-2014 23:58    52K    \n<A HREF=\"DOC-331102A1.pdf\"
+        NAME=\"DOC-331102A1.pdf\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  DOC-331102A1.pdf</A>       17-Dec-2014 23:58    88K    \n<A HREF=\"DOC-331102A1.txt\"
+        NAME=\"DOC-331102A1.txt\"><IMG SRC=\"/mc-icons/text.gif\" ALT=\"[TXT]\" BORDER=0>
+        \ DOC-331102A1.txt</A>       17-Dec-2014 23:58     2K    \n<A HREF=\"DOC-331103A1.doc\"
+        NAME=\"DOC-331103A1.doc\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  DOC-331103A1.doc</A>       17-Dec-2014 23:57    52K    \n<A HREF=\"DOC-331103A1.pdf\"
+        NAME=\"DOC-331103A1.pdf\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  DOC-331103A1.pdf</A>       17-Dec-2014 23:57    88K    \n<A HREF=\"DOC-331103A1.txt\"
+        NAME=\"DOC-331103A1.txt\"><IMG SRC=\"/mc-icons/text.gif\" ALT=\"[TXT]\" BORDER=0>
+        \ DOC-331103A1.txt</A>       17-Dec-2014 23:57     2K    \n<A HREF=\"DOC-331113A1.docx\"
+        NAME=\"DOC-331113A1.docx\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  DOC-331113A1.docx</A>      17-Dec-2014 23:57    25K    \n<A HREF=\"DOC-331113A1.pdf\"
+        NAME=\"DOC-331113A1.pdf\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  DOC-331113A1.pdf</A>       17-Dec-2014 23:58    76K    \n<A HREF=\"DOC-331113A1.txt\"
+        NAME=\"DOC-331113A1.txt\"><IMG SRC=\"/mc-icons/text.gif\" ALT=\"[TXT]\" BORDER=0>
+        \ DOC-331113A1.txt</A>       17-Dec-2014 23:57     6K    \n<A HREF=\"DOC-331117A1.docx\"
+        NAME=\"DOC-331117A1.docx\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  DOC-331117A1.docx</A>      17-Dec-2014 23:57    33K    \n<A HREF=\"DOC-331117A1.pdf\"
+        NAME=\"DOC-331117A1.pdf\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  DOC-331117A1.pdf</A>       17-Dec-2014 23:58    70K    \n<A HREF=\"DOC-331117A1.txt\"
+        NAME=\"DOC-331117A1.txt\"><IMG SRC=\"/mc-icons/text.gif\" ALT=\"[TXT]\" BORDER=0>
+        \ DOC-331117A1.txt</A>       17-Dec-2014 23:57     1K    \n<A HREF=\"FCC-14-191A1.docx\"
+        NAME=\"FCC-14-191A1.docx\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  FCC-14-191A1.docx</A>      17-Dec-2014 23:58     3M    \n<A HREF=\"FCC-14-191A1.pdf\"
+        NAME=\"FCC-14-191A1.pdf\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  FCC-14-191A1.pdf</A>       17-Dec-2014 23:58    16M    \n<A HREF=\"FCC-14-191A1.txt\"
+        NAME=\"FCC-14-191A1.txt\"><IMG SRC=\"/mc-icons/text.gif\" ALT=\"[TXT]\" BORDER=0>
+        \ FCC-14-191A1.txt</A>       17-Dec-2014 23:58   541K    \n<A HREF=\"FCC-14-191A2.pdf\"
+        NAME=\"FCC-14-191A2.pdf\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  FCC-14-191A2.pdf</A>       17-Dec-2014 23:58    92K    \n<A HREF=\"FCC-14-191A2.txt\"
+        NAME=\"FCC-14-191A2.txt\"><IMG SRC=\"/mc-icons/text.gif\" ALT=\"[TXT]\" BORDER=0>
+        \ FCC-14-191A2.txt</A>       17-Dec-2014 23:58    38K    \n<A HREF=\"FCC-14-191A2.xlsx\"
+        NAME=\"FCC-14-191A2.xlsx\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  FCC-14-191A2.xlsx</A>      17-Dec-2014 23:58    46K    \n<A HREF=\"FCC-14-191A3.docx\"
+        NAME=\"FCC-14-191A3.docx\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  FCC-14-191A3.docx</A>      17-Dec-2014 23:58    22K    \n<A HREF=\"FCC-14-191A3.pdf\"
+        NAME=\"FCC-14-191A3.pdf\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  FCC-14-191A3.pdf</A>       17-Dec-2014 23:57    73K    \n<A HREF=\"FCC-14-191A3.txt\"
+        NAME=\"FCC-14-191A3.txt\"><IMG SRC=\"/mc-icons/text.gif\" ALT=\"[TXT]\" BORDER=0>
+        \ FCC-14-191A3.txt</A>       17-Dec-2014 23:57     7K    \n<A HREF=\"FCC-14-191A4.docx\"
+        NAME=\"FCC-14-191A4.docx\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  FCC-14-191A4.docx</A>      17-Dec-2014 23:58    21K    \n<A HREF=\"FCC-14-191A4.pdf\"
+        NAME=\"FCC-14-191A4.pdf\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  FCC-14-191A4.pdf</A>       17-Dec-2014 23:58    70K    \n<A HREF=\"FCC-14-191A4.txt\"
+        NAME=\"FCC-14-191A4.txt\"><IMG SRC=\"/mc-icons/text.gif\" ALT=\"[TXT]\" BORDER=0>
+        \ FCC-14-191A4.txt</A>       17-Dec-2014 23:58     4K    \n<A HREF=\"FCC-14-191A5.docx\"
+        NAME=\"FCC-14-191A5.docx\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  FCC-14-191A5.docx</A>      17-Dec-2014 23:58    20K    \n<A HREF=\"FCC-14-191A5.pdf\"
+        NAME=\"FCC-14-191A5.pdf\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  FCC-14-191A5.pdf</A>       17-Dec-2014 23:57    65K    \n<A HREF=\"FCC-14-191A5.txt\"
+        NAME=\"FCC-14-191A5.txt\"><IMG SRC=\"/mc-icons/text.gif\" ALT=\"[TXT]\" BORDER=0>
+        \ FCC-14-191A5.txt</A>       17-Dec-2014 23:58     4K    \n<A HREF=\"FCC-14-191A6.docx\"
+        NAME=\"FCC-14-191A6.docx\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  FCC-14-191A6.docx</A>      17-Dec-2014 23:57    27K    \n<A HREF=\"FCC-14-191A6.pdf\"
+        NAME=\"FCC-14-191A6.pdf\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  FCC-14-191A6.pdf</A>       17-Dec-2014 23:58    87K    \n<A HREF=\"FCC-14-191A6.txt\"
+        NAME=\"FCC-14-191A6.txt\"><IMG SRC=\"/mc-icons/text.gif\" ALT=\"[TXT]\" BORDER=0>
+        \ FCC-14-191A6.txt</A>       17-Dec-2014 23:57    16K    \n<A HREF=\"FCC-14-191A7.docx\"
+        NAME=\"FCC-14-191A7.docx\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  FCC-14-191A7.docx</A>      17-Dec-2014 23:57    22K    \n<A HREF=\"FCC-14-191A7.pdf\"
+        NAME=\"FCC-14-191A7.pdf\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  FCC-14-191A7.pdf</A>       17-Dec-2014 23:58    78K    \n<A HREF=\"FCC-14-191A7.txt\"
+        NAME=\"FCC-14-191A7.txt\"><IMG SRC=\"/mc-icons/text.gif\" ALT=\"[TXT]\" BORDER=0>
+        \ FCC-14-191A7.txt</A>       17-Dec-2014 23:57     6K    \n<A HREF=\"FCC-14-207A1.docx\"
+        NAME=\"FCC-14-207A1.docx\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  FCC-14-207A1.docx</A>      17-Dec-2014 23:58    84K    \n<A HREF=\"FCC-14-207A1.pdf\"
+        NAME=\"FCC-14-207A1.pdf\"><IMG SRC=\"/mc-icons/unknown.gif\" ALT=\"[   ]\"
+        BORDER=0>  FCC-14-207A1.pdf</A>       17-Dec-2014 23:58   186K    \n<A HREF=\"FCC-14-207A1.txt\"
+        NAME=\"FCC-14-207A1.txt\"><IMG SRC=\"/mc-icons/text.gif\" ALT=\"[TXT]\" BORDER=0>
+        \ FCC-14-207A1.txt</A>       17-Dec-2014 23:58    78K    \n<A HREF=\"dd141217.html\"
+        NAME=\"dd141217.html\"><IMG SRC=\"/mc-icons/text.gif\" ALT=\"[TXT]\" BORDER=0>
+        \ dd141217.html</A>          17-Dec-2014 13:04    15K    \n<A HREF=\"dd141217.txt\"
+        NAME=\"dd141217.txt\"><IMG SRC=\"/mc-icons/text.gif\" ALT=\"[TXT]\" BORDER=0>
+        \ dd141217.txt</A>           17-Dec-2014 13:04    12K    \n</PRE>"
+    http_version: 
+  recorded_at: Sat, 27 Dec 2014 01:15:14 GMT
+- request:
+    method: get
+    uri: http://transition.fcc.gov/Daily_Releases/Daily_Business/2014/db1217//DA-14-1835A1.txt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Sun-Java-System-Web-Server/7.0
+      Date:
+      - Sat, 27 Dec 2014 01:16:09 GMT
+      Content-Type:
+      - text/plain
+      Last-Modified:
+      - Thu, 18 Dec 2014 04:58:06 GMT
+      Content-Length:
+      - '17006'
+      Etag:
+      - '"426e-54925ede"'
+      Accept-Ranges:
+      - bytes
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        RmVkZXJhbCBDb21tdW5pY2F0aW9ucyBDb21taXNzaW9uIERBIDE0LTE4MzUN
+        CiAgICAgIA0KQmVmb3JlIHRoZQ0KRmVkZXJhbCBDb21tdW5pY2F0aW9ucyBD
+        b21taXNzaW9uDQpXYXNoaW5ndG9uLCBELkMuIDIwNTU0DQpJbiB0aGUgTWF0
+        dGVyIG9mIA0KRm91ciBDb3JuZXJzIEJyb2FkY2FzdGluZywgTExDDQpMaWNl
+        bnNlZSBvZjoNClN0YXRpb24gS0lRWChGTSkgYW5kIFN0YXRpb24gV0hCMzUy
+        LA0KRHVyYW5nbywgQ29sb3JhZG87DQpTdGF0aW9uIEtSU0ooRk0pIGFuZCBT
+        dGF0aW9uIFdMRDczLA0KRHVyYW5nbywgQ29sb3JhZG87IA0KU3RhdGlvbiBL
+        SVVQKEFNKSBhbmQgU3RhdGlvbiBXUE5HNzQ2ICANCkR1cmFuZ28sIENvbG9y
+        YWRvDQopDQopDQopDQopDQopDQopDQopDQopDQopDQopDQopDQopDQopDQop
+        DQopDQopDQpGaWxlIE5vLjogIEVCLUZJRUxEV1ItMTItMDAwMDQwNDMNCkZh
+        Y2lsaXR5IElEIE5vLjogMjIxNzQNCkZpbGUgTm8uOiAgRUItRklFTERXUi0x
+        Mi0wMDAwNDAzOA0KRmFjaWxpdHkgSUQgTm8uOiAyMjAzNg0KRmlsZSBOby46
+        ICBFQi1GSUVMRFdSLTEyLTAwMDA0MDQ0DQpGYWNpbGl0eSBJRCBOby46IDIy
+        MDM5DQpOQUwvQWNjdC4gTm8uOiAgMjAxNDMyODAwMDAxDQpGUk46ICAwMDAz
+        Nzc5ODE2IA0KRk9SRkVJVFVSRSBPUkRFUg0KQWRvcHRlZDogRGVjZW1iZXIg
+        MTYsIDIwMTQgUmVsZWFzZWQ6ICBEZWNlbWJlciAxNywgMjAxNA0KQnkgdGhl
+        IFJlZ2lvbmFsIERpcmVjdG9yLCBXZXN0ZXJuIFJlZ2lvbiwgRW5mb3JjZW1l
+        bnQgQnVyZWF1Og0KSS4gICAgICAgICAgIElOVFJPRFVDVElPTg0KMS4gSW4g
+        dGhpcyBvcmRlciwgd2UgaW1wb3NlIGEgcGVuYWx0eSBvZiAkMjUsMDAwIGFn
+        YWluc3QgRm91ciBDb3JuZXJzIEJyb2FkY2FzdGluZywgTExDIA0KKEZvdXIg
+        Q29ybmVycykgZm9yIG9wZXJhdGluZyB0aHJlZSBzdHVkaW8tdHJhbnNtaXR0
+        ZXIgbGluayAoU1RMKSBzdGF0aW9ucyBhdCBhbiB1bmF1dGhvcml6ZWQgbG9j
+        YXRpb24uIEZvdXIgDQpDb3JuZXJzIGRvZXMgbm90IGRlbnkgdGhlIG9wZXJh
+        dGlvbnMgYnV0IGFza3MgdGhhdCB0aGUgZm9yZmVpdHVyZSBiZSByZWR1Y2Vk
+        IGR1ZSB0byBpbmFkdmVydGVudCBlcnJvcnMgbWFkZSANCmJ5IGl0cyBzdGFm
+        ZiBhbG9uZyB3aXRoIHN0YWZmIGlzc3VlcyB0aGF0IHdlcmUgYmV5b25kIGl0
+        cyBjb250cm9sLiAgR2l2ZW4gdGhlIGV4dGVuZGVkIG5hdHVyZSBvZiB0aGUg
+        dmlvbGF0aW9uDQphbmQgdGhlIGxhY2sgb2YgbWl0aWdhdGluZyBjaXJjdW1z
+        dGFuY2VzIHVuZGVyIG91ciBwcmVjZWRlbnQsIHdlIHNlZSBubyByZWFzb24g
+        dG8gcmVkdWNlIHRoZSBmb3JmZWl0dXJlLg0KMi4gSW4gdGhpcyBGb3JmZWl0
+        dXJlIE9yZGVyIChPcmRlciksIHdlIGlzc3VlIGEgbW9uZXRhcnkgZm9yZmVp
+        dHVyZSBpbiB0aGUgYW1vdW50IG9mIHR3ZW50eS0NCmZpdmUgdGhvdXNhbmQg
+        ZG9sbGFycyAoJDI1LDAwMCkgdG8gRm91ciBDb3JuZXJzLCBsaWNlbnNlZSBv
+        ZiBTdGF0aW9uIEtJUVgoRk0pIGFuZCBpdHMgYXNzb2NpYXRlZCBzdHVkaW8t
+        DQp0cmFuc21pdHRlciBsaW5rIChTVEwpIFN0YXRpb24gV0hCMzUyIG9wZXJh
+        dGluZyBvbiBmcmVxdWVuY3kgOTQ4LjUgTUh6LCBTdGF0aW9uIEtSU0ooRk0p
+        IGFuZCBpdHMgDQphc3NvY2lhdGVkIFNUTCBTdGF0aW9uIFdMRDczIG9wZXJh
+        dGluZyBvbiBmcmVxdWVuY3kgOTQ3LjAgTUh6LCBhbmQgU3RhdGlvbiBLSVVQ
+        KEFNKSBhbmQgaXRzIA0KYXNzb2NpYXRlZCBTVEwgU3RhdGlvbiBXUE5HNzQ2
+        IG9wZXJhdGluZyBvbiBmcmVxdWVuY3kgOTUxLjg3NSBNSHosIGluIER1cmFu
+        Z28sIENvbG9yYWRvLCBmb3IgDQp3aWxsZnVsbHkgYW5kIHJlcGVhdGVkbHkg
+        dmlvbGF0aW5nIFNlY3Rpb24gMzAxIG9mIHRoZSBDb21tdW5pY2F0aW9ucyBB
+        Y3Qgb2YgMTkzNCwgYXMgYW1lbmRlZCAoQWN0KSwNCjENCmFuZCANClNlY3Rp
+        b24gMS45MDMoYSkgb2YgdGhlIENvbW1pc3Npb26ScyBydWxlcyAoUnVsZXMp
+        Lg0KMg0KVGhlIG5vdGVkIHZpb2xhdGlvbnMgaW52b2x2ZSBvcGVyYXRpb24g
+        b2YgdGhlIHRocmVlIA0KU1RMIFN0YXRpb25zIChTVEwgU3RhdGlvbnMpIGZy
+        b20gYSBsb2NhdGlvbiBub3QgYXV0aG9yaXplZCBieSB0aGVpciByZXNwZWN0
+        aXZlIEZDQyBsaWNlbnNlcy4gIA0KSUkuICBCQUNLR1JPVU5EDQozLiBPbiBP
+        Y3RvYmVyIDI1LCAyMDEzLCB0aGUgRW5mb3JjZW1lbnQgQnVyZWF1knMgRGVu
+        dmVyIE9mZmljZSAoRGVudmVyIE9mZmljZSkgaXNzdWVkIGEgDQpOb3RpY2Ug
+        b2YgQXBwYXJlbnQgTGlhYmlsaXR5IGZvciBGb3JmZWl0dXJlIGFuZCBPcmRl
+        ciAoTkFMKSBmb3IgdHdlbnR5LWZpdmUgdGhvdXNhbmQgZG9sbGFycyAoJDI1
+        LDAwMCkgdG8gDQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+        ICAgICAgICAgICAgICAgICAgIA0KMQ0KNDcgVS5TLkMuIKcgMzAxLg0KMg0K
+        NDcgQy5GLlIuIKcgMS45MDMoYSkuDQpGZWRlcmFsIENvbW11bmljYXRpb25z
+        IENvbW1pc3Npb24gREEgMTQtMTgzNQ0KMg0KRm91ciBDb3JuZXJzIGZvciBm
+        YWlsaW5nIHRvIG9wZXJhdGUgdGhlIFNUTCBTdGF0aW9ucyBmcm9tIHRoZWly
+        IGF1dGhvcml6ZWQgbG9jYXRpb25zLg0KMw0KICBJbiByZXNwb25zZSB0byB0
+        aGUgDQpOQUwsIEZvdXIgQ29ybmVycyBkb2VzIG5vdCBkZW55IHRoZSB2aW9s
+        YXRpb25zLCBidXQgcmVxdWVzdHMgY2FuY2VsbGF0aW9uIG9yIHJlZHVjdGlv
+        biBiZWNhdXNlIGl0IHRvb2sgDQphY3Rpb24gYWZ0ZXIgcmVjZWl2aW5nIG5v
+        dGljZXMgZnJvbSB0aGUgRGVudmVyIE9mZmljZSBjb25jZXJuaW5nIHRoZSB2
+        aW9sYXRpb25zLCBhbmQgYmVjYXVzZSBpdCB3YXMgdW5hYmxlIHRvIA0KY29y
+        cmVjdCB0aGUgdmlvbGF0aW9ucyBiZWNhdXNlIG9mIHN0YWZmaW5nIGlzc3Vl
+        cyBiZXlvbmQgaXRzIGNvbnRyb2wuDQo0DQpJdCBhbHNvIHF1ZXN0aW9ucyB0
+        aGUgdXB3YXJkIGFkanVzdG1lbnQgDQphZGRlZCB0byB0aGUgcHJvcG9zZWQg
+        Zm9yZmVpdHVyZS4NCjUNCiAgICAgIA0KSUlJLiBESVNDVVNTSU9ODQo0LiBU
+        aGUgcHJvcG9zZWQgZm9yZmVpdHVyZSBhbW91bnQgaW4gdGhpcyBjYXNlIHdh
+        cyBhc3Nlc3NlZCBpbiBhY2NvcmRhbmNlIHdpdGggU2VjdGlvbiANCjUwMyhi
+        KSBvZiB0aGUgQ29tbXVuaWNhdGlvbnMgQWN0IG9mIDE5MzQsIGFzIGFtZW5k
+        ZWQgKEFjdCksDQo2DQpTZWN0aW9uIDEuODAgb2YgdGhlIFJ1bGVzLA0KNw0K
+        YW5kIHRoZSANCkZvcmZlaXR1cmUgUG9saWN5IFN0YXRlbWVudC4NCjgNCiAg
+        SW4gZXhhbWluaW5nIEZvdXIgQ29ybmVyc5IgcmVzcG9uc2UsIFNlY3Rpb24g
+        NTAzKGIpKDIpKEUpIG9mIHRoZSBBY3QgDQpyZXF1aXJlcyB0aGF0IHRoZSBD
+        b21taXNzaW9uIHRha2UgaW50byBhY2NvdW50IHRoZSBuYXR1cmUsIGNpcmN1
+        bXN0YW5jZXMsIGV4dGVudCwgYW5kIGdyYXZpdHkgb2YgdGhlIHZpb2xhdGlv
+        biANCmFuZCwgd2l0aCByZXNwZWN0IHRvIHRoZSB2aW9sYXRvciwgdGhlIGRl
+        Z3JlZSBvZiBjdWxwYWJpbGl0eSwgYW55IGhpc3Rvcnkgb2YgcHJpb3Igb2Zm
+        ZW5zZXMsIGFiaWxpdHkgdG8gcGF5LCBhbmQgDQpvdGhlciBzdWNoIG1hdHRl
+        cnMgYXMganVzdGljZSBtYXkgcmVxdWlyZS4NCjkNCiAgDQo1LiBXZSBhZmZp
+        cm0gdGhlIE5BTJJzIGZpbmRpbmcgdGhhdCBGb3VyIENvcm5lcnMgdmlvbGF0
+        ZWQgU2VjdGlvbiAzMDEgb2YgdGhlIEFjdCBhbmQgDQpTZWN0aW9uIDEuOTAz
+        KGEpIG9mIHRoZSBSdWxlcy4NCjEwDQogIFNlY3Rpb24gMzAxIG9mIHRoZSBB
+        Y3QgcHJvaGliaXRzIHRoZSB1c2Ugb3Igb3BlcmF0aW9uIG9mIGFueSBhcHBh
+        cmF0dXMgZm9yIA0KdGhlIHRyYW5zbWlzc2lvbiBvZiBlbmVyZ3kgb3IgY29t
+        bXVuaWNhdGlvbnMgb3Igc2lnbmFscyBieSByYWRpbywgZXhjZXB0IHVuZGVy
+        IGFuZCBpbiBhY2NvcmRhbmNlIHdpdGggDQp0aGUgQWN0IGFuZCB3aXRoIGEg
+        bGljZW5zZS4NCjExDQogIFNlY3Rpb24gMS45MDMoYSkgb2YgdGhlIFJ1bGVz
+        IHJlcXVpcmVzIHRoYXQgc3RhdGlvbnMgaW4gdGhlIFdpcmVsZXNzIFJhZGlv
+        IA0KU2VydmljZXMgbXVzdCBiZSB1c2VkIGFuZCBvcGVyYXRlZCBvbmx5IGlu
+        IGFjY29yZGFuY2Ugd2l0aCB0aGUgcnVsZXMgYXBwbGljYWJsZSB0byB0aGVp
+        ciBwYXJ0aWN1bGFyIA0Kc2VydmljZSwgYW5kIHdpdGggYSB2YWxpZCBhdXRo
+        b3JpemF0aW9uIGdyYW50ZWQgYnkgdGhlIENvbW1pc3Npb24uDQoxMg0KICAN
+        CjYuIEFzIHJlZmxlY3RlZCBpbiB0aGUgTkFMLCBkdXJpbmcgYW4gaW5zcGVj
+        dGlvbiBjb25kdWN0ZWQgb24gQXVndXN0IDI0LCAyMDEyLCBhbiBhZ2VudCAN
+        CmZyb20gdGhlIERlbnZlciBPZmZpY2UgZGV0ZXJtaW5lZCB0aGF0IHRoZSBT
+        VEwgU3RhdGlvbnMgd2VyZSBvcGVyYXRpbmcgZnJvbSBhIGxvY2F0aW9uIGFw
+        cHJveGltYXRlbHkgDQowLjYgbWlsZXMgZnJvbSB0aGVpciBhdXRob3JpemVk
+        IGxvY2F0aW9uLiAgRnVydGhlciwgdGhlIGFnZW50IGRldGVybWluZWQgdGhh
+        dCB0aGUgU1RMIFN0YXRpb25zIGhhZCBiZWVuIA0Kb3BlcmF0aW5nIGF0IHRo
+        ZSB1bmF1dGhvcml6ZWQgbG9jYXRpb24gc2luY2UgQXVndXN0IDIwMDcuIElu
+        IGFkZGl0aW9uLCB3aGlsZSBGb3VyIENvcm5lcnMgZmlsZWQgDQphcHBsaWNh
+        dGlvbnMgdG8gcmVtZWR5IHRoZSB2aW9sYXRpb25zIGFmdGVyIHJlY2Vpdmlu
+        ZyBOb3RpY2VzIG9mIFZpb2xhdGlvbiwNCjEzDQppbiBTZXB0ZW1iZXIgMjAx
+        MiwgYWxsIHRocmVlIA0KYXBwbGljYXRpb25zIHdlcmUgk3JldHVybmVklCB0
+        byBGb3VyIENvcm5lcnMgYnkgdGhlIENvbW1pc3Npb24gb24gRmVicnVhcnkg
+        MjAsIDIwMTMsIGFuZCANCnN1YnNlcXVlbnRseSwgb24gTWF5IDE0LCAyMDEz
+        LCBsZXR0ZXJzIGRpc21pc3NpbmcgdGhlIGFwcGxpY2F0aW9ucyB3ZXJlIGFs
+        c28gc2VudCB0byBGb3VyIENvcm5lcnMuDQoxNA0KICANCiAgICAgICAgICAg
+        ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgDQoz
+        DQpGb3VyIENvcm5lcnMgQnJvYWRjYXN0aW5nLCBMTEMsIE5vdGljZSBvZiBB
+        cHBhcmVudCBMaWFiaWxpdHkgZm9yIEZvcmZlaXR1cmUgYW5kIE9yZGVyLCAy
+        OCBGQ0MgUmNkIDE0NjU5IChFbmYuIA0KQnVyLiAyMDEzKSAoTkFMKS4gIEEg
+        cmVjaXRhdGlvbiBvZiB0aGUgZmFjdHMgb2YgdGhpcyBjYXNlIGNhbiBiZSBm
+        b3VuZCBpbiB0aGUgTkFMIGFuZCBpcyBpbmNvcnBvcmF0ZWQgaGVyZWluIGJ5
+        IA0KcmVmZXJlbmNlLiAgDQo0DQpTZWUgUmVzcG9uc2Ugb2YgRm91ciBDb3Ju
+        ZXJzIEJyb2FkY2FzdGluZywgTExDLCB0byBEZW52ZXIgT2ZmaWNlLCBXZXN0
+        ZXJuIFJlZ2lvbiwgRW5mb3JjZW1lbnQgQnVyZWF1IChOb3YuIA0KMjUsIDIw
+        MTMpIChvbiBmaWxlIGluIEVCLUZJRUxEV1ItMTItMDAwMDQwMzgsIEVCLUZJ
+        RUxEV1ItMTItMDAwMDQwNDMsIGFuZCBFQi1GSUVMRFdSLTEyLTAwMDA0MDQ0
+        KSANCihOQUwgUmVzcG9uc2UpLg0KNQ0KU2VlIE5BTCBSZXNwb25zZSBhdCAz
+        ljQuDQo2DQo0NyBVLlMuQy4gpyA1MDMoYikuDQo3DQo0NyBDLkYuUi4gpyAx
+        LjgwLg0KOA0KVGhlIENvbW1pc3Npb26ScyBGb3JmZWl0dXJlIFBvbGljeSBT
+        dGF0ZW1lbnQgYW5kIEFtZW5kbWVudCBvZiBTZWN0aW9uIDEuODAgb2YgdGhl
+        IFJ1bGVzIHRvIEluY29ycG9yYXRlIHRoZSANCkZvcmZlaXR1cmUgR3VpZGVs
+        aW5lcywgUmVwb3J0IGFuZCBPcmRlciwgMTIgRkNDIFJjZCAxNzA4NyAoMTk5
+        NyksIHJlY29ucy4gZGVuaWVkLCAxNSBGQ0MgUmNkIDMwMyAoMTk5OSkgDQoo
+        Rm9yZmVpdHVyZSBQb2xpY3kgU3RhdGVtZW50KS4gIA0KOQ0KNDcgVS5TLkMu
+        IKcgNTAzKGIpKDIpKEUpLg0KMTANClNlZSBOQUwsIHN1cHJhIG5vdGUgMy4g
+        DQoxMQ0KNDcgVS5TLkMuIKcgMzAxLg0KMTINCjQ3IEMuRi5SLiCnIDEuOTAz
+        KGEpLg0KMTMNClNlZSBGb3VyIENvcm5lcnMgQnJvYWRjYXN0aW5nLCBOb3Rp
+        Y2Ugb2YgVmlvbGF0aW9uLCBWMjAxMjMyODAwMDY5IChTZXB0LiAyNywgMjAx
+        Mik7IEZvdXIgQ29ybmVycyANCkJyb2FkY2FzdGluZywgTm90aWNlIG9mIFZp
+        b2xhdGlvbiwgVjIwMTIzMjgwMDA3MCAoU2VwdC4gMjcsIDIwMTIpOyBGb3Vy
+        IENvcm5lcnMgQnJvYWRjYXN0aW5nLCBOb3RpY2Ugb2YgDQpWaW9sYXRpb24s
+        IFYyMDEyMzI4MDAwNzEgKFNlcHQuIDI3LCAyMDEyKSAoTm90aWNlcykuDQox
+        NA0KQWxsIHRocmVlIGFwcGxpY2F0aW9ucyB3ZXJlIGRpc21pc3NlZCBiZWNh
+        dXNlIHRoZSBhcHBsaWNhdGlvbnMgd2VyZSBub3QgYW1lbmRlZCB3aXRoaW4g
+        NjAgZGF5cyBvZiB0aGUgZGF0ZSANCnNob3duIG9uIHRoZSCTTm90aWNlIG9m
+        IEFwcGxpY2F0aW9uIFJldHVybpQgbGV0dGVycy4gIFNlZSBTdGF0aW9uIFdI
+        QjM1MiwgRmlsZSBOby4gMDAwNTQ2OTM2MSAoZmlsZWQgT2N0LiAyOSwgDQpG
+        ZWRlcmFsIENvbW11bmljYXRpb25zIENvbW1pc3Npb24gREEgMTQtMTgzNQ0K
+        Mw0KNy4gT24gSnVseSAyMywgMjAxMywgYSBEZW52ZXIgT2ZmaWNlIGFnZW50
+        IGNvbmR1Y3RlZCBhIGZvbGxvdy11cCBpbnNwZWN0aW9uIG9mIHRoZSBTVEwg
+        DQpTdGF0aW9ucyBhbmQgZm91bmQgdGhhdCB0aGUgU1RMIFN0YXRpb25zIGNv
+        bnRpbnVlZCB0byBiZSBpbiBvcGVyYXRpb24gYXQgdGhlIHVuYXV0aG9yaXpl
+        ZCBsb2NhdGlvbi4gVGh1cywgDQpvbiBPY3RvYmVyIDI1LCAyMDEzLCB0aGUg
+        RGVudmVyIE9mZmljZSBpc3N1ZWQgdGhlIE5BTCwgZmluZGluZyB0aGF0IEZv
+        dXIgQ29ybmVycyB3aWxsZnVsbHkgYW5kIA0KcmVwZWF0ZWRseSB2aW9sYXRl
+        ZCBTZWN0aW9uIDMwMSBvZiB0aGUgQWN0IGFuZCBTZWN0aW9uIDEuOTAzKGEp
+        IG9mIHRoZSBSdWxlcyBieSBvcGVyYXRpbmcgdGhlIFNUTCANClN0YXRpb25z
+        IGZyb20gYSBsb2NhdGlvbiBub3QgYXV0aG9yaXplZCBieSB0aGVpciByZXNw
+        ZWN0aXZlIEZDQyBsaWNlbnNlcy4gVGhlcmVhZnRlciwgb24gT2N0b2JlciAz
+        MCwgDQoyMDEzLCBGb3VyIENvcm5lcnMgc3VibWl0dGVkIGFwcGxpY2F0aW9u
+        cyB3aXRoIHRoZSBGQ0MgdG8gbW9kaWZ5IHRoZSB0cmFuc21pdHRlciBzaXRl
+        IG9mIHRoZSBTVEEgDQpTdGF0aW9ucywgd2hpY2ggd2VyZSB1bHRpbWF0ZWx5
+        IGdyYW50ZWQgaW4gSmFudWFyeSwgMjAxNC4NCjE1DQogICAgICAgIA0KOC4g
+        SW4gcmVzcG9uc2UgdG8gdGhlIE5BTCwgRm91ciBDb3JuZXJzIHJlcXVlc3Rz
+        IGNhbmNlbGxhdGlvbiBvciByZWR1Y3Rpb24gb2YgdGhlICQyNSwwMDAgDQpm
+        b3JmZWl0dXJlLCBmaXJzdCBhcmd1aW5nIHRoYXQgaXQgdG9vayBpbW1lZGlh
+        dGUgc3RlcHMgdG8gcmVtZWR5IHRoZSB2aW9sYXRpb24gYWZ0ZXIgYmVpbmcg
+        bm90aWZpZWQgYnkgdGhlIA0KRGVudmVyIE9mZmljZSBpbiB0aGUgTm90aWNl
+        cyBhbmQgdGhhdCBhbnkgc3Vic2VxdWVudCBmYWlsdXJlIHdhcyBkdWUgdG8g
+        aW5hZHZlcnRlbnQgc3RhZmYgZXJyb3IsIGluY2x1ZGluZyANCmFuIHVuYW50
+        aWNpcGF0ZWQgaWxsbmVzcyBhbmQgdW5hdmFpbGFiaWxpdHkgb2Ygb25lIG9m
+        IGl0cyBrZXkgZW1wbG95ZWVzLg0KMTYNCiAgV2UgZmluZCB0aGF0IG5laXRo
+        ZXIgb2YgdGhlc2UgDQphcmd1bWVudHMganVzdGlmeSBhIHJlZHVjdGlvbiBv
+        ZiB0aGUgcHJvcG9zZWQgZm9yZmVpdHVyZS4gIEl0IGlzIHdlbGwgZXN0YWJs
+        aXNoZWQgdGhhdCBjb3JyZWN0aXZlIGFjdGlvbiB0YWtlbiANCnRvIGNvbWUg
+        aW50byBjb21wbGlhbmNlIHdpdGggdGhlIFJ1bGVzIGlzIGV4cGVjdGVkIGFm
+        dGVyIG5vdGljZSBmcm9tIHRoZSBDb21taXNzaW9uLCBhbmQgZG9lcyBub3Qg
+        DQpudWxsaWZ5IG9yIG1pdGlnYXRlIGFueSBwcmlvciBmb3JmZWl0dXJlcyBv
+        ciB2aW9sYXRpb25zLg0KMTcNCiAgV2UgYWxzbyBub3RlIHRoYXQgbmVpdGhl
+        ciB0aGUgbmVnbGlnZW50IGFjdHMgbm9yIA0Kb21pc3Npb25zIG9mIHN0YXRp
+        b24gZW1wbG95ZWVzIGV4Y3VzZSBhIGxpY2Vuc2VlJ3MgcnVsZSB2aW9sYXRp
+        b24ulA0KMTgNCjkuIEZvdXIgQ29ybmVycyBhbHNvIGFyZ3VlcyB0aGF0IHRo
+        ZSBwcm9wb3NlZCB1cHdhcmQgYWRqdXN0bWVudCBvZiB0aGUgYmFzZSBmb3Jm
+        ZWl0dXJlIA0KYW1vdW50IJNpcyBvdXRyYWdlb3VzIGFuZCBjYW5ub3QgYmUg
+        c3VzdGFpbmVklCBiZWNhdXNlIHRoZSBwcmVjZWRlbnQgY2l0ZWQgZm9yIHRo
+        ZSB1cHdhcmQgYWRqdXN0IGlzIHR3byANCk5vdGljZXMgb2YgQXBwYXJlbnQg
+        TGlhYmlsaXR5LA0KMTkNCmFzc2VydGluZyB0aGF0IGJlY2F1c2UgdGhleSB3
+        ZXJlIG5laXRoZXIgZmluYWwgZGV0ZXJtaW5hdGlvbnMgb2YgbGlhYmlsaXR5
+        LCANCm5vciBwYWlkLCByZWx5aW5nIG9uIHRoZW0gdmlvbGF0ZXMgU2VjdGlv
+        biA1MDQoYykgb2YgdGhlIEFjdC4NCjIwDQogIFdlIGRpc2FncmVlLiBTZWN0
+        aW9uIDUwNChjKSBzdGF0ZXMgdGhhdCANCpNbaV1uIGFueSBjYXNlIHdoZXJl
+        IHRoZSBDb21taXNzaW9uIGlzc3VlcyBhIG5vdGljZSBvZiBhcHBhcmVudCBs
+        aWFiaWxpdHkgbG9va2luZyB0b3dhcmQgdGhlIGltcG9zaXRpb24gDQogICAg
+        ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+        ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+        ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+        ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIA0KMjAxMjsgcmV0dXJu
+        ZWQgRmViLiAyMCwgMjAxMzsgZGlzbWlzc2VkIE1heSAxNCwgMjAxMyk7IFN0
+        YXRpb24gV0xENzMsIEZpbGUgTm8uIDAwMDU0NjkyODYgKGZpbGVkIE9jdC4g
+        MjksIDIwMTI7IA0KcmV0dXJuZWQgRmViLiAyMCwgMjAxMzsgZGlzbWlzc2Vk
+        IE1heSAxNCwgMjAxMyk7IFN0YXRpb24gV1BORzc0NiwgRmlsZSBOby4gMDAw
+        NTQ2OTMxNyAoZmlsZWQgT2N0LiAyOSwgMjAxMjsNCnJldHVybmVkIEZlYi4g
+        MjAsIDIwMTM7IGRpc21pc3NlZCBNYXkgMTQsIDIwMTMpLiAgDQoxNQ0KQ29u
+        c2lzdGVudCB3aXRoIHRoZSByZXF1aXJlbWVudHMgb2YgdGhlIE5BTCwgRm91
+        ciBDb3JuZXJzIGJyb3VnaHQgdGhlIFNUTCBTdGF0aW9ucyBpbnRvIGNvbXBs
+        aWFuY2UgYXMgb2YgDQpKYW51YXJ5IDE0LCAyMDE0LiBTZWUgU3RhdGlvbiBX
+        SEIzNTIsIEZpbGUgTm8uIDAwMDU5OTA0MTcgKGdyYW50ZWQgSmFuLiAxNCwg
+        MjAxNCk7IFN0YXRpb24gV0xENzMsIEZpbGUgTm8uIA0KMDAwNTk5MDc2NCAo
+        Z3JhbnRlZCBKYW4uIDE0LCAyMDE0KTsgU3RhdGlvbiBXUE5HNzQ2LCBGaWxl
+        IE5vLiAwMDA1OTg5NjY0IChncmFudGVkIEphbiAxNCwgMjAxNCkuICANCjE2
+        DQpOQUwgUmVzcG9uc2UgYXQgMZYzLiAgRm91ciBDb3JuZXJzIGFsc28gc3Rh
+        dGVzIHRoYXQgaXQgZGlkIG5vdCByZWNlaXZlIHRoZSCTcmV0dXJuZWSUIGFw
+        cGxpY2F0aW9ucyBpbiBGZWJydWFyeSANCjIwMTMsIGJ1dCBkb2VzIGFja25v
+        d2xlZGdlIHRoYXQgaXQgcmVjZWl2ZWQgdGhlIE1heSAyMDEzIGxldHRlcnMg
+        ZGlzbWlzc2luZyB0aGUgYXBwbGljYXRpb25zLiAgSWQuIGF0IDKWMy4gDQox
+        Nw0KU2VlLCBlLmcuLCBDQiBSYWRpbywgSW5jLiwgTWVtb3JhbmR1bSBPcGlu
+        aW9uIGFuZCBPcmRlciwgMjIgRkNDIFJjZCA4ODM2LCA4ODM5LTQwICgyMDA3
+        KSAobm90aW5nIHRoYXQgk2l0IGlzIA0Kd2VsbCBlc3RhYmxpc2hlZCB0aGF0
+        IHBvc3QtaW52ZXN0aWdhdGlvbmFsIGVmZm9ydHMgdG8gY29ycmVjdCBhIHZp
+        b2xhdGlvbiBkbyBub3QgbWl0aWdhdGUgdGhlIGZvcmZlaXR1cmUgb3Igd2Fy
+        cmFudCBhIA0KcmVkdWN0aW9uIGluIHRoZSBhc3Nlc3NlZCBmb3JmZWl0dXJl
+        IGFtb3VudJQpOyBBVCZUIFdpcmVsZXNzIFNlcnZpY2VzLCBJbmMuLCBGb3Jm
+        ZWl0dXJlIE9yZGVyLCAxNyBGQ0MgUmNkIDIxODY2LCANCjIxODc1LTc2ICgy
+        MDAyKSAoZmluZGluZyB0aGF0IGEgZG93bndhcmQgYWRqdXN0bWVudCBvZiBh
+        biBhZ2dyZWdhdGUgZm9yZmVpdHVyZSB3YXMgbm90IHdhcnJhbnRlZCB3aGVy
+        ZSB0aGUgDQpjYXJyaWVyIGxhY2tlZCBhbiBlZmZlY3RpdmUgYW50ZW5uYSBj
+        b21wbGlhbmNlIHByb2dyYW0gYXQgdGhlIHRpbWUgb2YgdGhlIHZpb2xhdGlv
+        bnMgYW5kIG9ubHkgY29ycmVjdGVkIHN1Y2ggDQp2aW9sYXRpb25zIGFmdGVy
+        IHRoZSBDb21taXNzaW9uIGJyb3VnaHQgdGhlbSB0byBpdHMgYXR0ZW50aW9u
+        KS4NCjE4DQpEaXNjdXNzaW9uIFJhZGlvLCBJbmMuLCBNZW1vcmFuZHVtIE9w
+        aW5pb24gYW5kIE9yZGVyLCAxOSBGQ0MgUmNkIDc0MzMsIDc0MzksIHBhcmEu
+        IDE4ICgyMDA0KSAod2hlcmUgbGFwc2VzIA0Kb2NjdXIgaW4gbWFpbnRhaW5p
+        bmcgdGhlIHB1YmxpYyBmaWxlLCBuZWl0aGVyIHRoZSBuZWdsaWdlbnQgYWN0
+        cyBvciBvbWlzc2lvbnMgb2Ygc3RhdGlvbiBlbXBsb3llZXMgb3IgYWdlbnRz
+        LCBub3IgdGhlIA0Kc3Vic2VxdWVudCByZW1lZGlhbCBhY3Rpb25zIHVuZGVy
+        dGFrZW4gYnkgdGhlIGxpY2Vuc2VlLCBleGN1c2Ugb3IgbnVsbGlmeSBhIGxp
+        Y2Vuc2VlJ3MgcnVsZSB2aW9sYXRpb24pLiAgRm91ciBDb3JuZXJzIA0KYWxz
+        byBhcHBlYXJzIHRvIGFsbGVnZSB0aGF0IHRoZSBEZW52ZXIgT2ZmaWNlIGFn
+        ZW50IHNob3VsZCBub3QgaGF2ZSBjb25kdWN0ZWQgdGhlIGZvbGxvdy11cCBp
+        bnNwZWN0aW9uIG9mIHRoZSBTVEwgDQpTdGF0aW9ucyBvbiBKdWx5IDIzLCAy
+        MDEzLCBiZWNhdXNlIHRoZSB0d28gRk0gc3RhdGlvbnMgYW5kIG9uZSBBTSBz
+        dGF0aW9uIHRoYXQgb3BlcmF0ZSB0aGUgU1RMIFN0YXRpb25zIGhhZCANCnJl
+        Y2VpdmVkIEFsdGVybmF0aXZlIEJyb2FkY2FzdCBJbnNwZWN0aW9uIFByb2dy
+        YW0gKEFCSVApIENlcnRpZmljYXRlcyAoQ2VydGlmaWNhdGVzKSBvbiBKdW5l
+        IDI4LCAyMDEzLiAgU2VlIE5BTCANClJlc3BvbnNlIGF0IDIsIG4uMiwgYW5k
+        IEV4aGliaXQgQS4gIEZvdXIgQ29ybmVyc5IgdmlvbGF0aW9ucyBjb25jZXJu
+        aW5nIHRoZSBTVEwgU3RhdGlvbnMgYmVnYW4sIGFuZCBGb3VyIENvcm5lcnMg
+        DQpoYWQgbm90aWNlIG9mIHRoZSB2aW9sYXRpb25zIGFuZCB0aGUgRkNDknMg
+        b3BlbiBpbnZlc3RpZ2F0aW9uIG9mIHRoZSBvbmdvaW5nIHZpb2xhdGlvbnMs
+        IHByaW9yIHRvIHRoZSBhd2FyZGluZyBvZiANCnRoZXNlIEFCSVAgQ2VydGlm
+        aWNhdGVzLCBhbmQgZ2l2ZW4gdGhlIGNvbnRpbnVpbmcgdW5yZXNvbHZlZCBu
+        YXR1cmUgb2YgdGhlIHZpb2xhdGlvbnMsIHRoZSBGQ0OScyBKdWx5IDIzLCAy
+        MDEzLCANCmluc3BlY3Rpb24sIHdoaWNoIHdhcyBsaW1pdGVkIHRvIHRoZSBj
+        b250aW51ZWQgdW5hdXRob3JpemVkIG9wZXJhdGlvbiBvZiB0aGUgU1RMIFN0
+        YXRpb25zLCB3YXMgYSBwcm9wZXIgaW5zcGVjdGlvbi4gDQoxOQ0KVGhlIHR3
+        byBOb3RpY2VzIG9mIEFwcGFyZW50IExpYWJpbGl0eSBjaXRlZCB3ZXJlIFJl
+        bWVsLCBJbmMuIGFuZCBJdHMgQ29ycG9yYXRlIFBhcmVudCBUaGVybWFsIEZp
+        c2hlciBTY2llbnRpZmljLCANCkluYy4sIE5vdGljZSBvZiBBcHBhcmVudCBM
+        aWFiaWxpdHkgZm9yIEZvcmZlaXR1cmUsIDI4IEZDQyBSY2QgODc3OCAoMjAx
+        MykgKGZvcmZlaXR1cmUgcGFpZCkgKFJlbWVsIE5BTCkgYW5kIFVuaW9uIA0K
+        QnJvYWRjYXN0aW5nLCBJbmMuLCBOb3RpY2Ugb2YgQXBwYXJlbnQgTGlhYmls
+        aXR5IGZvciBGb3JmZWl0dXJlLCAyOCBGQ0MgUmNkIDcwNjEgKEVuZi4gQnVy
+        LiAyMDEzKSAoZm9yZmVpdHVyZSBwYWlkKQ0KKFVuaW9uIEJyb2FkY2FzdGlu
+        ZyBOQUwpLiAgV2Ugbm90ZSB0aGF0IHdoaWxlIEZvdXIgQ29ybmVycyBhcmd1
+        ZXMgdGhhdCB0aGVzZSB3ZXJlIGJvdGggc3RhZmYgZGVjaXNpb25zLCB0aGUg
+        UmVtZWwgDQpOQUwgd2FzIGlzc3VlZCBieSB0aGUgQ29tbWlzc2lvbi4NCjIw
+        DQo0NyBVLlMuQy4gpyA1MDQoYykuICBOQUwgUmVzcG9uc2UgYXQgNC4NCkZl
+        ZGVyYWwgQ29tbXVuaWNhdGlvbnMgQ29tbWlzc2lvbiBEQSAxNC0xODM1DQo0
+        DQpvZiBhIGZvcmZlaXR1cmUgdW5kZXIgdGhpcyBjaGFwdGVyLCB0aGF0IGZh
+        Y3Qgc2hhbGwgbm90IGJlIHVzZWQsIGluIGFueSBvdGhlciBwcm9jZWVkaW5n
+        IGJlZm9yZSB0aGUgDQpDb21taXNzaW9uLCB0byB0aGUgcHJlanVkaWNlIG9m
+        IHRoZSBwZXJzb24gdG8gd2hvbSBzdWNoIG5vdGljZSB3YXMgaXNzdWVkLCB1
+        bmxlc3MgKGkpIHRoZSBmb3JmZWl0dXJlIGhhcyANCmJlZW4gcGFpZCwgb3Ig
+        KGlpKSBhIGNvdXJ0IG9mIGNvbXBldGVudCBqdXJpc2RpY3Rpb24gaGFzIG9y
+        ZGVyZWQgcGF5bWVudCBvZiBzdWNoIGZvcmZlaXR1cmUsIGFuZCBzdWNoIG9y
+        ZGVyIA0KaGFzIGJlY29tZSBmaW5hbC6UDQoyMQ0KV2Ugc2VlIG5vIGVycm9y
+        IGluIHRoZSBEZW52ZXIgT2ZmaWNlIHJlbHlpbmcgb24gcHJpb3IgQ29tbWlz
+        c2lvbiBhbmQgc3RhZmYgDQpwcmVjZWRlbnQgdG8gZGV0ZXJtaW5lIHdoYXQg
+        bGV2ZWwgb2YgZm9yZmVpdHVyZSB0byBwcm9wb3NlLCBhcyB0aGUgZm9yZmVp
+        dHVyZSBpbiB0aGUgTkFMIGlzIGEgcHJvcG9zYWwgYW5kIA0KRm91ciBDb3Ju
+        ZXJzIHdhcyBhZmZvcmRlZCBhbiBvcHBvcnR1bml0eSB0byByZXNwb25kLiAg
+        SW4gYW55IGV2ZW50LCB0aGUgU2VjdGlvbiA1MDQoYykgYXJndW1lbnQgaXMg
+        bW9vdCwgDQphcyBib3RoIHRoZSBSZW1lbCBOQUwgYW5kIFVuaW9uIEJyb2Fk
+        Y2FzdGluZyBOQUwgd2VyZSBwYWlkIGFmdGVyIGVhY2ggb2YgdGhlIG5vdGlj
+        ZXMgd2VyZSBpc3N1ZWQuICBXZSANCmZpbmQgdGhhdCB0aGUgcHJlY2VkZW50
+        IGNvbnRpbnVlcyB0byBzdXBwb3J0IHRoZSB1cHdhcmQgYWRqdXN0bWVudCBv
+        ZiB0aGUgcHJvcG9zZWQgZm9yZmVpdHVyZSwgZ2l2ZW4gdGhlIA0KbG9uZyBk
+        dXJhdGlvbiBvZiBGb3VyIENvcm5lcnOSIHZpb2xhdGlvbiBvZiBTZWN0aW9u
+        IDMwMSBvZiB0aGUgQWN0IGFuZCBTZWN0aW9uIDEuOTAzKGEpIG9mIHRoZSBS
+        dWxlcy4NCjIyDQpUaGVyZWZvcmUsIGFmdGVyIGNvbnNpZGVyYXRpb24gb2Yg
+        dGhlIGVudGlyZSByZWNvcmQgYW5kIHRoZSBmYWN0b3JzIGxpc3RlZCBhYm92
+        ZSwgd2UgZmluZCB0aGF0IGEgZm9yZmVpdHVyZSBpbiANCnRoZSBhbW91bnQg
+        b2YgJDI1LDAwMCBpcyB3YXJyYW50ZWQuDQpJVi4gT1JERVJJTkcgQ0xBVVNF
+        Uw0KMTAuIEFjY29yZGluZ2x5LCBJVCBJUyBPUkRFUkVEIHRoYXQsIHB1cnN1
+        YW50IHRvIFNlY3Rpb24gNTAzKGIpIG9mIHRoZSBDb21tdW5pY2F0aW9ucyAN
+        CkFjdCBvZiAxOTM0LCBhcyBhbWVuZGVkLCBhbmQgU2VjdGlvbnMgMC4xMTEs
+        IDAuMjA0LCAwLjMxMSwgMC4zMTQsIGFuZCAxLjgwKGYpKDQpIG9mIHRoZSBD
+        b21taXNzaW9uknMgcnVsZXMsIA0KRm91ciBDb3JuZXJzIEJyb2FkY2FzdGlu
+        ZywgTExDLCBJUyBMSUFCTEUgRk9SIEEgTU9ORVRBUlkgRk9SRkVJVFVSRSBp
+        biB0aGUgYW1vdW50IG9mIA0KdHdlbnR5LWZpdmUgdGhvdXNhbmQgZG9sbGFy
+        cyAoJDI1LDAwMCkgZm9yIHZpb2xhdGlvbnMgb2YgU2VjdGlvbiAzMDEgb2Yg
+        dGhlIEFjdCBhbmQgU2VjdGlvbiAxLjkwMyhhKSBvZiB0aGUgDQpSdWxlcy4N
+        CjIzDQoxMS4gUGF5bWVudCBvZiB0aGUgZm9yZmVpdHVyZSBzaGFsbCBiZSBt
+        YWRlIGluIHRoZSBtYW5uZXIgcHJvdmlkZWQgZm9yIGluIFNlY3Rpb24gMS44
+        MCBvZiB0aGUgDQpSdWxlcyB3aXRoaW4gdGhpcnR5ICgzMCkgY2FsZW5kYXIg
+        ZGF5cyBhZnRlciB0aGUgcmVsZWFzZSBkYXRlIG9mIHRoaXMgRm9yZmVpdHVy
+        ZSBPcmRlci4NCjI0DQpJZiB0aGUgZm9yZmVpdHVyZSBpcyBub3QgDQpwYWlk
+        IHdpdGhpbiB0aGUgcGVyaW9kIHNwZWNpZmllZCwgdGhlIGNhc2UgbWF5IGJl
+        IHJlZmVycmVkIHRvIHRoZSBVLlMuIERlcGFydG1lbnQgb2YgSnVzdGljZSBm
+        b3IgZW5mb3JjZW1lbnQgDQpvZiB0aGUgZm9yZmVpdHVyZSBwdXJzdWFudCB0
+        byBTZWN0aW9uIDUwNChhKSBvZiB0aGUgQWN0Lg0KMjUNCkZvdXIgQ29ybmVy
+        cyBCcm9hZGNhc3RpbmcsIExMQywgc2hhbGwgc2VuZCANCmVsZWN0cm9uaWMg
+        bm90aWZpY2F0aW9uIG9mIHBheW1lbnQgdG8gV1ItUmVzcG9uc2VAZmNjLmdv
+        diBvbiB0aGUgZGF0ZSBzYWlkIHBheW1lbnQgaXMgbWFkZS4gIA0KVGhlIHBh
+        eW1lbnQgbXVzdCBiZSBtYWRlIGJ5IGNoZWNrIG9yIHNpbWlsYXIgaW5zdHJ1
+        bWVudCwgd2lyZSB0cmFuc2Zlciwgb3IgY3JlZGl0IGNhcmQsIGFuZCBtdXN0
+        IGluY2x1ZGUgDQp0aGUgTkFML0FjY291bnQgbnVtYmVyIGFuZCBGUk4gcmVm
+        ZXJlbmNlZCBhYm92ZS4gIFJlZ2FyZGxlc3Mgb2YgdGhlIGZvcm0gb2YgcGF5
+        bWVudCwgYSBjb21wbGV0ZWQgDQpGQ0MgRm9ybSAxNTkgKFJlbWl0dGFuY2Ug
+        QWR2aWNlKSBtdXN0IGJlIHN1Ym1pdHRlZC4NCjI2DQogIFdoZW4gY29tcGxl
+        dGluZyB0aGUgRkNDIEZvcm0gMTU5LCBlbnRlciB0aGUgDQpBY2NvdW50IE51
+        bWJlciBpbiBibG9jayBudW1iZXIgMjNBIChjYWxsIHNpZ24vb3RoZXIgSUQp
+        IGFuZCBlbnRlciB0aGUgbGV0dGVycyCTRk9SRpQgaW4gYmxvY2sgbnVtYmVy
+        IA0KMjRBIChwYXltZW50IHR5cGUgY29kZSkuICBCZWxvdyBhcmUgYWRkaXRp
+        b25hbCBpbnN0cnVjdGlvbnMgeW91IHNob3VsZCBmb2xsb3cgYmFzZWQgb24g
+        dGhlIGZvcm0gb2YgDQpwYXltZW50IHlvdSBzZWxlY3Q6DQo/IFBheW1lbnQg
+        YnkgY2hlY2sgb3IgbW9uZXkgb3JkZXIgbXVzdCBiZSBtYWRlIHBheWFibGUg
+        dG8gdGhlIG9yZGVyIG9mIHRoZSBGZWRlcmFsIA0KQ29tbXVuaWNhdGlvbnMg
+        Q29tbWlzc2lvbi4gU3VjaCBwYXltZW50cyAoYWxvbmcgd2l0aCB0aGUgY29t
+        cGxldGVkIEZvcm0gMTU5KSBtdXN0IGJlIA0KbWFpbGVkIHRvIEZlZGVyYWwg
+        Q29tbXVuaWNhdGlvbnMgQ29tbWlzc2lvbiwgUC5PLiBCb3ggOTc5MDg4LCBT
+        dC4gTG91aXMsIE1PIDYzMTk3LTkwMDAsIA0Kb3Igc2VudCB2aWEgb3Zlcm5p
+        Z2h0IG1haWwgdG8gVS5TLiBCYW5rIJYgR292ZXJubWVudCBMb2NrYm94ICM5
+        NzkwODgsIFNMLU1PLUMyLUdMLCANCjEwMDUgQ29udmVudGlvbiBQbGF6YSwg
+        U3QuIExvdWlzLCBNTyA2MzEwMS4NCj8gUGF5bWVudCBieSB3aXJlIHRyYW5z
+        ZmVyIG11c3QgYmUgbWFkZSB0byBBQkEgTnVtYmVyIDAyMTAzMDAwNCwgcmVj
+        ZWl2aW5nIGJhbmsgDQpUUkVBUy9OWUMsIGFuZCBBY2NvdW50IE51bWJlciAy
+        NzAwMDAwMS4gVG8gY29tcGxldGUgdGhlIHdpcmUgdHJhbnNmZXIgYW5kIGVu
+        c3VyZSANCmFwcHJvcHJpYXRlIGNyZWRpdGluZyBvZiB0aGUgd2lyZWQgZnVu
+        ZHMsIGEgY29tcGxldGVkIEZvcm0gMTU5IG11c3QgYmUgZmF4ZWQgdG8gVS5T
+        LiBCYW5rIGF0IA0KKDMxNCkgNDE4LTQyMzIgb24gdGhlIHNhbWUgYnVzaW5l
+        c3MgZGF5IHRoZSB3aXJlIHRyYW5zZmVyIGlzIGluaXRpYXRlZC4NCj8gUGF5
+        bWVudCBieSBjcmVkaXQgY2FyZCBtdXN0IGJlIG1hZGUgYnkgcHJvdmlkaW5n
+        IHRoZSByZXF1aXJlZCBjcmVkaXQgY2FyZCBpbmZvcm1hdGlvbiBvbiBGQ0Mg
+        DQpGb3JtIDE1OSBhbmQgc2lnbmluZyBhbmQgZGF0aW5nIHRoZSBGb3JtIDE1
+        OSB0byBhdXRob3JpemUgdGhlIGNyZWRpdCBjYXJkIHBheW1lbnQuICAgVGhl
+        IA0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+        ICAgICAgICAgICANCjIxDQo0NyBVLlMuQy4gpyA1MDQoYykuICANCjIyDQpT
+        ZWUgTkFMLCAyOCBGQ0MgUmNkIGF0IDE0NjYyLCBwYXJhLiA2IG4uMjAuICAN
+        CjIzDQo0NyBVLlMuQy4gp6cgMzAxLCA1MDMoYik7IDQ3IEMuRi5SLiCnpyAw
+        LjExMSwgMC4yMDQsIDAuMzExLCAwLjMxNCwgMS44MChmKSg0KSwgMS45MDMo
+        YSkuDQoyNA0KNDcgQy5GLlIuIKcgMS44MC4NCjI1DQo0NyBVLlMuQy4gpyA1
+        MDQoYSkuDQoyNg0KQW4gRkNDIEZvcm0gMTU5IGFuZCBkZXRhaWxlZCBpbnN0
+        cnVjdGlvbnMgZm9yIGNvbXBsZXRpbmcgdGhlIGZvcm0gbWF5IGJlIG9idGFp
+        bmVkIGF0IA0KaHR0cDovL3d3dy5mY2MuZ292L0Zvcm1zL0Zvcm0xNTkvMTU5
+        LnBkZi4NCkZlZGVyYWwgQ29tbXVuaWNhdGlvbnMgQ29tbWlzc2lvbiBEQSAx
+        NC0xODM1DQo1DQpjb21wbGV0ZWQgRm9ybSAxNTkgbXVzdCB0aGVuIGJlIG1h
+        aWxlZCB0byBGZWRlcmFsIENvbW11bmljYXRpb25zIENvbW1pc3Npb24sIFAu
+        Ty4gQm94IA0KOTc5MDg4LCBTdC4gTG91aXMsIE1PIDYzMTk3LTkwMDAsIG9y
+        IHNlbnQgdmlhIG92ZXJuaWdodCBtYWlsIHRvIFUuUy4gQmFuayCWIEdvdmVy
+        bm1lbnQgDQpMb2NrYm94ICM5NzkwODgsIFNMLU1PLUMyLUdMLCAxMDA1IENv
+        bnZlbnRpb24gUGxhemEsIFN0LiBMb3VpcywgTU8gNjMxMDEuDQoxMi4gQW55
+        IHJlcXVlc3QgZm9yIG1ha2luZyBmdWxsIHBheW1lbnQgb3ZlciB0aW1lIHVu
+        ZGVyIGFuIGluc3RhbGxtZW50IHBsYW4gc2hvdWxkIGJlIHNlbnQgDQp0bzog
+        Q2hpZWYgRmluYW5jaWFsIE9mZmljZXKXRmluYW5jaWFsIE9wZXJhdGlvbnMs
+        IEZlZGVyYWwgQ29tbXVuaWNhdGlvbnMgQ29tbWlzc2lvbiwgNDQ1IDEydGgg
+        U3RyZWV0LCANClMuVy4sIFJvb20gMS1BNjI1LCBXYXNoaW5ndG9uLCBELkMu
+        IDIwNTU0Lg0KMjcNCiAgSWYgeW91IGhhdmUgcXVlc3Rpb25zIHJlZ2FyZGlu
+        ZyBwYXltZW50IHByb2NlZHVyZXMsIA0KcGxlYXNlIGNvbnRhY3QgdGhlIEZp
+        bmFuY2lhbCBPcGVyYXRpb25zIEdyb3VwIEhlbHAgRGVzayBieSBwaG9uZSwg
+        MS04NzctNDgwLTMyMDEsIG9yIGJ5IGUtbWFpbCwgDQpBUklOUVVJUklFU0Bm
+        Y2MuZ292Lg0KMTMuIElUIElTIEZVUlRIRVIgT1JERVJFRCB0aGF0IGEgY29w
+        eSBvZiB0aGlzIE9yZGVyIHNoYWxsIGJlIHNlbnQgYnkgYm90aCBGaXJzdCBD
+        bGFzcyANCmFuZCBDZXJ0aWZpZWQgTWFpbCwgUmV0dXJuIFJlY2VpcHQgUmVx
+        dWVzdGVkLCB0byBGb3VyIENvcm5lcnMgQnJvYWRjYXN0aW5nLCBMTEMsIGF0
+        IDE5MCBUdXJuZXIgRHJpdmUsIA0KU3VpdGUgRywgRHVyYW5nbywgQ29sb3Jh
+        ZG8gODEzMDMsIGFuZCB0byBpdHMgY291bnNlbCwgRnJhbmsgUi4gSmF6em8s
+        IEVzcXVpcmUsIGF0IEZsZXRjaGVyLCBIZWFsZCAmIA0KSGlsZHJldGgsIFBM
+        QywgMTMwMCBOb3J0aCAxNw0KdGgNClN0cmVldCwgMTENCnRoDQpGbG9vciwg
+        QXJsaW5ndG9uLCBWaXJnaW5pYSAyMjIwOS4gDQpGRURFUkFMIENPTU1VTklD
+        QVRJT05TIENPTU1JU1NJT04NClJlYmVjY2EgTC4gRG9yY2gNClJlZ2lvbmFs
+        IERpcmVjdG9yLCBXZXN0ZXJuIFJlZ2lvbg0KRW5mb3JjZW1lbnQgQnVyZWF1
+        DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+        ICAgICAgICAgIA0KMjcNClNlZSA0NyBDLkYuUi4gpyAxLjE5MTQuDQo=
+    http_version: 
+  recorded_at: Sat, 27 Dec 2014 01:18:18 GMT
+recorded_with: VCR 2.9.3

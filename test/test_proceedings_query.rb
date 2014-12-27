@@ -44,24 +44,24 @@ class TestProceedingsQuery < MiniTest::Unit::TestCase
     end
   end
 
-  def test_search_proceedings
-    VCR.use_cassette('main_cassette') do
-      proceedings_query = ECFS::ProceedingsQuery.new
-      proceedings_query.eq("bureau_code", "WC")
-      proceedings_query.eq("page_number", "1")
-      proceedings_query.eq("per_page", "100")
-      results = proceedings_query.get
-      %w[
-        total_pages first_result last_result total_results
-        current_page results
-      ].each do |key|
-        assert results.keys.include?(key)
-        assert results[key]
-      end
-
-      result = results["results"].first
-      assert_equal Fixnum, result["filings_in_last_30_days"].class
-    end
-  end
+  # def test_search_proceedings
+  #   VCR.use_cassette('main_cassette') do
+  #     proceedings_query = ECFS::ProceedingsQuery.new
+  #     proceedings_query.eq("bureau_code", "WC")
+  #     proceedings_query.eq("page_number", "1")
+  #     proceedings_query.eq("per_page", "100")
+  #     results = proceedings_query.get
+  #     %w[
+  #       total_pages first_result last_result total_results
+  #       current_page results
+  #     ].each do |key|
+  #       assert results.keys.include?(key)
+  #       assert results[key]
+  #     end
+  #
+  #     result = results["results"].first
+  #     assert_equal Fixnum, result["filings_in_last_30_days"].class
+  #   end
+  # end
 
 end
