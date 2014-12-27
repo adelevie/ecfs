@@ -24,6 +24,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "webmock", "1.9.0"
   spec.add_development_dependency "minitest", "~> 4.7.3"
   spec.add_development_dependency "pry-rescue"
+  spec.add_development_dependency "m", "~> 1.3.1"
 
 
   spec.add_dependency "pdf-reader"
