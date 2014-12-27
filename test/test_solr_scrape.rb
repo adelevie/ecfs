@@ -12,6 +12,7 @@ class TestSolrScrape < MiniTest::Unit::TestCase
       
       assert filings.first.is_a?(Hash)
       assert filings.first.has_key?('docket_number')
+      assert filings.first.has_key?('citation')
     end
   end
 

@@ -47,7 +47,26 @@ module ECFS
       return filings, total
     end
     
-    def get(fetch_document_urls=false)
+    def filing_to_citation(filing)
+      patterns = {
+        "COMMENT" => "Comments",
+        "REPLY TO COMMENTS" => "Reply Comments",
+        "NOTICE OF EXPARTE" => "Ex Parte Letter"
+      }
+  
+      case filing["type_of_filing"]
+      when "COMMENT"
+        return "Comments of #{filing['name_of_filer']}"
+      when "REPLY TO COMMENTS"
+        return "Reply Comments of #{filing['name_of_filer']}"
+      when "NOTICE OF EXPARTE"
+        return "#{filing['name_of_filer']} Ex Parte Letter"
+      else
+        return "#{filing["type_of_filing"].downcase.capitalize} of #{filing['name_of_filer']}"
+      end
+    end
+    
+    def get
       url = "http://apps.fcc.gov/ecfs/solr/search?sort=dateRcpt&proceeding=#{@docket_number}&dir=asc&start=0"
       filings = []
       
@@ -62,8 +81,8 @@ module ECFS
         filings.concat filings_from_docket_number(@docket_number, page)[0]
       end
       
-      if fetch_document_urls
-        p "pretending to fetch some urls"
+      filings.each do |filing|
+        filing['citation'] = filing_to_citation(filing)
       end
 
       filings
