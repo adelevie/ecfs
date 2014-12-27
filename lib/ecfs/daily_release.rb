@@ -18,7 +18,7 @@ module ECFS
     
     def find_links_by_type(type)
       @links.select do |link|
-        if link.has_key?("href")
+        if link.attributes.has_key?("href")
           link.attributes["href"].value.end_with?(".#{type}")
         else
           false
