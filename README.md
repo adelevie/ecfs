@@ -220,6 +220,8 @@ You can also keep track of page numbers with `ECFS::Document#pages`, which retur
 
 ### Bulk Queries
 
+None of this works (leaving here for posterity):
+
 This has been a problem that's been bothering me for a while: ECFS filing pages won't create spreadsheets when a query returns more than 10,000 filings. A simple solution is to add date constraints to the query until you have a set of queries where each result set contains 10,000 or fewer filings.
 
 I implemented a convenience method that make these queries for you:
@@ -232,7 +234,36 @@ filings = query.get
 
 In the background, `ECFS::BulkFilingsQuery#get` will perform as many queries as necessary to retrieve all the filings for the given proceeding.
 
+### Daily Releases
 
+This feature parses these types of pages: http://transition.fcc.gov/Daily_Releases/Daily_Business/2014/db0917/.
+
+The documents listed are PDFs, text files, and `.docx` files.
+
+```ruby
+releases = ECFS::DailyReasesQuery.new.tap do |q|
+  q.month = '12'
+  q.day   = '17'
+  q.year  = '2014'
+end.get
+
+txt_urls = releases.txts
+pdf_urls = releases.pdfs
+docs_urls = releases.docxs
+
+p txt_urls.first
+#=> 
+{
+  title: "DA-14-1835A1.txt",
+  url: "http://transition.fcc.gov/Daily_Releases/Daily_Business/2014/db1217//DA-14-1835A1.txt"
+}
+```
+
+## Testing
+
+```
+$ bundle exec m
+```
 
 ## Contact
 
