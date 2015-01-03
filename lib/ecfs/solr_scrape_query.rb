@@ -6,12 +6,14 @@ module ECFS
 
   class SolrScrapeQuery
     attr_accessor :docket_number
-
-    def initialize
-    end
+    attr_accessor :received_min_date
     
-    def filings_from_docket_number(docket_number, start=0)
+    def filings_from_docket_number(docket_number, start=0, received_min_date=nil)
       url = "http://apps.fcc.gov/ecfs/solr/search?sort=dateRcpt&proceeding=#{docket_number}&dir=asc&start=#{start}"
+      
+      if received_min_date
+        url << "&received.minDate=#{received_min_date}"
+      end
       
       agent = Mechanize.new
       page = agent.get(url)
@@ -70,7 +72,7 @@ module ECFS
       url = "http://apps.fcc.gov/ecfs/solr/search?sort=dateRcpt&proceeding=#{@docket_number}&dir=asc&start=0"
       filings = []
       
-      first_page_of_filings, total = filings_from_docket_number(@docket_number, 0)
+      first_page_of_filings, total = filings_from_docket_number(@docket_number, 0, @received_min_date)
       
       pages = (total.to_f/20.0).ceil.to_i.times.map {|n| n*20} # divide, round up, then map *20
       pages.shift
@@ -78,7 +80,7 @@ module ECFS
       filings.concat first_page_of_filings
       
       pages.each do |page|
-        filings.concat filings_from_docket_number(@docket_number, page)[0]
+        filings.concat filings_from_docket_number(@docket_number, page, @received_min_date)[0]
       end
       
       filings.each do |filing|
