@@ -27,7 +27,7 @@ module ECFS
       
         proceeding     = columns[0].text.strip
         name_of_filer  = columns[1].text.strip
-        date_recieved  = columns[2].text.strip
+        date_received  = columns[2].text.strip
         type_of_filing = columns[3].text.strip
         pages          = columns[4].text.strip.to_i
               
@@ -39,7 +39,7 @@ module ECFS
           'name_of_filer' => name_of_filer,
           'type_of_filing' => type_of_filing,
           'url' => url,
-          'date_recieved' => date_recieved,
+          'date_received' => date_received,
           'pages' => pages
         }
       end
