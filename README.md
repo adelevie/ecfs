@@ -256,6 +256,23 @@ p filings.first
 }
 ```
 
+Options:
+
+```ruby
+filings = ECFS::SolrScrapeQuery.new.tap do |q|
+  q.docket_number = '12-83'
+  
+  # a minimum date, inclusive. mm/dd/yyyy
+  q.received_min_date = '03/30/2012'
+  
+  # an after_scrape block
+  q.after_scrape = Proc.new do |filings|
+    p "Fetched asynchronyously: #{filings.length}"
+  end
+  # This is handy for large scrapes.
+end.get
+```
+
 ### Daily Releases
 
 This feature parses these types of pages: http://transition.fcc.gov/Daily_Releases/Daily_Business/2014/db0917/.

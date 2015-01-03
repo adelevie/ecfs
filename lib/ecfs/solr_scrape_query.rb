@@ -7,8 +7,9 @@ module ECFS
   class SolrScrapeQuery
     attr_accessor :docket_number
     attr_accessor :received_min_date
+    attr_accessor :after_scrape
     
-    def filings_from_docket_number(docket_number, start=0, received_min_date=nil)
+    def filings_from_docket_number(docket_number, start=0, received_min_date=nil, after_scrape=nil)
       url = "http://apps.fcc.gov/ecfs/solr/search?sort=dateRcpt&proceeding=#{docket_number}&dir=asc&start=#{start}"
       
       if received_min_date
@@ -46,6 +47,10 @@ module ECFS
         }
       end
       
+      if after_scrape
+        after_scrape.call(filings)
+      end
+            
       return filings, total
     end
     
@@ -72,7 +77,7 @@ module ECFS
       url = "http://apps.fcc.gov/ecfs/solr/search?sort=dateRcpt&proceeding=#{@docket_number}&dir=asc&start=0"
       filings = []
       
-      first_page_of_filings, total = filings_from_docket_number(@docket_number, 0, @received_min_date)
+      first_page_of_filings, total = filings_from_docket_number(@docket_number, 0, @received_min_date, @after_scrape)
       
       pages = (total.to_f/20.0).ceil.to_i.times.map {|n| n*20} # divide, round up, then map *20
       pages.shift
@@ -80,7 +85,7 @@ module ECFS
       filings.concat first_page_of_filings
       
       pages.each do |page|
-        filings.concat filings_from_docket_number(@docket_number, page, @received_min_date)[0]
+        filings.concat filings_from_docket_number(@docket_number, page, @received_min_date, @after_scrape)[0]
       end
       
       filings.each do |filing|
