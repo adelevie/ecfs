@@ -26,6 +26,7 @@ class TestSolrScrape < MiniTest::Unit::TestCase
       assert filings.first.is_a?(Hash)
       assert filings.first.has_key?('docket_number')
       assert filings.first.has_key?('citation')
+      assert filings.first
       
       filing_date = DateTime.strptime(filings.first['date_received'], "%m/%d/%Y")
       min_date = DateTime.strptime('11/28/14', "%m/%d/%Y")

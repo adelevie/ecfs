@@ -9,6 +9,25 @@ module ECFS
     attr_accessor :received_min_date
     attr_accessor :after_scrape
     
+    def filing_to_citation(filing)
+      patterns = {
+        "COMMENT" => "Comments",
+        "REPLY TO COMMENTS" => "Reply Comments",
+        "NOTICE OF EXPARTE" => "Ex Parte Letter"
+      }
+  
+      case filing["type_of_filing"]
+      when "COMMENT"
+        return "Comments of #{filing['name_of_filer']}"
+      when "REPLY TO COMMENTS"
+        return "Reply Comments of #{filing['name_of_filer']}"
+      when "NOTICE OF EXPARTE"
+        return "#{filing['name_of_filer']} Ex Parte Letter"
+      else
+        return "#{filing["type_of_filing"].downcase.capitalize} of #{filing['name_of_filer']}"
+      end
+    end
+    
     def filings_from_docket_number(docket_number, start=0, received_min_date=nil, after_scrape=nil)
       url = "http://apps.fcc.gov/ecfs/solr/search?sort=dateRcpt&proceeding=#{docket_number}&dir=asc&start=#{start}"
       
@@ -47,30 +66,15 @@ module ECFS
         }
       end
       
+      filings.each do |filing|
+        filing['citation'] = filing_to_citation(filing)
+      end
+      
       if after_scrape
         after_scrape.call(filings)
       end
             
       return filings, total
-    end
-    
-    def filing_to_citation(filing)
-      patterns = {
-        "COMMENT" => "Comments",
-        "REPLY TO COMMENTS" => "Reply Comments",
-        "NOTICE OF EXPARTE" => "Ex Parte Letter"
-      }
-  
-      case filing["type_of_filing"]
-      when "COMMENT"
-        return "Comments of #{filing['name_of_filer']}"
-      when "REPLY TO COMMENTS"
-        return "Reply Comments of #{filing['name_of_filer']}"
-      when "NOTICE OF EXPARTE"
-        return "#{filing['name_of_filer']} Ex Parte Letter"
-      else
-        return "#{filing["type_of_filing"].downcase.capitalize} of #{filing['name_of_filer']}"
-      end
     end
     
     def get
@@ -86,10 +90,6 @@ module ECFS
       
       pages.each do |page|
         filings.concat filings_from_docket_number(@docket_number, page, @received_min_date, @after_scrape)[0]
-      end
-      
-      filings.each do |filing|
-        filing['citation'] = filing_to_citation(filing)
       end
 
       filings
