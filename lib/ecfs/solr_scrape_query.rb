@@ -36,6 +36,9 @@ module ECFS
       end
       
       agent = Mechanize.new
+      
+      sleep(1)
+      
       page = agent.get(url)
       
       total = page.search('div').find {|div| div.text.start_with?("Showing results")}.text.split('of ')[1].to_i
