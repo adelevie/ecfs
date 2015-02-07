@@ -2,6 +2,8 @@
 
 ECFS helps you download and parse filings from the FCC's Electronic Comment Filing System.
 
+This gem powers [ecfs.link](https://ecfs.link), which lets you search the FCC's ECFS with ease. That site is also [open source](https://github.com/adelevie/ezfs).
+
 [![Build Status](https://travis-ci.org/adelevie/ecfs.png?branch=master)](https://travis-ci.org/adelevie/ecfs)
 
 [![Gem Version](https://badge.fury.io/rb/ecfs.png)](http://badge.fury.io/rb/ecfs)
