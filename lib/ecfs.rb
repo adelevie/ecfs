@@ -4,6 +4,8 @@ require 'open-uri'
 require 'pry'
 require 'net/http'
 require 'uri'
+require 'faraday'
+require 'unirest'
 
 module ECFS
   module EDOCS
@@ -19,10 +21,10 @@ module ECFS
         'fccRecordPage' => fcc_rcd_page
       }
       params.reject! {|_k,v| v.nil?}
-      response = Net::HTTP.post_form(uri, params)
-      doc = Nokogiri::HTML(response.body)
 
-      binding.pry
+      url = 'https://apps.fcc.gov/edocs_public/Query.do?mode=advance&rpt=cond'
+      response = Unirest.post url, parameters: params
+      doc = Nokogiri::HTML(response.raw_body)
 
       tables = doc.css('table.tableWithOutBorder').children.css('table.tableWithOutBorder')
       results = tables[2].css('table.tableWithBorder')

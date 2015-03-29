@@ -1,7 +1,7 @@
 require 'spec_helper'
 
-describe ECFS, vcr: {record: :all, match_requests_on: [:body, :query, :method]} do
-
+#describe ECFS, vcr: {record: :all, match_requests_on: [:body, :query, :method]} do
+describe ECFS do
   it 'has a version number' do
     expect(ECFS::VERSION).not_to be nil
   end
@@ -11,12 +11,28 @@ describe ECFS, vcr: {record: :all, match_requests_on: [:body, :query, :method]} 
 
       it 'searches given a docket number' do
         docs = ECFS::EDOCS.search(docket: '14-261')
+
         expect(docs).to(be_a(Array))
+        expect(docs.first).to(be_a(Hash))
+        expect(docs.first).to(have_key(:title))
+        expect(docs.first).to(have_key(:released))
+        expect(docs.first).to(have_key(:description))
+        expect(docs.first).to(have_key(:word))
+        expect(docs.first).to(have_key(:pdf))
+        expect(docs.first).to(have_key(:txt))
       end
 
       it 'searches the FCC Record' do
         docs = ECFS::EDOCS.search(fcc_rcd_vol: '16', fcc_rcd_page: '20341')
-        binding.pry
+
+        expect(docs).to(be_a(Array))
+        expect(docs.first).to(be_a(Hash))
+        expect(docs.first).to(have_key(:title))
+        expect(docs.first).to(have_key(:released))
+        expect(docs.first).to(have_key(:description))
+        expect(docs.first).to(have_key(:word))
+        expect(docs.first).to(have_key(:pdf))
+        expect(docs.first).to(have_key(:txt))
       end
     end
   end
