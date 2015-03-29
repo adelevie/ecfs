@@ -1,0 +1,176 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://apps.fcc.gov/edocs_public/Query.do?mode=advance&rpt=cond
+    body:
+      encoding: US-ASCII
+      string: fccRecordVol=16&fccRecordPage=20341
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip
+      User-Agent:
+      - unirest-ruby/1.1
+      Content-Length:
+      - '35'
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Sun-Java-System-Web-Server/7.0
+      Date:
+      - Sun, 29 Mar 2015 16:23:56 GMT
+      Content-Length:
+      - '11639'
+      Content-Type:
+      - text/html; charset=ISO-8859-1
+      Set-Cookie:
+      - JSESSIONID=gPn2VYncP2mxGpk1MXMyccqj5Gh99GnprWJGlJ9gYs6hwxxTp2W2!-243900878!792965292;
+        path=/; HttpOnly
+      X-Powered-By:
+      - Servlet/3.0 JSP/2.2
+    body:
+      encoding: UTF-8
+      string: "\n \n\n\n\n\n    \n<!DOCTYPE HTML>\n<!--[if lt IE 7]>      <html class=\"no-js
+        lt-ie9 lt-ie8 lt-ie7\"> <![endif]-->\n<!--[if IE 7]>         <html class=\"no-js
+        lt-ie9 lt-ie8\"> <![endif]-->\n<!--[if IE 8]>         <html class=\"no-js
+        lt-ie9\"> <![endif]-->\n<!--[if gt IE 8]><!--> <html lang=\"en\" class=\"no-js\">
+        <!--<![endif]-->\n\n<head>\n<meta charset=\"utf-8\">\n<meta http-equiv=\"X-UA-Compatible\"
+        content=\"IE=edge,chrome=1\">\n<title>EDOCS Search Result&laquo; EDOCS &laquo;
+        FCC</title>\n<meta name=\"description\" content=\"FCC EDOCS Search\">\n<meta
+        name=\"author\" content=\"Federal Communications Commission - FCC\">\n<meta
+        name=\"viewport\" content=\"width=device-width\">\n<link rel=\"stylesheet\"
+        href=\"css2/bootstrap.min.css\">\n<link rel=\"stylesheet\" href=\"css2/datepicker.css\">\n<link
+        rel=\"stylesheet\" href=\"css2/styles.css\">\n<link rel=\"stylesheet\" href=\"css2/fcc.css\">\n<link
+        rel=\"shortcut icon\" href=\"img/fcc_favicon.ico\" type=\"image/x-icon\">\n<script
+        src=\"js/libs/modernizr-2.6.1.custom.js\"></script>\n</head>\n<body>\n    \n
+        \   <header role=\"header\">\n  <div class=\"jumpLinks\">\n   <a href=\"#skiptarget1\"
+        class=\"visuallyhidden focusable\">Skip to main content</a>\n   \n   <a href=\"#skiptarget3\"
+        class=\"visuallyhidden focusable\">Skip to footer and contact information</a>
+        \n  </div>\n  <div class=\"container-fluid\" id=\"fcc-banner\">\n\t\t\n        <a
+        href=\"http://www.fcc.gov\"> <img \n                title=\"Go to the Federal
+        Communications Commission homepage at www.fcc.gov\" \n                alt=\"Go
+        to the Federal Communications Commission homepage at www.fcc.gov\" \n                src=\"img/navFCC.gif\">
+        </a>\n        <h1>Electronic Document Management System (EDOCS)</h1>\n\n\t</div>
+        \ \n</header>\n    <div id=\"pg-head\">\n        <div class=\"row\">\n            <div
+        class=\"span8\">\n                <h2>EDOCS Search Result</h2>\n            </div>\n
+        \       </div>\n    </div>     \n    <table class=\"tableWithOutBorder\">\n
+        \    \n            \n            <tr>\n                <td class=\"sideMenu\">
+        <nav id=\"sidebar\" class=\"span2\" role=\"navigation\"><a class=\"visuallyhidden\"
+        id=\"skiptarget1\" name=\"skiptarget1\" tabindex=\"-1\"></a>\n    <ul class=\"nav
+        nav-list\">\n        <li><a href=\"edocsLink.do?mode=basic&amp;type=n\" title=\"EDOCS
+        Advance Search\">EDOCS Home</a></li>\n        <li><a href=\"edocsLink.do?mode=advance&amp;type=n\"
+        title=\"EDOCS Advance Search\">EDOCS Advanced Search</a></li>\n        <li><a
+        href=\"edocsLink.do?mode=definitions\" title=\"EDOCS Search Field Definitions\">Definitions</a></li>\n
+        \       <li><a href=\"edocsLink.do?mode=instructions\" title=\"EDOCS Search
+        Tips\">Search Tips</a></li>\n        <li><a href=\"edocsLink.do?mode=faqs\"
+        title=\"EDOCS Search FAQ\">FAQ</a></li>\n        <li><a href=\"edocsLink.do?mode=digest\"
+        target=\"Daily Digest\" title=\"Daily Digest\">Daily Digest</a></li>\n        <li><a
+        href=\"releasedToday.do\" title=\"EDOCS Released for Today\">Today's Releases</a></li>\n
+        \       <li><a href=\"http://www.fcc.gov/Document_Indexes/\" tabindex=\"Document
+        Indexes\" target=\"Document Indexes\">Document Indexes</a></li>  \n    </ul>\n
+        </nav></td>\n                <td class=\"mainData\"> \n<table class=\"tableWithOutBorder\">\n
+        \   <tr>        \n                <td colspan=\"4\" BACKGROUND=\"https://www.fcc.gov/images/crumb-bkgnd-sitemap.gif\">
+        \ \n                        <a href=\"/edocs_public/edocsLink.do;jsessionid=gPn2VYncP2mxGpk1MXMyccqj5Gh99GnprWJGlJ9gYs6hwxxTp2W2!-243900878!792965292?type=n\">Quick
+        Search</a>&nbsp;&nbsp;\n                        <a href=\"/edocs_public/edocsLink.do;jsessionid=gPn2VYncP2mxGpk1MXMyccqj5Gh99GnprWJGlJ9gYs6hwxxTp2W2!-243900878!792965292?mode=advance&amp;type=n\"
+        title=\"EDOCS Advance search\">EDOCS Advanced</a>&nbsp;&nbsp;\n                        <a
+        href=\"/edocs_public/edocsLink.do;jsessionid=gPn2VYncP2mxGpk1MXMyccqj5Gh99GnprWJGlJ9gYs6hwxxTp2W2!-243900878!792965292\">Modify
+        current search</a>&nbsp;&nbsp;\n                        \n                                                                                                 \n
+        \                           \n                            \n                                <a
+        href=\"/edocs_public/result.do;jsessionid=gPn2VYncP2mxGpk1MXMyccqj5Gh99GnprWJGlJ9gYs6hwxxTp2W2!-243900878!792965292?rpt=full\">Full
+        report</a>\n                            \n                                                 \n
+        \               </td>\n            </tr>\n    <tr>\n                <td colspan=\"4\">\n
+        \               \n                      \n                \n                            \n<table
+        class=\"tableWithOutBorder\">\n            <tr >                  \n                        <td>\n
+        \                           \n                                                      \n
+        \                       </td>\n                        <td>\n                            Showing
+        document 1 thru 1 of 1                            \n                        </td>\n
+        \                       <td>\n                              \n                        </td>
+        \n                        <td>\n                        \n                        \n
+        \                       \n                        \n                        </td>\n
+        \                                   \n            </tr>           \n        </table>\n\n
+        \                \n                </td>\n            </tr>\n    <tr>\n        <td
+        colspan=\"4\"></td>\n    </tr>            \n</table>\n\n\n\n        <table
+        class=\"tableWithOutBorder\">\n    \n        <tr>\n            <td>\n                <table
+        class=\"tableWithBorder\">\n                    <tr >\n                        <a
+        href=\"#217773\"></a><td><b>PACIFIC WIRELESS TECHNOLOGIES, INC. AND NEXTEL
+        OF CALIFORNIA</b></td>\n                    </tr>\n                    <tr>\n
+        \                       <td>Released Date: 11/16/2001</td>\n                    </tr>
+        \        \n                    <tr >\n                        <td>Description:
+        Granted application of Pacific Wireless Technologies to assign its licenses
+        to Nextel of Calfornia, Inc.</td>\n                    </tr>\n\n                                                <tr>\n
+        \                               <td colspan=\"4\"><b>Documents:</b></td>\n
+        \                           </tr>\n                            \n                                  \n
+        \                           \n                                \n                                \n
+        \                               \n                                <tr><td
+        colspan=\"4\">\n                                    Word : \n                                    \n
+        \                                       <a href=\"attachmatch/DA-01-2685A1.doc\"
+        target=\"blank\" title=\"Document DA-01-2685A1.doc\">DA-01-2685A1.doc</a>&nbsp\n
+        \                                   \n                                </td></tr>\n
+        \                               \n                                \n                                                                \n
+        \                               \n                                                                 \n
+        \                               <tr><td colspan=\"4\">\n                                    PDF
+        : \n                                    \n                                        <a
+        href=\"attachmatch/DA-01-2685A1.pdf\" target=\"blank\" title=\"Document DA-01-2685A1.pdf\">DA-01-2685A1.pdf</a>&nbsp\n
+        \                                   \n                                </td></tr>\n
+        \                               \n                                \n                                \n
+        \                               <tr><td colspan=\"4\"> \n                                    Text
+        :\n                                    \n                                        <a
+        href=\"attachmatch/DA-01-2685A1.txt\" target=\"blank\" title=\"Document DA-01-2685A1.txt\">DA-01-2685A1.txt</a>&nbsp\n
+        \                                   \n                                </td></tr>
+        \n                                \n                                \n                                                                \n
+        \                           \n                                                       \n\n
+        \                                                     \n                         \n
+        \               </table>                \n            </td>\n        </tr>
+        \               \n    \n            \n<table class=\"tableWithOutBorder\">\n
+        \           <tr >                  \n                        <td>\n                            \n
+        \                                                     \n                        </td>\n
+        \                       <td>\n                            Showing document
+        1 thru 1 of 1                            \n                        </td>\n
+        \                       <td>\n                              \n                        </td>
+        \n                        <td>\n                        \n                        \n
+        \                       \n                        \n                        </td>\n
+        \                                   \n            </tr>           \n        </table>\n\n</table>\n\n
+        \       \n\n    \n</td>                        \n            </tr>\n                \n
+        \   </table>\n    <footer> \n<a id=\"skiptarget3\" class=\"visuallyhidden\"
+        tabindex=\"-1\"></a>\n<div class=\"footer-help\">\n<span class=\"icon-quoteBubble\"></span>\nFor
+        questions, please contact <a href=\"mailto:EDOCSHelp@fcc.gov\">EDOCshelp.
+        Phone: (202) 418-0265.</a>\n</div>\n    <nav class=\"container\">\n    <div
+        class=\"row-fluid\">\n        <div class=\"span3\">\n\t\t\t<ul class=\"unstyled\">\n
+        \       <li>Federal Communications Commission</li>\n        <li>445 12th Street
+        SW</li>\n\t\t\t\t<li>Washington, DC 20554<br /><br /></li>\n        <li>Phone:
+        1-888-225-5322</li>\n        <li>TTY:  1-888-835-5322</li>\n        <li>Fax:
+        1-866-418-0232</li>\n        <li><a href=\"https://www.fcc.gov/contact-us\">Contact
+        Us</a></li>\n      </ul>\n\t\t</div>\n      <div class=\"span3\">\n\t\t\t<ul
+        class=\"unstyled\">\n        <li><a href=\"http://www.fcc.gov/rss\">RSS</a></li>\n
+        \       <li><a href=\"http://www.fcc.gov/encyclopedia/privacy-policy\">Privacy
+        Policy</a></li>\n\t\t\t\t<li><a href=\"http://www.fcc.gov/comment-policy\">Moderation
+        Policy</a></li>\n\t\t\t\t<li><a href=\"http://www.fcc.gov/encyclopedia/website-notices\">Website
+        Policies &amp; Notices</a></li>\n\t\t\t\t<li><a href=\"http://www.fcc.gov/encyclopedia/required-plug-ins-players-and-readers\">Required
+        Browser &amp; Plug-ins</a></li>\n      </ul>\n\t\t</div>\n\t\t<div class=\"span3\">\n\t\t\t<ul
+        class=\"unstyled\">\n        <li><a href=\"http://www.fcc.gov/foia\">FOIA</a></li>\n\t\t\t\t<li><a
+        href=\"http://www.fcc.gov/encyclopedia/no-fear-act-data\">No Fear Act Data</a></li>\n\t\t\t\t<li><a
+        href=\"http://www.fcc.gov/open\">Open Government Directive</a></li>\n\t\t\t\t<li><a
+        href=\"http://www.fcc.gov/encyclopedia/plain-writing-fcc\">Plain Writing Act</a></li>\n\t\t\t\t<li><a
+        href=\"http://www.fcc.gov/encyclopedia/american-recovery-and-reinvestment-act-2009\">2009
+        Recovery and Reinvestment Act</a></li>\n                                <li>EDOCS
+        Search v2.2.17 01/26/2015 10:00 AM</li>\n      </ul>\n\t\t</div>\n      </div></nav>\n</footer>\n
+        \ \n    <script src=\"//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js\"></script>
+        \n<script>window.jQuery || document.write('<script src=\"js/libs/jquery-1.8.3.min.js\"><\\/script>')</script>
+        \n<script src=\"js/libs/bootstrap.js\"></script>\n<script src=\"js/libs/jquery.maskedinput.min.js\"></script>\n<script
+        src=\"js/util.js\"></script>\n<!--#include file=\"inc/scripts-ft.shtm\" -->
+        \n<script src=\"js/libs/bootstrap-datepicker.js\"></script>\n<script>\n    $(document).ready(function(e)
+        {\n\t\t$(\"#phone\").mask(\"(999) 999-9999\");\n\t\t$('.datepicker').datepicker({\n\t\t\tformat:
+        'mm/dd/yyyy'\n\t\t}); \n\t\t$('.lst-docProcessing').find('input[type=\"checkbox\"]').click(function(e)
+        {\n            if ($(this).is(':checked')) {\n\t\t\t    $('.js-reason').removeClass('hide');\t\n\t\t\t}\n\t\t\t\n\t\t\tif
+        ($('.lst-docProcessing').find(':checked').length == 0) {\t\t\t\t\n\t\t\t\t$('.js-reason').addClass('hide');\t\n\t\t\t}\n
+        \       });\n\t\t$('.nav-tabs').tab();\n    });\n</script>\n \n    </body>\n</html>\n"
+    http_version: 
+  recorded_at: Sun, 29 Mar 2015 16:23:59 GMT
+recorded_with: VCR 2.9.3

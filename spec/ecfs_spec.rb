@@ -1,9 +1,33 @@
 require 'spec_helper'
 
-#describe ECFS, vcr: {record: :all, match_requests_on: [:body, :query, :method]} do
-describe ECFS do
+describe ECFS, :vcr do
   it 'has a version number' do
     expect(ECFS::VERSION).not_to be nil
+  end
+
+  describe ECFS::Util do
+    context 'download word doc from a url' do
+      it 'parses footnotes' do
+        url = 'https://apps.fcc.gov/edocs_public/attachmatch/FCC-14-210A1.doc'
+        footnotes = ECFS::Util.get_footnotes(url: url)
+
+        expect(footnotes).to(be_a(Array))
+        expect(footnotes.first).to(be_a(Hash))
+        expect(footnotes.first).to(have_key(:index))
+        expect(footnotes.first).to(have_key(:text))
+      end
+
+      it 'computes the id tree' do
+        url = 'https://apps.fcc.gov/edocs_public/attachmatch/FCC-14-210A1.doc'
+        footnotes = ECFS::Util.get_footnotes(url: url, id_tree: true)
+
+        # expect that no id has ids of its own
+        ids = footnotes.select {|f| f[:id] == true}
+        ids.each do |id|
+          expect(id[:ids].length).to(eq(0))
+        end
+      end
+    end
   end
 
   describe ECFS::EDOCS do
