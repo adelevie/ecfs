@@ -1,0 +1,43 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://apps.fcc.gov/edocs_public/Query.do?mode=advanced
+    body:
+      encoding: US-ASCII
+      string: fccRecordVol=16&fccRecordPage=20341
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - apps.fcc.gov
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Sun-Java-System-Web-Server/7.0
+      Date:
+      - Sun, 29 Mar 2015 00:26:46 GMT
+      Content-Length:
+      - '0'
+      Content-Type:
+      - text/html
+      Set-Cookie:
+      - JSESSIONID=nf6TVXGGT1qlG1qB6JhSVKDLdJQTYDTTGn4sdxKHhQnlp57y0x8L!792965292!-243900878;
+        path=/; HttpOnly
+      X-Powered-By:
+      - Servlet/3.0 JSP/2.2
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version:
+  recorded_at: Sun, 29 Mar 2015 00:26:48 GMT
+recorded_with: VCR 2.9.3
