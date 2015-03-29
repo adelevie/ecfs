@@ -131,6 +131,28 @@ module ECFS
     end
   end
 
+  module Proceedings
+    def self.search(docket: nil)
+      url = "http://apps.fcc.gov/ecfs/proceeding/view?name=#{docket}"
+      response = Unirest.get url
+      doc = Nokogiri::HTML(response.raw_body)
+      table = doc.search('table.dataTable').first
+      rows = table.search('div.wwgrp')
+
+      proceeding = {}
+      rows.each do |row|
+        key = row.search('span')[0].text.strip
+        key.gsub!(" ", "")
+        key.gsub!(":", "")
+        key.downcase!
+        value = row.search('span')[1].text.strip
+        proceeding[key.to_sym] = value
+      end
+
+      proceeding
+    end
+  end
+
   module Filings
     ATTRS = [
       :docket, :filer, :lawfirm, :received,

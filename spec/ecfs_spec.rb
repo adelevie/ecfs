@@ -61,6 +61,16 @@ describe ECFS, :vcr do
     end
   end
 
+  describe ECFS::Proceedings do
+    context 'fetching a proceeding' do
+      it 'gets a proceeding given a docket number' do
+        proceeding = ECFS::Proceedings.search(docket: '14-261')
+        expect(proceeding).to(be_a(Hash))
+        expect(proceeding).to(have_key(:subject))
+      end
+    end
+  end
+
   describe ECFS::Filings do
     context 'fetching filings links' do
       let(:url) { 'http://apps.fcc.gov/ecfs/comment/view?id=6017611775' }
