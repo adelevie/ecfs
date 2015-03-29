@@ -6,29 +6,32 @@ require 'ecfs/version'
 Gem::Specification.new do |spec|
   spec.name          = "ecfs"
   spec.version       = ECFS::VERSION
-  spec.authors       = ["Alan deLevie"]
-  spec.email         = ["adelevie@gmail.com"]
-  spec.description   = %q{ECFS provides a set of utilities for scraping FCC rulemakings}
-  spec.summary       = %q{ECFS helps you obtain comments and other filings from the FCC's Electronic Comment Filing System}
-  spec.homepage      = "http://github.com/adelevie/ecfs"
+  spec.authors       = ["TODO: Write your name"]
+  spec.email         = ["TODO: Write your email address"]
+
+  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
+  spec.description   = %q{TODO: Write a longer description or delete this line.}
+  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
   spec.license       = "MIT"
 
-  spec.files         = `git ls-files`.split($/)
-  spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
-  spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
+  spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
+  spec.bindir        = "exe"
+  spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_development_dependency "bundler", "~> 1.3"
-  spec.add_development_dependency "rake"
-  spec.add_development_dependency "vcr"
-  spec.add_development_dependency "webmock", "1.9.0"
-  spec.add_development_dependency "minitest", "~> 4.7.3"
-  spec.add_development_dependency "pry-rescue"
-  spec.add_development_dependency "m", "~> 1.3.1"
+  if spec.respond_to?(:metadata)
+    spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com' to prevent pushes to rubygems.org, or delete to allow pushes to any server."
+  end
 
-
-  spec.add_dependency "pdf-reader"
+  spec.add_dependency "nokogiri"
   spec.add_dependency "pry"
-  spec.add_dependency "mechanize"
-  spec.add_dependency "spreadsheet"
+  spec.add_dependency "unirest"
+  spec.add_dependency "rubyzip"
+  spec.add_dependency "open_uri_redirections"
+
+  spec.add_development_dependency "webmock"
+  spec.add_development_dependency "bundler", "~> 1.9"
+  spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_development_dependency "rspec"
+  spec.add_development_dependency "vcr"
 end
