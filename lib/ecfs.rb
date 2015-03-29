@@ -159,7 +159,7 @@ module ECFS
       :posted, :exparte, :type, :pages
     ]
 
-    def self.get_document_links(url)
+    def self.get_document_links(url: url)
       doc = Nokogiri::HTML(open(url))
       xpath = "//*[@id=\"documents.link\"]"
       links = doc.xpath(xpath).search('a')

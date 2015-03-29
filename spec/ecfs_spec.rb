@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe ECFS, :vcr do
+
   it 'has a version number' do
     expect(ECFS::VERSION).not_to be nil
   end
@@ -76,7 +77,7 @@ describe ECFS, :vcr do
       let(:url) { 'http://apps.fcc.gov/ecfs/comment/view?id=6017611775' }
 
       it 'fetches filing links given a filing url' do
-        links = ECFS::Filings.get_document_links(url)
+        links = ECFS::Filings.get_document_links(url: url)
 
         expect(links).to(be_a(Array))
       end
