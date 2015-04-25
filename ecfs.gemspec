@@ -6,12 +6,12 @@ require 'ecfs/version'
 Gem::Specification.new do |spec|
   spec.name          = "ecfs"
   spec.version       = ECFS::VERSION
-  spec.authors       = ["TODO: Write your name"]
-  spec.email         = ["TODO: Write your email address"]
+  spec.authors       = ["Alan deLevie"]
+  spec.email         = ["adelevie@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{Scraper for the FCC's Electronic Comment Filing System}
+  spec.description   = %q{Provides Ruby-based access to the FCC's Electronic Comment Filing System}
+  spec.homepage      = "https://github.com/adelevie/ecfs"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
